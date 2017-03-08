@@ -1,0 +1,15 @@
+MassFrictionCompare
+CoastingCompare
+Clutch
+MassMovementSpeed
+MassMovementForce
+IdealCurrentControlledConverter
+IdealCurrentControlledMachine1
+IdealCurrentControlledMachine2
+TestIdealBattery
+TestBattery
+RotationalConstantFriction
+EfficiencyFrictionCompare
+Efficiency
+TestTorqueLimiter
+MassFrictionangleCompare

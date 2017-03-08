@@ -1,0 +1,9 @@
+InitialVelocity
+AthmosphericFriction
+GenericAthmosphericFriction
+RollingFriction
+MassFriction
+MassStickingFriction
+Clutch
+ConstantEfficiency
+ConstantEfficiencyControlled

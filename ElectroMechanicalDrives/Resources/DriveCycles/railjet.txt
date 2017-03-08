@@ -1,0 +1,12 @@
+#1
+
+# Estimated Railjet drive cyccle
+# time(s)    velocity(m/s)
+
+double velocity(6,2) 
+0     0.000
+20		0.000
+100	 44.444
+180  61.111
+1000 61.111
+1200  0.000
