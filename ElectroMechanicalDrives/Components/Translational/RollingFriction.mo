@@ -7,8 +7,7 @@ model RollingFriction
   parameter Modelica.SIunits.Velocity v_linear(final min = 0) = 0.01
     "Speed limit of constant friction";
   Modelica.SIunits.Velocity v "Speed";
-  extends
-    Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
+  extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
 equation
   v = der(s);
   f = smooth(1, if v > v_linear then f_constant else if v < (-v_linear) then -f_constant else f_constant * v / v_linear);

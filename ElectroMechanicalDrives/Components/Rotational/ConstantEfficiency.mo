@@ -1,8 +1,7 @@
 within ElectroMechanicalDrives.Components.Rotational;
 model ConstantEfficiency
   "Efficiency model considering constant efficiency"
-  extends
-    Modelica.Mechanics.Rotational.Interfaces.PartialElementaryTwoFlangesAndSupport2;
+  extends Modelica.Mechanics.Rotational.Interfaces.PartialElementaryTwoFlangesAndSupport2;
   parameter Real efficiency = 0.9 "Efficiency coefficient";
   Modelica.SIunits.Angle phi "Angle of flange_a";
   Modelica.SIunits.AngularVelocity w
@@ -14,8 +13,7 @@ model ConstantEfficiency
   Modelica.SIunits.Power power_b = flange_b.tau * w
     "Power input of flange_b";
   Modelica.SIunits.Torque tau_loss(final start = 0) "Friction torque";
-  extends
-    Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
+  extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
 equation
   phi = flange_a.phi - phi_support;
   flange_a.phi = flange_b.phi;

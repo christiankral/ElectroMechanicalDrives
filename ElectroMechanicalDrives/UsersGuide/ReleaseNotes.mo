@@ -3,14 +3,18 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
-<h5>Version v0.11.0, 2017-02-10</h5>
+<h5>Version v0.13.0, 2017-XX-XX</h5>
+<ul>
+<li>Changed subfolder name Souces to Sources</li>
+</ul>
+
+<h5>Version v0.12.0, 2017-02-10</h5>
 <ul>
 <li>Added some more teaching examples</li>
 <li>Separated examples and component testing examples</li>
 <li>Changed icon of internal package</li>
 <li>Added controlled efficiency models</li>
 </ul>
-
 
 <h5>Version v0.10.1, 2016-12-04</h5>
 <ul>

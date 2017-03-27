@@ -1,10 +1,8 @@
 within ElectroMechanicalDrives.Components.Internal;
 model VariableDamper "Linear 1D translational damper"
-  extends
-    Modelica.Mechanics.Translational.Interfaces.PartialCompliantWithRelativeStates;
+  extends Modelica.Mechanics.Translational.Interfaces.PartialCompliantWithRelativeStates;
   Modelica.Blocks.Interfaces.RealInput d "Damping coefficient" annotation(Placement(transformation(extent = {{-140, -80}, {-100, -40}}), iconTransformation(extent = {{-20, -20}, {20, 20}}, rotation = 90, origin = {0, -120})));
-  extends
-    Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
+  extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
 equation
   f = d * v_rel;
   lossPower = f * v_rel;
