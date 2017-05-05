@@ -13,7 +13,7 @@ model IdealCurrentControlledConverter
   Modelica.Electrical.Analog.Interfaces.NegativePin dc_n1
     "Negative DC input"                                                       annotation(Placement(transformation(extent = {{-110, -70}, {-90, -50}})));
   Modelica.Electrical.Analog.Interfaces.PositivePin dc_p2
-    "Postive DC output"                                                       annotation(Placement(transformation(extent = {{90, 50}, {110, 70}})));
+    "Positive DC output"                                                       annotation(Placement(transformation(extent = {{90, 50}, {110, 70}})));
   Modelica.Electrical.Analog.Interfaces.NegativePin dc_n2
     "Negative DC output"                                                       annotation(Placement(transformation(extent = {{90, -70}, {110, -50}})));
   Modelica.Blocks.Interfaces.RealInput i2 "Current input i2"

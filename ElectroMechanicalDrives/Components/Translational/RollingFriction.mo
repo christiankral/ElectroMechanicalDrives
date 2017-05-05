@@ -21,7 +21,7 @@ equation
 <p>Characteristica of the rolling friction model</p>
 <ul>
 <li>constant friction force for <code>v </code>&ge;<code> v_linear</code></li>
-<li>friction force changes sign linearly for <code>v </code>&lt;<code> v_linear</code> to achieve a continuous transistion</li>
+<li>friction force changes sign linearly for <code>v </code>&lt;<code> v_linear</code> to achieve a continuous transition</li>
 <li>parameter <code>v_linear</code> shall not be change except for numerical reasons</li>
 </ul>
 </p></html>"));
