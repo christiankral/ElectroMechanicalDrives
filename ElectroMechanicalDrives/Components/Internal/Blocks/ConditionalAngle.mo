@@ -7,7 +7,7 @@ model ConditionalAngle "Block with conditional input"
   parameter Modelica.SIunits.Angle constantAngle = 0
     "Constant angle of gradient" annotation(Dialog(enable = useConstantAngle));
 
-  Modelica.Blocks.Interfaces.RealInput variableAngle(unit = "rad") = angle if not useConstantAngle
+  Modelica.Blocks.Interfaces.RealInput variableAngle(unit = "rad") if not useConstantAngle
     "Angle of inclination of ramp" annotation(Placement(transformation(extent={{-140,
             -20},{-100,20}}), iconTransformation(extent={{-140,
             -20},{-100,20}})));

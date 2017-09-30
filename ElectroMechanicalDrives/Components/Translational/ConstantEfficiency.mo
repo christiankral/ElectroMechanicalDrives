@@ -22,7 +22,7 @@ equation
   a = der(v);
   // Force balance
   flange_a.f + flange_b.f - f_loss = 0;
-  power_b = smooth(1, if power_a > 0 then -power_a * efficiency else -power_a / efficiency);
+  flange_b.f = smooth(0, if power_a > 0 then -flange_a.f * efficiency else -flange_a.f / efficiency);
   lossPower = f_loss * v;
   annotation(Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 0},
             fillPattern =                                                                                                   FillPattern.Solid, fillColor = {255, 255, 255}), Text(extent = {{-150, 150}, {150, 110}}, textString = "%name", lineColor = {0, 0, 255}), Text(extent = {{-40, 40}, {40, -40}}, lineColor = {0, 0, 0},

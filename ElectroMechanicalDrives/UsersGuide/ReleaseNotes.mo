@@ -3,6 +3,12 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<h5>Version v0.14.0, 2017-09-30</h5>
+<ul>
+<li>Alternative implementation of rotational and translational efficiency models based on
+    <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/issues/6\">#6</a></li>
+</ul>
+
 <h5>Version v0.13.0, 2017-08-24</h5>
 <ul>
 <li>Updated drive cycles to avoid problems with table implementation and power peaks</li>

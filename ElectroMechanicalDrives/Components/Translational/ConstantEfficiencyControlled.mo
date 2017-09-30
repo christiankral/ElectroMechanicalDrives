@@ -5,7 +5,7 @@ model ConstantEfficiencyControlled "Efficiency model considering constant effici
   parameter Modelica.SIunits.Time T = 1E-6 "Internal controller time constant";
   parameter Modelica.SIunits.Velocity vRef = 1 "Rereference velocity of controller";
   extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
-  ElectroMechanicalDrives.Components.Translational.VariableDamper variableDamper(useHeatPort=useHeatPort) annotation (Placement(transformation(
+  ElectroMechanicalDrives.Components.Internal.VariableDamper variableDamper(useHeatPort=useHeatPort) annotation (Placement(transformation(
         extent={{10,10},{-10,-10}},
         rotation=90,
         origin={0,30})));

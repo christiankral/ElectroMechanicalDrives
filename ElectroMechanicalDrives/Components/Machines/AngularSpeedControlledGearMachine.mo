@@ -47,7 +47,7 @@ public
   Modelica.Mechanics.Rotational.Sensors.PowerSensor powerMachineSensor annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {-70, -30})));
   Modelica.Mechanics.Rotational.Sensors.TorqueSensor torqueShaftSensor annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 0, origin = {-20, -80})));
   Modelica.Mechanics.Rotational.Sensors.PowerSensor powerLoadSensor annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {90, -50})));
-  Rotational.ConstantEfficiencyControlled
+  Rotational.ConstantEfficiency
     efficiencyGear(final efficiency=efficiency)
     annotation (Placement(transformation(extent={{60,-90},{80,-70}})));
   Modelica.Mechanics.Rotational.Sensors.TorqueSensor torqueLoadSensor annotation(Placement(transformation(extent={{10,10},{-10,-10}},      rotation = 270, origin = {90, -20})));
