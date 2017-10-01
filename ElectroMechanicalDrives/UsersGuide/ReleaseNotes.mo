@@ -3,6 +3,20 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<p>As of version 1.0.0 no more non-backwards compatible changes will be introduced</p>
+
+<h5>Version v1.0.0, 2017-10-01</h5>
+<ul>
+<li>Switched license to BSD-3-Clause</li>
+</ul>
+<p>Non backwards compatible changes</p>
+<ul>
+<li>Removed controlled efficiency models</li>
+<li>Removed obsolete Resistance Rcell of VehicleWithDrive</li>
+<li>Removed obsolete GenericAthmosphericFriction</li>
+<li>Removed gear and efficiency from machines models </li>
+</ul>
+
 <h5>Version v0.14.0, 2017-09-30</h5>
 <ul>
 <li>Alternative implementation of rotational and translational efficiency models based on

@@ -16,7 +16,6 @@ model VehicleWithDrive "Vehicle with friction"
     "Allows undercharging without error" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
   parameter Modelica.SIunits.Energy ECell
     "Total cell energy between V0 and V1" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
-  parameter Modelica.SIunits.Resistance RCell = 0 "Internal cell resitance" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
   parameter Modelica.SIunits.Voltage ViniCell = V1Cell "Initial cell voltage" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
   Modelica.Mechanics.Rotational.Components.IdealGear idealGear(ratio = i) annotation(Placement(transformation(extent={{-40,70},
             {-60,90}})));
@@ -52,7 +51,7 @@ equation
   connect(idealGear.flange_b, inertia.flange_a) annotation (Line(points={{-60,80},
           {-70,80},{-70,80},{-80,80},{-80,60}}, color={0,0,0}));
   connect(negative.y, idealCurrentControlledConverter.i2) annotation (Line(points={{40,51},{40,68}},         color={0,0,127}));
-  connect(negative.u, iMachine) annotation (Line(points={{40,28},{40,28},{40,-68},{40,-82},{40,-80},{0,-80},{0,-120}}, color={0,0,127}));
+  connect(negative.u, iMachine) annotation (Line(points={{40,28},{40,-80},{0,-80},{0,-120}}, color={0,0,127}));
   annotation(defaultComponentName="vehicle",Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}})),           Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={
                                                                                                                                                                                                   Rectangle(extent={{
               -16.5,15.5},{16.5,-15.5}},                                                                                                                                                                                                       lineColor = {0, 0, 0},

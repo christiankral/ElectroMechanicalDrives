@@ -18,7 +18,8 @@ model VehicleDriveCycleWithDrive "Driving cycle"
     r=0.35,
     i=8.8,
     wBase=0.25*837.8,
-    kBase=0.1492/0.25) annotation (Placement(transformation(extent={{60,40},{80,60}})));
+    kBase=0.1492/0.25,
+    IMachineMax=240)   annotation (Placement(transformation(extent={{60,40},{80,60}})));
   Modelica.Blocks.Continuous.Integrator integrator(k=1000)
     annotation (Placement(transformation(extent={{40,-10},{60,10}})));
 equation

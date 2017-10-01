@@ -40,7 +40,7 @@ model VehicleWithDriveLoss "Vehicle with friction"
   Modelica.Blocks.Math.Gain negative(final k=-1) annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=90,
-        origin={40,30})));
+        origin={40,40})));
 equation
   connect(idealGear.flange_a, machine.flange) annotation(Line(points={{-40,80},
           {-30,80}},                                                                             color = {0, 0, 0}, smooth = Smooth.None));
@@ -59,8 +59,8 @@ equation
           {20,90},{20,86},{30,86}},                                                                                                        color = {0, 0, 255}, smooth = Smooth.None));
   connect(inertia.flange_a, idealGear.flange_b) annotation (Line(points={
           {-80,60},{-80,80},{-60,80}}, color={0,0,0}));
-  connect(negative.y, idealCurrentControlledConverter.i2) annotation (Line(points={{40,41},{40,68},{40,68}}, color={0,0,127}));
-  connect(iMachine, negative.u) annotation (Line(points={{0,-120},{0,-120},{0,-80},{40,-80},{40,18}}, color={0,0,127}));
+  connect(negative.y, idealCurrentControlledConverter.i2) annotation (Line(points={{40,51},{40,68}},         color={0,0,127}));
+  connect(negative.u, iMachine) annotation (Line(points={{40,28},{40,-80},{0,-80},{0,-120}}, color={0,0,127}));
   annotation(defaultComponentName="vehicle",Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,
             -100},{100,100}})), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Line(points = {{-72, 28}}, color = {0, 0, 255}, smooth = Smooth.None), Line(points={{
               -66,-36},{-86,-28},{-46,-16},{-86,-8},{-66,4}},                                                                                                                                                                                                        color = {255, 0, 0}, smooth = Smooth.Bezier),

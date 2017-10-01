@@ -1,5 +1,4 @@
 InitialVelocity
 RollingFriction
 ConstantEfficiency
-ConstantEfficiencyControlled
 VariableDamper

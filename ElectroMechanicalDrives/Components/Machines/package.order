@@ -1,5 +1,5 @@
-AngularSpeedControlledGearMachine
-TorqueControlledGearMachine
+AngularSpeedControlledMachine
+TorqueControlledMachine
 IdealCurrentControlledMachine
 IdealCurrentFedMachine
 TorqueLimiter

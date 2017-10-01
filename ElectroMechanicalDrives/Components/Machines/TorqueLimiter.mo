@@ -46,9 +46,12 @@ equation
 This block enables a simplified approach of torque deduction due by field weakening.
 The field weakening behavior is characterized by:</p>
 
-    <ul>
+<ul>
     <li>the maximum torque of the machine, <code>tauLimit</code> for <code>w &le; wBase</code></li>
     <li>the base speed limit <code>wBase</code><li>
     <li>torque reduction proportial to <code>wBase/w</code> for <code>w &gt; wBase</code></li> 
+</ul>
+
+<p>In this model the pull out torque behaviour is not considered. </p>
 </html>"));
 end TorqueLimiter;
