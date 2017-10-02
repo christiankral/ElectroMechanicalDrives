@@ -1,6 +1,6 @@
 within ElectroMechanicalDrives.Components.Machines;
 model TorqueControlledMachine "Signal torque input machine"
-  extends ElectroMechanicalDrives.Icons.GearMachine;
+  extends ElectroMechanicalDrives.Icons.Machine;
   Modelica.Mechanics.Rotational.Interfaces.Flange_b flange annotation(Placement(transformation(extent = {{90, -10}, {110, 10}})));
 
   parameter Boolean useFieldWeakening = false

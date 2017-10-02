@@ -14,7 +14,6 @@ class ReleaseNotes "Release Notes"
 <li>Removed controlled efficiency models</li>
 <li>Removed obsolete Resistance Rcell of VehicleWithDrive</li>
 <li>Removed obsolete GenericAthmosphericFriction</li>
-<li>Removed gear and efficiency from machines models </li>
 </ul>
 
 <h5>Version v0.14.0, 2017-09-30</h5>
