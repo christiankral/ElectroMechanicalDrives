@@ -12,7 +12,7 @@ package ElectroMechanicalDrives "Library for the simulation of electro mechanica
 
 
 
-  annotation(version = "1.0.1", versionBuild = 1, versionDate = "2017-10-09", uses(Modelica(version = "3.2.2")),
+  annotation(version = "master", versionBuild = 1, versionDate = "2017-10-09", uses(Modelica(version = "3.2.2")),
   Documentation(info="x<html>
 </html>"));
 end ElectroMechanicalDrives;
