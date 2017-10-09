@@ -21,40 +21,46 @@ protected
   parameter Modelica.SIunits.AngularFrequency w_crit = 2 * Modelica.Constants.pi * f_crit
     "Critical frequency";
 public
-  Modelica.Mechanics.Rotational.Sources.Speed speed(final exact = exact, final f_crit = f_crit) annotation(Placement(transformation(extent={{-80,-10},{-60,10}})));
+  Modelica.Mechanics.Rotational.Sources.Speed speed(final exact = exact, final f_crit = f_crit) annotation(Placement(transformation(extent={{-90,-10},{-70,10}})));
   Modelica.Mechanics.Rotational.Sensors.TorqueSensor torqueSensor annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=0,
-        origin={30,0})));
+        origin={-10,0})));
   Modelica.Mechanics.Rotational.Sensors.PowerSensor powerSensor annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=0,
-        origin={-10,0})));
+        origin={-40,0})));
   Modelica.Mechanics.Rotational.Sensors.SpeedSensor speedSensor annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=90,
-        origin={-40,30})));
+        origin={-60,30})));
+  Modelica.Mechanics.Rotational.Components.Inertia inertia(J = J) annotation(Placement(transformation(extent={{10,-10},{30,10}})));
+  Modelica.Mechanics.Rotational.Sensors.TorqueSensor torqueShaftSensor annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 0, origin={50,0})));
+  Modelica.Mechanics.Rotational.Sensors.PowerSensor powerShaftSensor annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 0, origin={80,0})));
 equation
   der(phi) = w;
   der(w) = a;
 
   connect(powerSensor.flange_b, torqueSensor.flange_a) annotation (Line(
-      points={{0,0},{20,0}},
+      points={{-30,0},{-20,0}},
       color={0,0,0},
       smooth=Smooth.None));
-  connect(speed.w_ref, w_ref) annotation(Line(points={{-82,0},{-120,0}},      color = {0, 0, 127}, smooth = Smooth.None));
+  connect(speed.w_ref, w_ref) annotation(Line(points={{-92,0},{-120,0}},      color = {0, 0, 127}, smooth = Smooth.None));
   connect(speed.flange, powerSensor.flange_a) annotation (Line(
-      points={{-60,4.44089e-16},{-60,0},{-20,0}},
+      points={{-70,4.44089e-16},{-70,0},{-50,0}},
       color={0,0,0},
       smooth=Smooth.None));
-  connect(speedSensor.flange, speed.flange) annotation (Line(points={{-40,20},{-40,0},{-60,0},{-60,0}}, color={0,0,0}));
-  connect(torqueSensor.flange_b, flange) annotation (Line(points={{40,0},{100,0}}, color={0,0,0}));
+  connect(speedSensor.flange, speed.flange) annotation (Line(points={{-60,20},{-60,0},{-70,0}},         color={0,0,0}));
+  connect(inertia.flange_b,torqueShaftSensor. flange_a) annotation(Line(points={{30,0},{40,0}},            color = {0, 0, 0}, smooth = Smooth.None));
+  connect(torqueShaftSensor.flange_b,powerShaftSensor. flange_a) annotation(Line(points={{60,0},{70,0}},                     color = {0, 0, 0}, smooth = Smooth.None));
+  connect(torqueSensor.flange_b, inertia.flange_a) annotation (Line(points={{0,0},{6,0},{6,0},{10,0}}, color={0,0,0}));
+  connect(powerShaftSensor.flange_b, flange) annotation (Line(points={{90,0},{100,0},{100,0}}, color={0,0,0}));
   annotation(defaultComponentName = "machine", Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,-100},{100,100}})),                Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Rectangle(origin = {90, 0}, lineColor = {64, 64, 64}, fillColor = {191, 191, 191},
             fillPattern =                                                                                                   FillPattern.HorizontalCylinder, extent = {{-10, -10}, {10, 10}}), Text(extent = {{-140, 60}, {-100, 20}}, lineColor = {0, 0, 0},
             fillPattern =                                                                                                   FillPattern.HorizontalCylinder, fillColor = {175, 175, 175}, textString = "w"), Text(extent = {{-150, 120}, {150, 80}}, textString = "%name", lineColor = {0, 0, 255}), Line(points = {{-100, 0}, {-60, 0}}, color = {0, 0, 0}, smooth = Smooth.None)}),
     Documentation(info="<html>
 <p>This is an idealized angular speed controlled electric machine model. 
-The actual angular speed of the <b>electric machine</b> can be adjusted by means of the signal input. 
+The actual angular speed of the <em>electric machine</em> can be adjusted by means of the signal input. 
 Make sure that speed discontinuouties do not occur.</p>
 
 <p>This machine model considers the following effects:</p>

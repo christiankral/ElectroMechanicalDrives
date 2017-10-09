@@ -22,7 +22,7 @@ model AngularSpeedControlledGearMachine "Signal angular speed input machine incl
     "Absolute rotational acceleration of machine";
   Modelica.Blocks.Interfaces.RealInput w_ref(unit = "rad/s")
     "Reference angular speed as input signal"                                                          annotation(Placement(transformation(extent = {{-140, -20}, {-100, 20}}, rotation = 0)));
-  Modelica.SIunits.AngularVelocity wLoad= speedLoadSensor.w "Speed of mechanical load";
+  Modelica.SIunits.AngularVelocity wLoad = speedLoadSensor.w "Speed of mechanical load";
   Modelica.SIunits.Torque tauLoad = torqueLoadSensor.tau "Torque of mechanical load";
   Modelica.SIunits.Power powerLoad = powerLoadSensor.power
     "Power of mechanical load";
@@ -84,7 +84,7 @@ equation
             fillPattern =                                                                                                   FillPattern.HorizontalCylinder, fillColor = {175, 175, 175}, textString = "w"), Text(extent = {{-150, 120}, {150, 80}}, textString = "%name", lineColor = {0, 0, 255}), Line(points = {{-100, 0}, {-60, 0}}, color = {0, 0, 0}, smooth = Smooth.None)}),
     Documentation(info="<html>
 <p>This is an idealized angular speed controlled electric machine model. 
-The actual angular speed of the <b>electric machine</b> can be adjusted by means of the signal input. 
+The actual angular speed of the <em>electric machine</em> can be adjusted by means of the signal input. 
 Make sure that speed discontinuouties do not occur.</p>
 
 <p>This machine model considers the following effects:</p>
