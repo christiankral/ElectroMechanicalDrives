@@ -16,5 +16,7 @@ In this model considers the inertial mass <code>m</code> including the following
 <li>Rolling and friction force determined by friction coefficient <code>mu</code></li>
 <li>Sticking frcition determined by coefficient <code>peak*mu</code></li>
 </ul>
+<p>This model is extended by <a href=\"modelica://ElectroMechanicalDrives.Components.Vehicles\">vehicle</a> models which also consider
+athmospheric friction and optional electric drives. The vehicle models do <em>not</em> consider sticking friction, though.</p>
 </html>"));
 end MassStickingFriction;

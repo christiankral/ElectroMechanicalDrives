@@ -12,5 +12,7 @@ In this model considers the inertial mass <code>m</code> including the following
 <li><a href=\"modelica://ElectroMechanicalDrives.Components.Translational.RollingFriction\">Rolling friction</a> 
     force determined by friction coefficient <code>mu</code></li>
 </ul>
+<p>This model is extended by <a href=\"modelica://ElectroMechanicalDrives.Components.Vehicles\">vehicle</a> models which also consider
+athmospheric friction and optional electric drives.</p>
 </html>"));
 end MassFriction;
