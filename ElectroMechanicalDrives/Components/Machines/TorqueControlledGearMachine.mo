@@ -1,12 +1,12 @@
 within ElectroMechanicalDrives.Components.Machines;
 model TorqueControlledGearMachine "Signal torque input machine including loss, inertia and gear"
   extends ElectroMechanicalDrives.Icons.GearMachine;
-  Modelica.Mechanics.Rotational.Interfaces.Flange_b flange annotation(Placement(transformation(extent = {{90, -10}, {110, 10}})));
+  Modelica.Mechanics.Rotational.Interfaces.Flange_b flange "Load flange"
+                                                           annotation(Placement(transformation(extent = {{90, -10}, {110, 10}})));
   parameter Real ratio = 1
-    "Transmission ratio of gear (w_machine/w_load)";
+    "Transmission ratio of gear (wMachine/wLoad)";
   parameter Real efficiency = 1 "Efficiency of gear";
-  parameter Modelica.SIunits.Inertia J = 0
-    "Total inertia of machine w.r.t machine speed"                                        annotation(Evaluate = true);
+  parameter Modelica.SIunits.Inertia J = 0 "Total inertia of machine w.r.t machine speed" annotation(Evaluate = true);
 
   parameter Boolean useFieldWeakening = false
     "True, if field weakening is considered";
@@ -15,30 +15,27 @@ model TorqueControlledGearMachine "Signal torque input machine including loss, i
   parameter Modelica.SIunits.AngularVelocity wBase = Modelica.Constants.inf
     "Base angular frequency"  annotation(Dialog(enable=useFieldWeakening));
 
-  Modelica.SIunits.AngularVelocity w_load "Angular velcocity";
-  Modelica.SIunits.AngularVelocity w_machine "Internal angular velcocity";
-  Modelica.SIunits.Angle phi_load
-    "Absolute rotation angle of load flange";
-  Modelica.SIunits.Angle phi_machine "Absolute rotation angle of machine";
-  Modelica.SIunits.AngularAcceleration a_load
-    "Absolute rotational acceleration of load flange";
-  Modelica.SIunits.AngularAcceleration a_machine
-    "Absolute rotational acceleration of machine";
-  Modelica.Blocks.Interfaces.RealInput tau_ref(unit = "N.m")
-    "Reference torque as input signal"                                                          annotation(Placement(transformation(extent = {{-140, -20}, {-100, 20}}, rotation = 0)));
-  Modelica.SIunits.AngularVelocity wLoad= speedLoadSensor.w "Speed of mechanical load";
-  Modelica.SIunits.Torque tauLoad = torqueLoadSensor.tau "Torque of mechanical load";
-  Modelica.SIunits.Power powerLoad = powerLoadSensor.power
-    "Power of mechanical load";
-  Modelica.SIunits.Torque tauShaft = torqueShaftSensor.tau
-    "Torque of machine shaft (considering inertia)";
-  Modelica.SIunits.Power powerShaft = powerShaftSensor.power
-    "Power of electric machine shaft (considering inertia)";
+  Modelica.Blocks.Interfaces.RealInput tau_ref(unit = "N.m") "Reference torque as input signal"                                                          annotation(Placement(transformation(extent = {{-140, -20}, {-100, 20}}, rotation = 0)));
+
+  Modelica.SIunits.Angle phiMachine "Absolute rotation angle of machine";
   Modelica.SIunits.AngularVelocity wMachine = speedMachineSensor.w "Speed of electric machine";
-  Modelica.SIunits.Torque tauMachine = torqueMachineSensor.tau
-    "Total electromagnetic torque of electric machine";
-  Modelica.SIunits.Power powerMachine = powerMachineSensor.power
-    "Total electromagnetic power of electric machine";
+  Modelica.SIunits.AngularAcceleration aMachine "Absolute rotational acceleration of machine";
+  Modelica.SIunits.Torque tauMachine = torqueMachineSensor.tau "Total electromagnetic torque of electric machine";
+  Modelica.SIunits.Power powerMachine = powerMachineSensor.power "Total electromagnetic power of electric machine";
+
+  Modelica.SIunits.Angle phiLoad "Absolute rotation angle of load flange";
+  Modelica.SIunits.AngularVelocity wLoad= speedLoadSensor.w "Speed of mechanical load";
+  Modelica.SIunits.AngularAcceleration aLoad "Absolute rotational acceleration of load flange";
+  Modelica.SIunits.Torque tauLoad = torqueLoadSensor.tau "Torque of mechanical load";
+  Modelica.SIunits.Power powerLoad = powerLoadSensor.power "Power of mechanical load";
+
+  Modelica.SIunits.Angle phiShaft = phiMachine "Absolute rotation angle";
+  Modelica.SIunits.AngularVelocity wShaft = wMachine "Angular velcocity";
+  Modelica.SIunits.AngularAcceleration aShaft = aMachine  "Absolute rotational acceleration";
+  Modelica.SIunits.Torque tauShaft = torqueShaftSensor.tau "Torque of machine shaft (considering inertia)";
+  Modelica.SIunits.Power powerShaft = powerShaftSensor.power "Power of electric machine shaft (considering inertia)";
+
+
   Modelica.Mechanics.Rotational.Sources.Torque torque annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=270,
@@ -65,13 +62,11 @@ model TorqueControlledGearMachine "Signal torque input machine including loss, i
     annotation (Placement(transformation(extent={{80,-10},{60,10}})));
 equation
   // Machine equations
-  phi_machine = idealGear.flange_a.phi;
-  w_machine = der(phi_machine);
-  a_machine = der(w_machine);
+  phiMachine = idealGear.flange_a.phi;
+  aMachine = der(wMachine);
   // Load equations
-  phi_load = flange.phi;
-  w_load = der(phi_load);
-  a_load = der(w_load);
+  phiLoad = flange.phi;
+  aLoad = der(wLoad);
   connect(torqueMachineSensor.flange_b, inertia.flange_a) annotation(Line(points = {{-70, -70}, {-70, -80}, {-60, -80}}, color = {0, 0, 0}, smooth = Smooth.None));
   connect(powerMachineSensor.flange_b, torqueMachineSensor.flange_a) annotation(Line(points = {{-70, -40}, {-70, -50}}, color = {0, 0, 0}, smooth = Smooth.None));
   connect(inertia.flange_b, torqueShaftSensor.flange_a) annotation(Line(points = {{-40, -80}, {-30, -80}}, color = {0, 0, 0}, smooth = Smooth.None));
@@ -97,14 +92,48 @@ equation
             fillPattern =                                                                                                   FillPattern.HorizontalCylinder, extent = {{-10, -10}, {10, 10}}), Text(extent = {{-140, 60}, {-100, 20}}, lineColor = {0, 0, 0},
             fillPattern =                                                                                                   FillPattern.HorizontalCylinder, fillColor = {175, 175, 175}, textString = "tau"), Text(extent = {{-150, 120}, {150, 80}}, textString = "%name", lineColor = {0, 0, 255}), Line(points = {{-100, 0}, {-60, 0}}, color = {0, 0, 0}, smooth = Smooth.None)}),
     Documentation(info="<html>
-<p>This is an idealized torque controlled electric machine model. 
-The actual torque of the <b>electric machine</b> can be adjusted by means of the signal input.</p>
+<p>This is an idealized torque controlled electric machine model with integrated gear considering constant gear efficiency. 
+The actual torque of the <em>electric machine</em> can be adjusted by means of the signal input.</p>
+
+<p>
+<img src=\"modelica://ElectroMechanicalDrives/Resources/Images/GearMachine.png\">
+<br>
+Fig. 1: Principle of controlled machine model with gear and gear efficiency
+</p>
+
+<p>The following variables are calculated in the model</p>
+<ul>
+<li>Machine</li>
+    <ul>
+    <li><code>aMachine</code> = angular acceleration of machine</li>
+    <li><code>phiMachine</code> = mechanical angle of machine</li>
+    <li><code>wMachine</code> = angular velocity of machine</li>
+    <li><code>tauMachine</code> = (electrical) torque of machine</li>
+    <li><code>powerMachine</code> = power of machine</li>
+    </ul>
+<li>Shaft</li>
+    <ul>
+    <li><code>aShaft</code> = angular acceleration of shaft</li>
+    <li><code>phiShaft</code> = mechanical angle of shaft</li>
+    <li><code>wShaft</code> = angular velocity of shaft</li>
+    <li><code>tauShaft</code> = torque of shaft</li>
+    <li><code>powerShaft</code> = power of shaft</li>
+    </ul>
+<li>Load</li>
+    <ul>
+    <li><code>aLoad</code> = angular acceleration of load</li>
+    <li><code>phiLoad</code> = mechanical angle of load</li>
+    <li><code>wLoad</code> = angular velocity of load</li>
+    <li><code>tauLoad</code> = torque of load</li>
+    <li><code>powerLoad</code> = power of load</li>
+    </ul>
+</ul>
 
 <p>This machine model considers the following effects:</p>
 <ul>
-<li>Internal gear ratio to produce more output torque</li>
+<li>Internal gear ratio to produce a higher output torque</li>
 <li>Total mechanical efficiency due to friction and gear</li>
-<li>Inertial with respect to electric machine side</li>
+<li>Inertia with respect to electric machine side</li>
 <li>Optional field weaking is considered by<li>
     <ul>
     <li>the maximum torque of the machine, <code>tauLimit</code> for <code>w &le; wBase</code></li>

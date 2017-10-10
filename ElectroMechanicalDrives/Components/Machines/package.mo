@@ -6,4 +6,7 @@ package Machines "Machines"
 
 
 
+annotation (Documentation(info="<html>
+<p>This package provied simple electric machine models with and without electrical connectors</p>
+</html>"));
 end Machines;
