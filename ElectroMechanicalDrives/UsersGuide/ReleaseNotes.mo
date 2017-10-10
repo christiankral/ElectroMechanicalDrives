@@ -5,9 +5,17 @@ class ReleaseNotes "Release Notes"
 
 <h5>Version v1.1.0, 2017-10-10</h5>
 <ul>
-<li>Improved documentation of machine models</li>
+<li>Improved documentation</li>
 <li>Fixed duplicate variables of machine models</li>
 <li>Added inertia to machine models (without gear)</li>
+<li>Removed obsolete models</li>
+<ul><li>ElectroMechanicalDrives.Components.Internal.Obsolete.MassFullFrictionGradient</li>
+    <li>ElectroMechanicalDrives.Components.Internal.Obsolete.MassFullFrictionVariableGradient</li>
+    <li>ElectroMechanicalDrives.Components.Internal.Obsolete.WheelFriction</li>
+    <li>ElectroMechanicalDrives.Components.Internal.Obsolete.Translational.ConstantEfficiencyControlled</li>
+    <li>ElectroMechanicalDrives.Components.Internal.Obsolete.Rotational.ConstantEfficiencyControlled</li>
+    <li>ElectroMechanicalDrives.Components.Internal.VariableDamper</li>
+</ul>
 </ul>
 
 <p>As of version 1.0.0 no more non-backwards compatible changes will be introduced</p>
