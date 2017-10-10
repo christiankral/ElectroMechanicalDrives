@@ -17,9 +17,9 @@ class ReleaseNotes "Release Notes"
     <li>ElectroMechanicalDrives.Components.Internal.VariableDamper</li>
     <li>ElectroMechanicalDrives.Components.Internal.Blocks.ConditionalAngle</li>
 </ul>
+<li>Updated icons</li>
+<li>Re-structured battery model by using a partial battery model</p>
 </ul>
-
-<p>As of version 1.0.0 no more non-backwards compatible changes will be introduced</p>
 
 <h5>Version v1.0.0, 2017-10-01</h5>
 <ul>

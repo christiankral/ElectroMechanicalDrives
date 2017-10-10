@@ -13,9 +13,9 @@ partial model GearMachine "Electric machine"
             fillPattern =                                                                                                   FillPattern.HorizontalCylinder, fillColor = {95, 95, 95}), Rectangle(extent = {{22, 16}, {42, -16}}, lineColor = {0, 0, 0},
             fillPattern =                                                                                                   FillPattern.HorizontalCylinder, fillColor = {215, 215, 215}), Rectangle(extent = {{22, 36}, {42, 16}}, lineColor = {0, 0, 0},
             fillPattern =                                                                                                   FillPattern.HorizontalCylinder, fillColor = {215, 215, 215}), Rectangle(extent = {{18, 10}, {22, -10}}, lineColor = {0, 0, 0},
-            fillPattern =                                                                                                   FillPattern.HorizontalCylinder, fillColor = {95, 95, 95})}), Documentation(info = "<html>
+            fillPattern =                                                                                                   FillPattern.HorizontalCylinder, fillColor = {95, 95, 95})}), Documentation(info="<html>
 <p>
-This icon is designed for a <b>FundamentalWave machine</b> model.
+This icon is designed for a <b>ElectroMechanicalDrives</b> machine model with gear.
 </p>
 </html>"));
 end GearMachine;
