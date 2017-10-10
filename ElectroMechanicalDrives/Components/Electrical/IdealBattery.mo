@@ -1,7 +1,16 @@
 within ElectroMechanicalDrives.Components.Electrical;
 model IdealBattery "Re-chargeable ideal battery without loss"
-  extends ElectroMechanicalDrives.Components.Electrical.Battery(final RCell=0);
-  annotation(defaultComponentName="battery",Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}})),           Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Text(extent = {{-120, 50}, {-20, 0}}, lineColor = {0, 0, 255}, textString = "+"), Line(points = {{-90, 0}, {-10, 0}}, color = {0, 0, 255}), Line(points = {{-10, 60}, {-10, -60}}, color = {0, 0, 255}), Line(points = {{10, 30}, {10, -30}}, color = {0, 0, 255}), Line(points = {{10, 0}, {90, 0}}, color = {0, 0, 255}), Text(extent = {{20, 50}, {120, 0}}, lineColor = {0, 0, 255}, textString = "-"), Text(extent = {{-150, 140}, {150, 100}}, lineColor = {0, 0, 255}, textString = "%name")}),
+  extends ElectroMechanicalDrives.Interfaces.PartialBattery(final RCell=0);
+  annotation(defaultComponentName="battery",Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}})),           Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={
+        Line(points={{-90,30},{-70,30}}, color={28,108,200}),
+        Line(points={{-80,20},{-80,40}}, color={28,108,200}),
+        Line(points={{60,30},{80,30}}, color={28,108,200}),
+        Text(extent={{-150,110},{150,70}},
+        lineColor = {0, 0, 255}, textString = "%name"),
+        Line(points={{-90,0},{-10,0}},     color = {0, 0, 255}),
+        Line(points={{-10,60},{-10,-60}},    color = {0, 0, 255}),
+        Line(points={{10,30},{10,-30}},      color = {0, 0, 255}),
+        Line(points={{10,0},{90,0}},      color = {0, 0, 255})}),
     Documentation(info="<html>
 <p>This linear battery model is based on a linear capacitor which can be charged and discharged. 
 The battery cell is parameterized by the upper and lower operationg voltage limit and the total
