@@ -83,6 +83,6 @@ equation
 <li><b>side 2</b> must be connected with load</li>
 </ul>
 <p>Signal input <code>i2</code> is the current flowing into the positive pin of side 2. 
-In order to operate side 2 as a load the signal input current <code>i2</code> must be <b>negative</b>.</p>
+In order to operate side 2 as a load the signal input current <code>i2</code> must be <strong>negative</strong>.</p>
 </html>"));
 end IdealCurrentControlledConverter;

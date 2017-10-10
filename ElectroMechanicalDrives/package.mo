@@ -13,6 +13,7 @@ package ElectroMechanicalDrives "Library for the simulation of electro mechanica
 
 
   annotation(version = "master", versionBuild = 1, versionDate = "2017-10-09", uses(Modelica(version = "3.2.2")),
-  Documentation(info="x<html>
+  Documentation(info="<html>
+<p>The ElectroMechanicalDrives library is an educational library to investigate simple industrial drives and electric vehicles</p>
 </html>"));
 end ElectroMechanicalDrives;

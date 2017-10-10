@@ -3,6 +3,13 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<h5>Version v1.1.0, 2017-10-10</h5>
+<ul>
+<li>Improved documentation of machine models</li>
+<li>Fixed duplicate variables of machine models</li>
+<li>Added inertia to machine models (without gear)</li>
+</ul>
+
 <p>As of version 1.0.0 no more non-backwards compatible changes will be introduced</p>
 
 <h5>Version v1.0.0, 2017-10-01</h5>
