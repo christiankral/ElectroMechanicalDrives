@@ -9,8 +9,8 @@ equation
   annotation(Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Ellipse(extent = {{-100, 100}, {100, -100}}, lineColor=
               {95,95,95}),                                                                                                                                                               Text(extent = {{-60, 60}, {60, -60}}, lineColor=
               {95,95,95},
-          textString="w0=%w0")}),                                                                                                                                                                                                        Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics),
+          textString="w0=%w0")}),                                                                                                                                                                                                        Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}})),
     Documentation(info="<html>
-Sets initial velocity <code>w0</codew> at flange.
+Sets initial velocity <code>w0</code> at flange.
 </html>"));
 end InitialVelocity;

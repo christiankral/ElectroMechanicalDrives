@@ -6,17 +6,11 @@ model VariableDamper "Linear 1D rotational damper"
 equation
   tau = d * w_rel;
   lossPower = tau * w_rel;
-  annotation(Documentation(info = "<html>
+  annotation(Documentation(info="<html>
 <p>
-<b>Linear, velocity dependent damper</b> element. It can be either connected
+<em>Linear, velocity dependent damper</em> element with signal input. It can be either connected
 between an inertia or gear and the housing (component Fixed), or
-between two inertia/gear elements.
-</p>
-
-<p>
-See also the discussion
-<a href=\"modelica://Modelica.Mechanics.Rotational.UsersGuide.StateSelection\">State Selection</a>
-in the User's Guide of the Rotational library.
+between two inertia/gear elements. The singal input adjusts the actual damping of the element.
 </p>
 </html>"),
      Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Line(points = {{-90, 0}, {-60, 0}}, color = {0, 0, 0}), Line(points = {{-60, -30}, {-60, 30}}, color = {0, 0, 0}), Line(points = {{-60, -30}, {60, -30}}, color = {0, 0, 0}), Line(points = {{-60, 30}, {60, 30}}, color = {0, 0, 0}), Rectangle(extent = {{-60, 30}, {30, -30}}, lineColor = {0, 0, 0}, fillColor = {192, 192, 192},

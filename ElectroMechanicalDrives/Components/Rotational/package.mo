@@ -6,4 +6,7 @@ package Rotational "Rotational components"
 
 
 
+annotation (Documentation(info="<html>
+<p>Rotational components</p>
+</html>"));
 end Rotational;

@@ -11,5 +11,6 @@ package Translational "Translational mechanical components"
 
 
   annotation (Documentation(info="<html>
+<p>Translational components</p>
 </html>"));
 end Translational;
