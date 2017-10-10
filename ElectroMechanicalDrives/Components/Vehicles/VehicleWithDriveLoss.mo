@@ -83,5 +83,7 @@ or the signal input <code>variableAngle</code>.</li>
 <li><a href=\"modelica://ElectroMechanicalDrives.Components.Electrical.IdealCurrentControlledConverter\">Ideal DC/DC converter</a></li>
 <li><a href=\"modelica://ElectroMechanicalDrives.Components.Electrical.Battery\">Re-chargeable battery</a> with internal resistor</li>
 </ul>
+<h5>Note</h5>
+<p>Do not change <code>v_linear</code> except this is required for numerical reasons</p>
 </html>"));
 end VehicleWithDriveLoss;

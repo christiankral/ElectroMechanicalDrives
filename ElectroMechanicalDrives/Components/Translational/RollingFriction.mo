@@ -5,7 +5,7 @@ model RollingFriction
   parameter Modelica.SIunits.Force f_constant(final min = 0)
     "Constant friction force";
   parameter Modelica.SIunits.Velocity v_linear(final min = 0) = 0.01
-    "Speed limit of constant friction";
+    "Speed limit of constant friction (do not change unless required)";
   Modelica.SIunits.Velocity v "Speed";
   extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
 equation

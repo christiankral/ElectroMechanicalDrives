@@ -11,5 +11,7 @@ model Vehicle "Vehicle with friction"
 or the signal input <code>variableAngle</code>.</li>
 <li>The vehicle has to translational sides and two roational axes to be driven</li>
 </ul>
+<h5>Note</h5>
+<p>Do not change <code>v_linear</code> except this is required for numerical reasons</p>
 </html>"));
 end Vehicle;

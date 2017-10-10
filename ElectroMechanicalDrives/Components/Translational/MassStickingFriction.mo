@@ -18,5 +18,7 @@ In this model considers the inertial mass <code>m</code> including the following
 </ul>
 <p>This model is extended by <a href=\"modelica://ElectroMechanicalDrives.Components.Vehicles\">vehicle</a> models which also consider
 athmospheric friction and optional electric drives. The vehicle models do <em>not</em> consider sticking friction, though.</p>
+<h5>Note</h5>
+<p>Do not change <code>v_linear</code> except this is required for numerical reasons</p>
 </html>"));
 end MassStickingFriction;
