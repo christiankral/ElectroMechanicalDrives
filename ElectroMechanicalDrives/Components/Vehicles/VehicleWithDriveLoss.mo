@@ -75,6 +75,9 @@ equation
 <li><a href=\"modelica://ElectroMechanicalDrives.Components.Translational.RollingFriction\">Rolling friction</a></li>
 <li><a href=\"modelica://ElectroMechanicalDrives.Components.Translational.AthmosphericFriction\">Athmospheric friction</a></li>
 <li>The effect of effective mass increase due to inertias</li>
+<li>The impact of going up or down an inclined way by means of the constant angle parameter <code>constantAnge</code>
+or the signal input <code>variableAngle</code>.</li>
+<li>The vehicle has to translational sides and two roational axes to be driven</li>
 <li>Ideal gear</li>
 <li><a href=\"modelica://ElectroMechanicalDrives.Components.Machines.IdealCurrentFedMachine\">Ideal DC machine</a> including armature resistor considering field weakening range</li>
 <li><a href=\"modelica://ElectroMechanicalDrives.Components.Electrical.IdealCurrentControlledConverter\">Ideal DC/DC converter</a></li>

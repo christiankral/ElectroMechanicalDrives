@@ -7,6 +7,9 @@ model Vehicle "Vehicle with friction"
 <li><a href=\"modelica://ElectroMechanicalDrives.Components.Translational.RollingFriction\">Rolling friction</a></li>
 <li><a href=\"modelica://ElectroMechanicalDrives.Components.Translational.AthmosphericFriction\">Athmospheric friction</a></li>
 <li>The effect of effective mass increase due to inertias</li>
+<li>The impact of going up or down an inclined way by means of the constant angle parameter <code>constantAnge</code>
+or the signal input <code>variableAngle</code>.</li>
+<li>The vehicle has to translational sides and two roational axes to be driven</li>
 </ul>
 </html>"));
 end Vehicle;
