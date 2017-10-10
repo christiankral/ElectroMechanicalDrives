@@ -7,10 +7,21 @@ model IdealBattery "Re-chargeable ideal battery without loss"
         Line(points={{60,30},{80,30}}, color={28,108,200}),
         Text(extent={{-150,110},{150,70}},
         lineColor = {0, 0, 255}, textString = "%name"),
-        Line(points={{-90,0},{-10,0}},     color = {0, 0, 255}),
-        Line(points={{-10,60},{-10,-60}},    color = {0, 0, 255}),
-        Line(points={{10,30},{10,-30}},      color = {0, 0, 255}),
-        Line(points={{10,0},{90,0}},      color = {0, 0, 255})}),
+        Line(points={{40,0},{90,0}},      color = {0, 0, 255}),
+        Rectangle(extent={{-30,20},{40,-20}}, lineColor={0,0,255}),
+        Rectangle(extent={{-40,12},{-30,-12}}, lineColor={0,0,255}),
+        Rectangle(extent={{-20,12},{-10,-12}}, lineColor={0,0,255}),
+        Rectangle(
+          extent={{0,12},{10,-12}},
+          lineColor={0,0,255},
+          fillColor={0,0,255},
+          fillPattern=FillPattern.Solid),
+        Rectangle(
+          extent={{20,12},{30,-12}},
+          lineColor={0,0,255},
+          fillColor={0,0,255},
+          fillPattern=FillPattern.Solid),
+        Line(points={{-90,0},{-40,0}},    color = {0, 0, 255})}),
     Documentation(info="<html>
 <p>This linear battery model is based on a linear capacitor which can be charged and discharged. 
 The battery cell is parameterized by the upper and lower operationg voltage limit and the total

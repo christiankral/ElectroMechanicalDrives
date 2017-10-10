@@ -3,14 +3,25 @@ model Battery "Re-chargeable battery with internal resistor"
   extends ElectroMechanicalDrives.Interfaces.PartialBattery;
   annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}})),
     Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={
-        Line(points = {{-20, 0}, {20, 0}}, color = {0, 0, 255}),
-        Line(points = {{20, 60}, {20, -60}}, color = {0, 0, 255}),
-        Line(points = {{40, 30}, {40, -30}}, color = {0, 0, 255}),
-        Line(points = {{40, 0}, {90, 0}}, color = {0, 0, 255}),
+        Line(points={{-20,0},{0,0}},       color = {0, 0, 255}),
+        Line(points={{80,0},{90,0}},      color = {0, 0, 255}),
         Rectangle(
           extent={{-20,-12},{-70,12}},
           lineColor={0,0,255}),
-        Line(points = {{-70, 0}, {-90, 0}}, color = {0, 0, 255}, smooth = Smooth.None)}),
+        Line(points = {{-70, 0}, {-90, 0}}, color = {0, 0, 255}, smooth = Smooth.None),
+        Rectangle(extent={{10,20},{80,-20}}, lineColor={0,0,255}),
+        Rectangle(extent={{0,12},{10,-12}}, lineColor={0,0,255}),
+        Rectangle(extent={{20,12},{30,-12}}, lineColor={0,0,255}),
+        Rectangle(
+          extent={{40,12},{50,-12}},
+          lineColor={0,0,255},
+          fillColor={0,0,255},
+          fillPattern=FillPattern.Solid),
+        Rectangle(
+          extent={{60,12},{70,-12}},
+          lineColor={0,0,255},
+          fillColor={0,0,255},
+          fillPattern=FillPattern.Solid)}),
     Documentation(info="<html>
 <p>This linear battery model is based on a linear capacitor which can be charged and discharged. 
 The battery cell is parameterized by the upper and lower operationg voltage limit and the total
