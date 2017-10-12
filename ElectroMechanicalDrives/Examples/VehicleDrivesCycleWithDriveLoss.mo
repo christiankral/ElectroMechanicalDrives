@@ -22,7 +22,8 @@ model VehicleDrivesCycleWithDriveLoss "Driving cycle"
     allowOvercharge=true,
     allowUndercharge=true,
     Ra=0.02,
-    RCell=0.43E-3)     annotation (Placement(transformation(extent={{60,40},{80,60}})));
+    RCell=0.43E-3,
+    s(start=0,fixed=true))     annotation (Placement(transformation(extent={{60,40},{80,60}})));
   Modelica.Blocks.Continuous.Integrator integrator(k=1000)
     annotation (Placement(transformation(extent={{40,-10},{60,10}})));
 equation
@@ -45,5 +46,14 @@ equation
     experiment(
       StopTime=13200,
       Interval=1,
-      __Dymola_Algorithm="Radau"));
+      __Dymola_Algorithm="Radau"),
+    Documentation(info="<html>
+<p>This example extends 
+<a href=\"modelica://ElectroMechanicalDrives.Examples.VehicleDriveCycleWithDrive\">VehicleDriveCycleWithDrive</a>
+by:</p>
+<ul>
+<li>Additional cell resistance of battery</li>
+<li>Additional armature resistance of electric DC machine</li>
+</ul>
+</html>"));
 end VehicleDrivesCycleWithDriveLoss;

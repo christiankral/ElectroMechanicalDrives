@@ -19,6 +19,8 @@ model PartialVehicle "Partial vehicle with friction"
   Modelica.SIunits.Angle phi "Angul of wheel(s)";
   Modelica.SIunits.Force f_a = flangeT_a.f "Force of flangeT a";
   Modelica.SIunits.Force f_b = flangeT_b.f "Force of flangeT b";
+  Modelica.SIunits.Force fRollingFriction = rollingFriction.f_friction "Rolling friction force";
+  Modelica.SIunits.Force fAtmosphericFriction = atmosphericFriction.f "Atmospheric friction force";
   Modelica.SIunits.Torque tau_a = flangeR_a.tau "Torque of flangeR_a";
   Modelica.SIunits.Torque tau_b = flangeR_b.tau "Torque of flangeR_b";
 

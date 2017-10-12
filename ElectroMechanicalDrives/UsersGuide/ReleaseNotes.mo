@@ -3,6 +3,14 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<h5>Version v1.2.0, 2017-10-12</h5>
+<ul>
+<li>Improved documentation of examples</li>
+<li>Set all initial conditions of examples</li>
+<li>Added alias variables to partial vehicle model to better identify friction forces</li>
+<li>Improved simulation tolerance and reduced plotting intervals of examples</li>
+</ul>
+
 <h5>Version v1.1.0, 2017-10-10</h5>
 <ul>
 <li>Improved documentation</li>

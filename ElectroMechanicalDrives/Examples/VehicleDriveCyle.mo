@@ -19,5 +19,18 @@ equation
       points={{40,0},{60,0}},
       color={0,127,0},
       smooth=Smooth.None));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,-100},{100,100}}),      graphics), Icon(graphics), experiment(StopTime = 1200, Interval = 0.1, Tolerance = 1e-06));
+  annotation(Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,-100},{100,100}}),      graphics), Icon(graphics), experiment(StopTime = 1200, Interval = 0.1, Tolerance = 1e-06),
+    Documentation(info="<html>
+<p>This examples demonstrate a vehicle performing a NDEC drive cycle, powered by the external <code>speed</code> source.
+
+<p>Investigate as a function of time:</p>
+<ul>
+<li><code>vehicle.s</code> = vehicle distance</li>
+<li><code>vehicle.v</code> = vehicle velocity</li>
+<li><code>forceSensor.f</code> = traction force required to move the vehicle</li>
+<li><code>powerSensor.power</code> = power required to move the vehicle</li>
+<li><code>energy.y</code> = energy required to move the vehicle over the NEDC drive cycle</li>
+</ul>
+
+</html>"));
 end VehicleDriveCyle;

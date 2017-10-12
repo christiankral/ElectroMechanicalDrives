@@ -41,5 +41,23 @@ equation
     experiment(
       StopTime=13200,
       Interval=1,
-      __Dymola_Algorithm="Radau"));
+      __Dymola_Algorithm="Radau"),
+    Documentation(info="<html>
+<p>This example shows a self-powered electric vehicle which performs eleven NEDC drive cycles. 
+The totally covered distance is 117.85 km. The battery is almost fully discharged at the end
+of all driving cycles.</p>
+
+<p>Investigate as a function of time:</p>
+<ul>
+<li><code>vehicle.s</code> = vehicle distance</li>
+<li><code>vehicle.v</code> = vehicle velocity</li>
+<li><code>vehicle.battery.V1Cell</code> = charge voltage, <code>vehicle.battery.V0Cell</code> = cut off voltage, 
+    <code>vehicle.battery.vCell</code> = actual cell voltage</code></li>
+<li><code>vehicle.battery.iCell</code> = cell current (positive = charged, negative = discharged)</li>
+<li><code>vehicle.machine.power</code> = electric DC machine power</li>
+<li><code>vehicle.machine.tauElectrical</code> = electrical torque of the electric DC machine</li>
+<li><code>vehicle.machine.v</code> = artmature voltage of electrical DC machine (shows maximum power of 125 V)</li>
+</ul>
+
+</html>"));
 end VehicleDriveCycleWithDrive;
