@@ -23,7 +23,10 @@ equation
       smooth=Smooth.None));
   annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Text(extent = {{-100, 80}, {100, 60}}, lineColor={0,0,255},
           textString="w_base/w_max= 0.25"),                                                                                                                                                                           Text(extent = {{-100, 50}, {100, 30}}, lineColor = {0, 0, 255}, textString = "full overload u = 1.4")}),
-    experiment(StopTime=200, Interval=0.1),
+    experiment(
+      StopTime=200,
+      Interval=0.1,
+      Tolerance=1e-06),
     Documentation(info="<html>
 <p>Acceleration test with 140% of nominal current. The electric machine is different from
 <a href=\"modelica://ElectroMechanicalDrives.Examples.VehicleFullAcceleration\">VehicleFullAcceleration</a>: </p>

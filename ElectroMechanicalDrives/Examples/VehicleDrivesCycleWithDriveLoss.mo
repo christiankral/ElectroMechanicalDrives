@@ -46,6 +46,7 @@ equation
     experiment(
       StopTime=13200,
       Interval=1,
+      Tolerance=1e-06,
       __Dymola_Algorithm="Radau"),
     Documentation(info="<html>
 <p>This example extends 

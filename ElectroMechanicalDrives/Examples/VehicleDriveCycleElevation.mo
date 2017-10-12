@@ -37,7 +37,10 @@ equation
 connect(combiTable1Ds.y[1], vehicle.variableAngle) annotation (Line(points=
         {{1,-50},{26,-50},{48,-50},{48,-6},{58,-6}}, color={0,0,127}));
   annotation(Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,
-          -100},{100,100}})),                                                                       Icon(graphics), experiment(StopTime = 6000, Interval = 0.1, Tolerance = 1e-06),
+          -100},{100,100}})),                                                                       Icon(graphics), experiment(
+      StopTime=6000,
+      Interval=0.1,
+      Tolerance=1e-06),
     Documentation(info="<html>
 <p>This example extends 
 <a href=\"modelica://ElectroMechanicalDrives.Examples.VehicleDriveCycleWithDrive\">VehicleDriveCycleWithDrive</a>

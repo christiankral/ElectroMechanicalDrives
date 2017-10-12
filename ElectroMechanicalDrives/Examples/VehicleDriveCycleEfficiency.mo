@@ -27,7 +27,10 @@ equation
       points={{70,0},{76,0},{76,6.66134e-16},{80,6.66134e-16}},
       color={0,127,0},
       smooth=Smooth.None));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,-100},{100,100}}),      graphics), Icon(graphics), experiment(StopTime = 1200, Interval = 0.1, Tolerance = 1e-06),
+  annotation(Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,-100},{100,100}}),      graphics), Icon(graphics), experiment(
+      StopTime=1200,
+      Interval=0.1,
+      Tolerance=1e-06),
     Documentation(info="<html>
 <p>This example extends 
 <a href=\"modelica://ElectroMechanicalDrives.Examples.VehicleDriveCycle\">VehicleDriveCycle</a>

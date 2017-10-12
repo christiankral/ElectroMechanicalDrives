@@ -33,7 +33,10 @@ equation
       smooth=Smooth.None));
   connect(locomotive.flangeT_b, forceSensorLW.flange_a) annotation (Line(points={{40,0},{50,0}}, color={0,127,0}));
   connect(forceSensorLW.flange_b, wagons.flangeT_a) annotation (Line(points={{70,0},{80,0}}, color={0,127,0}));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,-100},{100,100}})),                Icon(graphics), experiment(StopTime = 1200, Interval = 0.1, Tolerance = 1e-06),
+  annotation(Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,-100},{100,100}})),                Icon(graphics), experiment(
+      StopTime=1200,
+      Interval=0.1,
+      Tolerance=1e-06),
     Documentation(info="<html>
 <p>This examples demonstrate a locomotive plus several wagons performing a drive cycle, powered by the external <code>speed</code> source.
 
