@@ -1,5 +1,5 @@
 within ElectroMechanicalDrives.ComponentTesting;
-model TestIdealBattery
+model TestIdealBattery "Test ideal battery discharge"
   extends Modelica.Icons.Example;
   Components.Electrical.IdealBattery battery(V1Cell = 4, V0Cell = 3,                 ns = 10, np = 1,
     allowUndercharge=true,

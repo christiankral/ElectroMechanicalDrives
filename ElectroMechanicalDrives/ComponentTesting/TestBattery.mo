@@ -1,5 +1,5 @@
 within ElectroMechanicalDrives.ComponentTesting;
-model TestBattery
+model TestBattery "Test discharge of battery with internal resistor"
   extends Modelica.Icons.Example;
   Components.Electrical.Battery battery(V1Cell = 4, V0Cell = 3,                 ns = 10, np = 1,               RCell = 0.45E-3,
     allowUndercharge=true,
