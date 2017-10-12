@@ -6,7 +6,7 @@ model VehicleDriveCyle "Test of NEDC drive cycle of car"
   Modelica.Blocks.Sources.CombiTimeTable combiTimeTable(tableOnFile = true, tableName = "velocity", extrapolation = Modelica.Blocks.Types.Extrapolation.Periodic, fileName = fileName) annotation(Placement(transformation(extent = {{-100, -10}, {-80, 10}})));
   Modelica.Mechanics.Translational.Sources.Speed speed(exact = false) annotation(Placement(transformation(extent = {{-60, -10}, {-40, 10}})));
   Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensor annotation(Placement(transformation(extent = {{-20, 10}, {0, -10}})));
-  Modelica.Blocks.Continuous.Integrator energy annotation(Placement(transformation(extent = {{10, -10}, {-10, 10}}, rotation = 270, origin = {-10, 50})));
+  Modelica.Blocks.Continuous.Integrator energy(u(unit="W"),y(unit="J")) annotation(Placement(transformation(extent = {{10, -10}, {-10, 10}}, rotation = 270, origin = {-10, 50})));
   Modelica.Mechanics.Translational.Sensors.ForceSensor forceSensor annotation(Placement(transformation(extent = {{20, -10}, {40, 10}})));
   ElectroMechanicalDrives.Components.Vehicles.Vehicle vehicle(j=0.1)
     annotation (Placement(transformation(extent={{60,-10},{80,10}})));
