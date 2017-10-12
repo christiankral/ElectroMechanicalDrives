@@ -21,5 +21,8 @@ equation
   connect(machine.n, ground2.p) annotation(Line(points = {{20, -10}, {20, -40}}, color = {0, 0, 255}, smooth = Smooth.None));
   connect(machine.flange, inertia.flange_a) annotation(Line(points = {{30, 0}, {38, 0}}, color = {0, 0, 0}, smooth = Smooth.None));
   connect(inertia.flange_b, quadraticSpeedDependentTorque.flange) annotation(Line(points = {{58, 0}, {70, 0}}, color = {0, 0, 0}, smooth = Smooth.None));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Text(extent = {{-100, 80}, {100, 60}}, lineColor = {0, 0, 127}, textString = "with field weakening")}), experiment(StopTime = 10));
+  annotation(experiment(
+      Interval=1E-3,
+      Tolerance=1e-06,
+      StopTime=10),Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Text(extent = {{-100, 80}, {100, 60}}, lineColor = {0, 0, 127}, textString = "with field weakening")}));
 end IdealCurrentControlledMachine2;

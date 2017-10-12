@@ -46,5 +46,5 @@ equation
   connect(powerSensorLoad5.flange_b, friction5.flange_b) annotation(Line(points = {{30, -80}, {40, -80}}, color = {0, 127, 0}, smooth = Smooth.None));
   connect(powerSensorSupply5.flange_b, efficiency5.flange_a) annotation(Line(points = {{-30, -80}, {-20, -80}}, color = {0, 127, 0}, smooth = Smooth.None));
   connect(efficiency5.flange_b, powerSensorLoad5.flange_a) annotation(Line(points = {{0, -80}, {10, -80}}, color = {0, 127, 0}, smooth = Smooth.None));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), experiment(Interval = 0.001), __Dymola_experimentSetupOutput);
+  annotation(experiment(Interval = 0.001,Tolerance=1E-6),Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics));
 end EfficiencyFrictionCompare;

@@ -34,7 +34,7 @@ equation
           {-20,0},{-20,-40},{-2,-40}},                                                                                                   color = {0, 0, 127}, smooth = Smooth.None));
   connect(ramp.y, massFriction1.variableAngle) annotation (Line(points={{
           -39,0},{-30,0},{-20,0},{-20,26},{-2,26}}, color={0,0,127}));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,
+  annotation(experiment(StopTime=3, Tolerance=1e-06), Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,
             -100},{100,100}}),                                                                           graphics={  Text(extent = {{-90, 80}, {90, 60}}, lineColor=
               {255,0,0},
             fillPattern=FillPattern.VerticalCylinder,                                                                                                    fillColor=
@@ -43,5 +43,5 @@ equation
           textString="massFriction1 starts
 moving after overcoming sticktion"),
                                  Text(extent={{-90,-80},{90,-100}},      lineColor = {0, 0, 255},
-            fillPattern =                                                                                       FillPattern.VerticalCylinder, fillColor = {255, 255, 255}, fontSize = 16, textString = "massFriction2 starts moving immediately")}), experiment(StopTime = 3), __Dymola_experimentSetupOutput);
+            fillPattern =                                                                                       FillPattern.VerticalCylinder, fillColor = {255, 255, 255}, fontSize = 16, textString = "massFriction2 starts moving immediately")}));
 end MassFrictionangleCompare;

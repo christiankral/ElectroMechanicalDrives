@@ -19,6 +19,7 @@ equation
           -22,-30},{0,-30},{0,-12}}, color={0,0,127}));
   connect(ramp_tau.y, torqueLimiter.tau)
     annotation (Line(points={{-39,0},{-26,0},{-12,0}}, color={0,0,127}));
-  annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-            -100,-100},{100,100}})));
+  annotation (experiment(
+      Interval=0.0001,
+      Tolerance=1e-06),Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}})));
 end TestTorqueLimiter;

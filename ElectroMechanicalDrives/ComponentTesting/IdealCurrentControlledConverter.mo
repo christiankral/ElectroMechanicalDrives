@@ -16,5 +16,7 @@ equation
   connect(idealCurrentControlledConverter.dc_n2, resistor.n) annotation(Line(points = {{10, -6}, {20, -6}, {20, -20}, {40, -20}, {40, -10}}, color = {0, 0, 255}, smooth = Smooth.None));
   connect(resistor.n, ground2.p) annotation(Line(points = {{40, -10}, {40, -40}}, color = {0, 0, 255}, smooth = Smooth.None));
   connect(idealCurrentControlledConverter.i2, ramp.y) annotation(Line(points = {{0, -12}, {0, -39}}, color = {0, 0, 127}, smooth = Smooth.None));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics));
+  annotation(experiment(
+      Interval=1E-4,
+      Tolerance=1e-06),Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics));
 end IdealCurrentControlledConverter;

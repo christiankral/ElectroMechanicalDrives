@@ -20,13 +20,15 @@ equation
   connect(const.y, force2.f) annotation(Line(points = {{79, 4.44089e-16}, {70, 4.44089e-16}, {70, -30}, {52, -30}}, color = {0, 0, 127}, smooth = Smooth.None));
   connect(massFriction2.flange_b, force2.flange) annotation(Line(points = {{20, -30}, {30, -30}}, color = {0, 127, 0}, smooth = Smooth.None));
   connect(const.y, force1.f) annotation(Line(points = {{79, 0}, {70, 0}, {70, 30}, {52, 30}}, color = {0, 0, 127}, smooth = Smooth.None));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Text(extent = {{-100, 0}, {0, -60}}, lineColor = {0, 0, 255},
-            fillPattern =                                                                                                   FillPattern.VerticalCylinder, fillColor = {255, 255, 255}, fontSize = 16, textString = "Simplified friction model 
+  annotation(experiment(
+      Interval=1E-4,
+      Tolerance=1e-06),Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Text(extent = {{-100, 0}, {0, -60}}, lineColor = {0, 0, 255},
+            fillPattern = FillPattern.VerticalCylinder, fillColor = {255, 255, 255}, fontSize = 16, textString = "Simplified friction model 
 with linear region"),
-                  Text(extent = {{-100, 60}, {0, 0}}, lineColor = {255, 0, 0},
-            fillPattern =                                                                    FillPattern.VerticalCylinder, fillColor = {255, 255, 255}, fontSize = 16, textString = "Advanced friction model
+      Text(extent = {{-100, 60}, {0, 0}}, lineColor = {255, 0, 0},
+            fillPattern = FillPattern.VerticalCylinder, fillColor = {255, 255, 255}, fontSize = 16, textString = "Advanced friction model
 with sticktion based on
 MSL friction model"),
-                  Text(extent = {{-90, 70}, {90, 50}}, lineColor = {255, 0, 0},
-            fillPattern =                                                                     FillPattern.VerticalCylinder, fillColor = {255, 255, 255}, textString = "Upper model causes initialization problems with speed sources", fontSize = 16)}));
+      Text(extent = {{-90, 70}, {90, 50}}, lineColor = {255, 0, 0},
+            fillPattern = FillPattern.VerticalCylinder, fillColor = {255, 255, 255}, textString = "Upper model causes initialization problems with speed sources", fontSize = 16)}));
 end MassFrictionCompare;

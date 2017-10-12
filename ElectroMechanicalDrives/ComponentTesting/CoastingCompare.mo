@@ -16,7 +16,9 @@ Components.Translational.MassStickingFriction         massFriction1(
 equation
   connect(initialVelocity1.flange_a, massFriction1.flange_a) annotation(Line(points = {{-20, 20}, {-10, 20}}, color = {0, 127, 0}, smooth = Smooth.None));
   connect(initialVelocity2.flange_a, massFriction2.flange_a) annotation(Line(points = {{-20, -20}, {-10, -20}}, color = {0, 127, 0}, smooth = Smooth.None));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Text(extent = {{-88, 60}, {92, 40}}, lineColor = {255, 0, 0},
+  annotation(experiment(
+      Interval=1E-4,
+      Tolerance=1e-06),Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Text(extent = {{-88, 60}, {92, 40}}, lineColor = {255, 0, 0},
             fillPattern =                                                                                                   FillPattern.VerticalCylinder, fillColor = {255, 255, 255}, fontSize = 16, textString = "massFriction1 shows constant friction force"), Text(extent = {{-88, -40}, {92, -60}}, lineColor = {0, 0, 255},
             fillPattern =                                                                                                   FillPattern.VerticalCylinder, fillColor = {255, 255, 255}, fontSize = 16, textString = "massFriction2 friction force linearly decreases with speed 
 below vlimit")}));

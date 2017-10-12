@@ -13,5 +13,7 @@ equation
   connect(clutch.flange_b, mass2.flange_a) annotation(Line(points = {{10, 0}, {20, 0}}, color = {0, 127, 0}, smooth = Smooth.None));
   connect(trapezoid.y, clutch.f_normalized) annotation(Line(points = {{-9, 30}, {0, 30}, {0, 11}}, color = {0, 0, 127}, smooth = Smooth.None));
   connect(initialVelocity1.flange_a, mass2.flange_b) annotation(Line(points = {{50, 0}, {40, 0}}, color = {0, 127, 0}, smooth = Smooth.None));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics));
+  annotation(experiment(
+      Interval=1E-4,
+      Tolerance=1e-06),Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics));
 end Clutch;

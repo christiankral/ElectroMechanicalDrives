@@ -10,7 +10,7 @@ model MassMovementForce "Movement of mass without propulsion"
     annotation (Placement(transformation(extent={{0,10},{20,30}})));
   Modelica.Blocks.Sources.Ramp ramp(duration = 1, offset = 0,
     startTime=0,
-    height=1000)                                                                           annotation(Placement(transformation(extent = {{-80, -10}, {-60, 10}})));
+    height=1000) annotation(Placement(transformation(extent = {{-80, -10}, {-60, 10}})));
   Modelica.Mechanics.Translational.Sources.Force force2
     annotation (Placement(transformation(extent={{-40,-30},{-20,-10}})));
   Components.Translational.MassStickingFriction massFriction2(
@@ -34,6 +34,8 @@ equation
       smooth=Smooth.None));
   connect(ramp.y, force2.f) annotation (Line(points={{-59,0},{-54,0},{-50,0},
           {-50,-20},{-42,-20}}, color={0,0,127}));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,
+  annotation(experiment(
+      Interval=1E-4,
+      Tolerance=1e-06),Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,
             -100},{100,100}})));
 end MassMovementForce;

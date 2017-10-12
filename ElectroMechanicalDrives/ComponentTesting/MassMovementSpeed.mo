@@ -16,5 +16,5 @@ equation
   connect(speed.flange, massFriction1.flange_a) annotation(Line(points = {{-20, 6.66134e-16}, {-10, 6.66134e-16}, {-10, 20}, {-4.44089e-16, 20}}, color = {0, 127, 0}, smooth = Smooth.None));
   connect(ramp.y, speed.v_ref) annotation(Line(points = {{-59, 0}, {-42, 0}}, color = {0, 0, 127}, smooth = Smooth.None));
   connect(massFriction2.flange_a, speed.flange) annotation(Line(points = {{-4.44089e-16, -20}, {-10, -20}, {-10, 0}, {-20, 0}}, color = {0, 127, 0}, smooth = Smooth.None));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), experiment(StopTime = 3, Interval = 0.0001, Tolerance = 1e-06));
+  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), experiment(StopTime = 3, Interval = 1E-4, Tolerance = 1e-06));
 end MassMovementSpeed;

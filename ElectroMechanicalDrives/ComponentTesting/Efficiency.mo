@@ -36,5 +36,5 @@ equation
   connect(powerSensorSupply4.flange_b, efficiency4.flange_b) annotation(Line(points = {{-40, -60}, {-30, -60}}, color = {0, 127, 0}, smooth = Smooth.None));
   connect(efficiency4.flange_a, powerSensorLoad4.flange_a) annotation(Line(points = {{-10, -60}, {0, -60}}, color = {0, 127, 0}, smooth = Smooth.None));
   connect(force4.f, ramp.y) annotation(Line(points = {{52, -60}, {70, -60}, {70, 6.66134e-16}, {79, 6.66134e-16}}, color = {0, 0, 127}, smooth = Smooth.None));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), experiment(Interval = 0.001), __Dymola_experimentSetupOutput);
+  annotation(experiment(Interval = 0.001,Tolerance=1E-6),Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics));
 end Efficiency;
