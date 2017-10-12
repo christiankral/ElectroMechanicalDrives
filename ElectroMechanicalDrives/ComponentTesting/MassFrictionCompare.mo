@@ -1,12 +1,18 @@
 within ElectroMechanicalDrives.ComponentTesting;
 model MassFrictionCompare "Mass on slope with friction"
   extends Modelica.Icons.Example;
-Components.Translational.MassStickingFriction         massFriction1(
-  m=1000,
-  mu=0.02,
-  peak=1) annotation (Placement(transformation(extent={{0,20},{20,40}})));
+Components.Translational.MassStickingFriction massFriction1(
+    m=1000,
+    mu=0.02,
+    peak=1,
+    s(start=0,fixed=true),
+    v(start=0,fixed=true)) annotation (Placement(transformation(extent={{0,20},{20,40}})));
   Modelica.Mechanics.Translational.Sources.Force force1 annotation(Placement(transformation(extent = {{50, 20}, {30, 40}})));
-  Components.Translational.MassFriction massFriction2(m = 1000, mu = 0.02) annotation(Placement(transformation(extent = {{0, -40}, {20, -20}})));
+  Components.Translational.MassFriction massFriction2(
+    m = 1000,
+    mu = 0.02,
+    s(start=0,fixed=true),
+    v(start=0,fixed=true)) annotation(Placement(transformation(extent = {{0, -40}, {20, -20}})));
   Modelica.Mechanics.Translational.Sources.Force force2 annotation(Placement(transformation(extent = {{50, -40}, {30, -20}})));
   Modelica.Blocks.Sources.Constant const(k = 300) annotation(Placement(transformation(extent = {{100, -10}, {80, 10}})));
 equation

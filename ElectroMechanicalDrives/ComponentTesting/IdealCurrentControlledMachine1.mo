@@ -7,7 +7,7 @@ model IdealCurrentControlledMachine1
   Modelica.Electrical.Analog.Basic.Ground ground1 annotation(Placement(transformation(extent = {{-70, -60}, {-50, -40}})));
   Modelica.Electrical.Analog.Basic.Ground ground2 annotation(Placement(transformation(extent = {{10, -60}, {30, -40}})));
   Modelica.Blocks.Sources.Ramp ramp(duration = 0.5, offset = 0, startTime = 0, height = -10) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {-20, -50})));
-  Components.Machines.IdealCurrentFedMachine machine(kBase=1, wBase=100)
+  Components.Machines.IdealCurrentFedMachine machine(kBase=1, wBase=100,phi(start=0,fixed=true),w(start=0,fixed=true))
     annotation (Placement(transformation(extent={{10,-10},{30,10}})));
   Modelica.Mechanics.Rotational.Sources.QuadraticSpeedDependentTorque quadraticSpeedDependentTorque(TorqueDirection = false, tau_nominal = -10, w_nominal = 100) annotation(Placement(transformation(extent = {{90, -10}, {70, 10}})));
   Modelica.Mechanics.Rotational.Components.Inertia inertia(J = 0.1) annotation(Placement(transformation(extent = {{38, -10}, {58, 10}})));

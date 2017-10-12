@@ -11,5 +11,5 @@ model RotationalConstantFriction "Testing rotational constant friction"
 equation
   connect(ramp.y, speed.w_ref) annotation(Line(points = {{-29, 0}, {-12, 0}}, color = {0, 0, 127}, smooth = Smooth.None));
   connect(speed.flange, constantFriction.flange) annotation(Line(points = {{10, 0}, {30, 0}}, color = {0, 0, 0}, smooth = Smooth.None));
-  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics));
+  annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), experiment(Interval=0.0001, Tolerance=1e-06));
 end RotationalConstantFriction;

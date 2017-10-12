@@ -5,20 +5,20 @@ model Efficiency "Investigating efficiency"
     annotation (Placement(transformation(extent={{-30,50},{-10,70}})));
   Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensorSupply1 annotation(Placement(transformation(extent = {{-60, 50}, {-40, 70}})));
   Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensorLoad1 annotation(Placement(transformation(extent = {{0, 50}, {20, 70}})));
-  Modelica.Mechanics.Translational.Sources.Force force1 annotation(Placement(transformation(extent = {{50, 50}, {30, 70}})));
+  Modelica.Mechanics.Translational.Sources.Force force1(flange(s(start=0,fixed=true))) annotation(Placement(transformation(extent = {{50, 50}, {30, 70}})));
   Modelica.Blocks.Sources.Ramp ramp(height = -2, duration = 1, offset = 1, startTime = 0) annotation(Placement(transformation(extent = {{100, -10}, {80, 10}})));
-  Modelica.Mechanics.Translational.Sources.ConstantSpeed constantSpeed1(v_fixed = 1) annotation(Placement(transformation(extent = {{-90, 50}, {-70, 70}})));
+  Modelica.Mechanics.Translational.Sources.ConstantSpeed constantSpeed1(v_fixed = 1,flange(f(start=0))) annotation(Placement(transformation(extent = {{-90, 50}, {-70, 70}})));
   Components.Translational.ConstantEfficiency efficiency2(efficiency=0.8)
     annotation (Placement(transformation(extent={{-10,10},{-30,30}})));
   Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensorSupply2 annotation(Placement(transformation(extent = {{-60, 10}, {-40, 30}})));
   Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensorLoad2 annotation(Placement(transformation(extent = {{0, 10}, {20, 30}})));
-  Modelica.Mechanics.Translational.Sources.Force force2 annotation(Placement(transformation(extent = {{50, 10}, {30, 30}})));
+  Modelica.Mechanics.Translational.Sources.Force force2(flange(s(start=0,fixed=true))) annotation(Placement(transformation(extent = {{50, 10}, {30, 30}})));
   Modelica.Mechanics.Translational.Sources.ConstantSpeed constantSpeed2(v_fixed = 1) annotation(Placement(transformation(extent = {{-90, 10}, {-70, 30}})));
 Components.Translational.ConstantEfficiency efficiency4(efficiency=0.8)
   annotation (Placement(transformation(extent={{-10,-70},{-30,-50}})));
   Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensorSupply4 annotation(Placement(transformation(extent = {{-60, -70}, {-40, -50}})));
   Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensorLoad4 annotation(Placement(transformation(extent = {{0, -70}, {20, -50}})));
-  Modelica.Mechanics.Translational.Sources.Force force4 annotation(Placement(transformation(extent = {{50, -70}, {30, -50}})));
+  Modelica.Mechanics.Translational.Sources.Force force4(flange(s(start=0,fixed=true))) annotation(Placement(transformation(extent = {{50, -70}, {30, -50}})));
   Modelica.Mechanics.Translational.Sources.ConstantSpeed constantSpeed4(v_fixed = 1) annotation(Placement(transformation(extent = {{-90, -70}, {-70, -50}})));
 equation
   connect(ramp.y, force1.f) annotation(Line(points = {{79, 6.66134e-16}, {70, 6.66134e-16}, {70, 60}, {52, 60}}, color = {0, 0, 127}, smooth = Smooth.None));

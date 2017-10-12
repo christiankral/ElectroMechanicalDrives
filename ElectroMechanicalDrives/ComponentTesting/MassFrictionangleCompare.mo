@@ -5,14 +5,20 @@ Components.Translational.MassStickingFriction                 massFriction1(
   m=1000,
   mu=0.02,
   peak=2,
-    useConstantAngle=false)
-          annotation (Placement(transformation(extent={{0,22},{20,42}})));
-  Modelica.Mechanics.Translational.Sources.Force force1 annotation(Placement(transformation(extent={{50,22},
-            {30,42}})));
+  useConstantAngle=false,
+    s(start=0,fixed=true),
+    v(start=0,fixed=true))
+    annotation (Placement(transformation(extent={{0,22},{20,42}})));
+  Modelica.Mechanics.Translational.Sources.Force force1 annotation(Placement(transformation(extent={{50,22},{30,42}})));
   Modelica.Blocks.Sources.Constant const(k = 300) annotation(Placement(transformation(extent = {{100, -10}, {80, 10}})));
   Modelica.Blocks.Sources.Ramp ramp(duration = 1, offset = 0, startTime = 1, height = -0.01) annotation(Placement(transformation(extent = {{-60, -10}, {-40, 10}})));
-  Components.Translational.MassFriction massFriction2(m = 1000, mu = 0.02, useConstantAngle = false) annotation(Placement(transformation(extent={{0,-44},
-            {20,-24}})));
+  Components.Translational.MassFriction massFriction2(
+    m = 1000,
+    mu = 0.02,
+    useConstantAngle = false,
+    s(start=0,fixed=true),
+    v(start=0,fixed=true))
+    annotation(Placement(transformation(extent={{0,-44},{20,-24}})));
   Modelica.Mechanics.Translational.Sources.Force force2 annotation(Placement(transformation(extent={{50,-44},
             {30,-24}})));
 equation

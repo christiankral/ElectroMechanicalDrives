@@ -1,31 +1,34 @@
 within ElectroMechanicalDrives.ComponentTesting;
 model EfficiencyFrictionCompare "Investigating efficiency"
   extends Modelica.Icons.Example;
-Components.Translational.ConstantEfficiency efficiency1(efficiency=0.8)
+  Components.Translational.ConstantEfficiency efficiency1(efficiency=0.8)
   annotation (Placement(transformation(extent={{-20,70},{0,90}})));
   Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensorSupply1 annotation(Placement(transformation(extent = {{-50, 70}, {-30, 90}})));
   Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensorLoad1 annotation(Placement(transformation(extent = {{10, 70}, {30, 90}})));
-  Modelica.Mechanics.Translational.Sources.ConstantSpeed constantSpeed1(v_fixed = 1) annotation(Placement(transformation(extent = {{-80, 70}, {-60, 90}})));
-Components.Translational.ConstantEfficiency efficiency2(efficiency=0.8)
+  Modelica.Mechanics.Translational.Sources.ConstantSpeed constantSpeed1(v_fixed = 1,flange(f(start=0))) annotation(Placement(transformation(extent = {{-80, 70}, {-60, 90}})));
+  Modelica.Mechanics.Translational.Sources.ConstantForce friction1(f_constant = -1,s(start=0,fixed=true)) annotation(Placement(transformation(extent = {{60, 70}, {40, 90}})));
+
+  Components.Translational.ConstantEfficiency efficiency2(efficiency=0.8)
   annotation (Placement(transformation(extent={{-20,30},{0,50}})));
   Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensorSupply2 annotation(Placement(transformation(extent = {{-50, 30}, {-30, 50}})));
   Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensorLoad2 annotation(Placement(transformation(extent = {{10, 30}, {30, 50}})));
-  Modelica.Mechanics.Translational.Sources.ConstantSpeed constantSpeed2(v_fixed = 1) annotation(Placement(transformation(extent = {{-80, 30}, {-60, 50}})));
-  Modelica.Mechanics.Translational.Sources.ConstantForce friction1(f_constant = -1) annotation(Placement(transformation(extent = {{60, 70}, {40, 90}})));
-Components.Translational.RollingFriction friction2(f_constant=1)
+  Modelica.Mechanics.Translational.Sources.ConstantSpeed constantSpeed2(v_fixed = 1,flange(f(start=0))) annotation(Placement(transformation(extent = {{-80, 30}, {-60, 50}})));
+  Components.Translational.RollingFriction friction2(f_constant=1,s(start=0,fixed=true))
   annotation (Placement(transformation(extent={{62,30},{42,50}})));
-Components.Translational.ConstantEfficiency efficiency4(efficiency=0.8)
+
+  Components.Translational.ConstantEfficiency efficiency4(efficiency=0.8)
   annotation (Placement(transformation(extent={{-20,-50},{0,-30}})));
   Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensorSupply4 annotation(Placement(transformation(extent = {{-50, -50}, {-30, -30}})));
   Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensorLoad4 annotation(Placement(transformation(extent = {{10, -50}, {30, -30}})));
-  Modelica.Mechanics.Translational.Sources.ConstantSpeed constantSpeed4(v_fixed = 1) annotation(Placement(transformation(extent = {{-80, -50}, {-60, -30}})));
-  Components.Translational.MassFriction friction4(mu = 1, m = 1 / Modelica.Constants.g_n) annotation(Placement(transformation(extent = {{60, -50}, {40, -30}})));
-Components.Translational.ConstantEfficiency efficiency5(efficiency=0.8)
+  Modelica.Mechanics.Translational.Sources.ConstantSpeed constantSpeed4(v_fixed = 1,flange(f(start=0))) annotation(Placement(transformation(extent = {{-80, -50}, {-60, -30}})));
+  Components.Translational.MassFriction friction4(mu = 1, m = 1 / Modelica.Constants.g_n,s(start=0,fixed=true)) annotation(Placement(transformation(extent = {{60, -50}, {40, -30}})));
+
+  Components.Translational.ConstantEfficiency efficiency5(efficiency=0.8)
   annotation (Placement(transformation(extent={{-20,-90},{0,-70}})));
   Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensorSupply5 annotation(Placement(transformation(extent = {{-50, -90}, {-30, -70}})));
   Modelica.Mechanics.Translational.Sensors.PowerSensor powerSensorLoad5 annotation(Placement(transformation(extent = {{10, -90}, {30, -70}})));
-  Modelica.Mechanics.Translational.Sources.ConstantSpeed constantSpeed5(v_fixed = 1) annotation(Placement(transformation(extent = {{-80, -90}, {-60, -70}})));
-  Components.Translational.MassStickingFriction friction5(mu = 1, m = 1 / Modelica.Constants.g_n) annotation(Placement(transformation(extent = {{60, -90}, {40, -70}})));
+  Modelica.Mechanics.Translational.Sources.ConstantSpeed constantSpeed5(v_fixed = 1,flange(f(start=0))) annotation(Placement(transformation(extent = {{-80, -90}, {-60, -70}})));
+  Components.Translational.MassStickingFriction friction5(mu = 1, m = 1 / Modelica.Constants.g_n,s(start=0,fixed=true)) annotation(Placement(transformation(extent = {{60, -90}, {40, -70}})));
 equation
   connect(efficiency1.flange_b, powerSensorLoad1.flange_a) annotation(Line(points = {{0, 80}, {10, 80}}, color = {0, 127, 0}, smooth = Smooth.None));
   connect(powerSensorSupply1.flange_b, efficiency1.flange_a) annotation(Line(points = {{-30, 80}, {-20, 80}}, color = {0, 127, 0}, smooth = Smooth.None));
