@@ -22,9 +22,11 @@ model PartialVehicle "Partial vehicle with friction"
   Modelica.SIunits.Force fRollingFriction = rollingFriction.f_friction "Rolling friction force";
   Modelica.SIunits.Force fAtmosphericFriction = atmosphericFriction.f "Atmospheric friction force";
   Modelica.SIunits.Force fTotalFriction = fRollingFriction + fAtmosphericFriction "Total rolling plus atmospeheric friction";
+  Modelica.SIunits.Force fGradient = rollingFriction.f_gradient "Force cause by gradient";
   Modelica.SIunits.Power powerRollingFriction = fRollingFriction*v "Rolling friction power";
   Modelica.SIunits.Power powerAtmosphericFriction = fAtmosphericFriction*v "Atmospheric friction power";
   Modelica.SIunits.Power powerTotalFriction = fTotalFriction*v "Total friction power";
+  Modelica.SIunits.Power powerGradient = fGradient*v "Power caused by gradient";
   Modelica.SIunits.Torque tau_a = flangeR_a.tau "Torque of flangeR_a";
   Modelica.SIunits.Torque tau_b = flangeR_b.tau "Torque of flangeR_b";
 

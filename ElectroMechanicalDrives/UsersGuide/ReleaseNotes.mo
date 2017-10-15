@@ -3,6 +3,11 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<h5>Version v1.3.1, 2017-10-15</h5>
+<ul>
+<li>Added alias variables to partial vehicle and partial mass friction model to calculate the total grafient force and power (forgotten in version 1.3.0)</li>
+</ul>
+
 <h5>Version v1.3.0, 2017-10-15</h5>
 <ul>
 <li>Added alias variables to partial vehicle model to calculate the total friction force and all friction power terms</li>

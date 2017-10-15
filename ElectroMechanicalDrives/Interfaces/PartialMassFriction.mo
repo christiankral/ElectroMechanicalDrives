@@ -15,6 +15,7 @@ partial model PartialMassFriction
     "Absolute acceleration of flange_a and flange_b";
   Modelica.SIunits.Force f_friction "Friction force";
   Modelica.SIunits.Force f_gradient "Force caused by gradient";
+  Modelica.SIunits.Power power_gradient = f_gradient*v "Power caused by gradient";
   Modelica.SIunits.Force f "Total force";
   extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
 equation
