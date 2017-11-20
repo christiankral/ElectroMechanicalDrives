@@ -14,7 +14,7 @@ equation
   tau = smooth(1, if w > w_linear then tau_constant else if w < (-w_linear) then -tau_constant else tau_constant * w / w_linear);
   lossPower = -tau * w;
   tau = -flange.tau;
-  annotation(Icon(graphics={  Ellipse(extent = {{-60, 60}, {60, -60}}, lineColor = {0, 0, 0}, fillColor = {175, 175, 175},
+  annotation(defaultComponentName="friction",Icon(graphics={  Ellipse(extent = {{-60, 60}, {60, -60}}, lineColor = {0, 0, 0}, fillColor = {175, 175, 175},
           fillPattern =                                                                                                   FillPattern.Solid), Ellipse(extent = {{-50, 50}, {50, -50}}, lineColor = {0, 0, 0}, fillColor = {255, 255, 255},
           fillPattern =                                                                                                   FillPattern.Solid), Ellipse(extent = {{-12, 50}, {8, 30}}, lineColor = {0, 0, 0},
           fillPattern =                                                                                                   FillPattern.Sphere, fillColor = {135, 135, 135}), Ellipse(extent = {{-10, -30}, {10, -50}}, lineColor = {0, 0, 0},

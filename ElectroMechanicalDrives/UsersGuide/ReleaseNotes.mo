@@ -3,6 +3,12 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<h5>Version v1.4.0, 2017-11-20</h5>
+<ul>
+<li>Added Gear with constant efficiency</li>
+<li>Added some more default component namesy</li>
+</ul>
+
 <h5>Version v1.3.1, 2017-10-15</h5>
 <ul>
 <li>Added alias variables to partial vehicle and partial mass friction model to calculate the total grafient force and power (forgotten in version 1.3.0)</li>

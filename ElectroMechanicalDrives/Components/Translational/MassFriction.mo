@@ -3,7 +3,7 @@ model MassFriction "Constant force with linear range around zero speed"
   extends ElectroMechanicalDrives.Interfaces.PartialMassFriction;
 equation
   f_friction = smooth(1, if v > v_linear then f_frictionSliding else if v < (-v_linear) then -f_frictionSliding else f_frictionSliding * v / v_linear);
-  annotation (Documentation(info="<html>
+  annotation (defaultComponentName="mass",Documentation(info="<html>
 <p>
 In this model considers the inertial mass <code>m</code> including the following effects:
 </p>
