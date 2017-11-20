@@ -6,7 +6,7 @@ class ReleaseNotes "Release Notes"
 <h5>Version v1.4.0, 2017-11-20</h5>
 <ul>
 <li>Added Gear with constant efficiency</li>
-<li>Added some more default component namesy</li>
+<li>Added some more default component names</li>
 </ul>
 
 <h5>Version v1.3.1, 2017-10-15</h5>
