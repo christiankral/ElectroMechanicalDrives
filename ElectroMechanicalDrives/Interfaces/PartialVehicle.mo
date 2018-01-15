@@ -1,5 +1,5 @@
 within ElectroMechanicalDrives.Interfaces;
-model PartialVehicle "Partial vehicle with friction"
+partial model PartialVehicle "Partial vehicle with friction"
 
   extends ElectroMechanicalDrives.Interfaces.ConditionalAngle;
   parameter Modelica.SIunits.Density rho = 1.2 "Mass density of air" annotation(Dialog(group = "Ambient"));
@@ -69,12 +69,12 @@ equation
     annotation (Line(points={{-80,28},{-80,40}},   color={0,0,0}));
   connect(wheelInternal.flangeT, flangeT_a)
     annotation (Line(points={{-80,8},{-80,0},{-100,0}},   color={0,127,0}));
-  connect(wheel_a.flangeR, flangeR_a) annotation (Line(points={{-70,-90},{-70,
-          -90},{-70,-102},{-70,-100},{-100,-100}}, color={0,0,0}));
+  connect(wheel_a.flangeR, flangeR_a) annotation (Line(points={{-70,-90},{-70,-100},{-100,-100}},
+                                                   color={0,0,0}));
   connect(angle, rollingFriction.variableAngle) annotation (Line(points={{-90,-50},
           {-90,-50},{-90,-26},{-32,-26}},                 color={0,0,127}));
-  connect(wheel_b.flangeR, flangeR_b) annotation (Line(points={{80,-90},{80,
-          -90},{80,-100},{100,-100}}, color={0,0,0}));
+  connect(wheel_b.flangeR, flangeR_b) annotation (Line(points={{80,-90},{80,-100},{100,-100}},
+                                      color={0,0,0}));
   connect(flangeT_a, rollingFriction.flange_b) annotation (Line(points={{-100,0},
           {0,0},{0,-20},{-2,-20},{-10,-20}}, color={0,127,0}));
   connect(rollingFriction.flange_b, atmosphericFriction.flange)

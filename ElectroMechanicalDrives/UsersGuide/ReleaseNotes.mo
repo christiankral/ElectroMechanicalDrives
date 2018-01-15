@@ -16,6 +16,7 @@ class ReleaseNotes "Release Notes"
     <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/issues/11\">#11</a>
 </li>
 <li>Changed gear machine icon to better distinguish from non-gear machine</li>
+<li>Added <code>partial</code> to all partial <a href=\"modelica://ElectroMechanicalDrives.Interfaces\">Interfaces</a> models</li>
     
 </ul>
 

@@ -1,5 +1,5 @@
 within ElectroMechanicalDrives.Interfaces;
-model PartialBattery "Partial re-chargeable battery with internal resistor"
+partial model PartialBattery "Partial re-chargeable battery with internal resistor"
   parameter Integer ns(min = 1) = 1 "Number of series cells";
   parameter Integer np(min = 1) = 1 "Number of parallel cells";
   parameter Modelica.SIunits.Voltage V1Cell "Maximum cell voltage > V0Cell";
@@ -37,7 +37,7 @@ equation
   energyCell * ns * np = energy;
   assert(vCell >= V0Cell or allowUndercharge, "Battery: cell voltage less than V0Cell");
   assert(vCell <= V1Cell or allowOvercharge, "Battery: cell voltage greater than V1Cell");
-  connect(capacitor.n, pin_n) annotation(Line(points = {{40, 0}, {56, 0}, {56, 4.44089e-16}, {100, 4.44089e-16}}, color = {0, 0, 255}, smooth = Smooth.None));
+  connect(capacitor.n, pin_n) annotation(Line(points={{40,0},{56,0},{56,0},{100,0}},                              color = {0, 0, 255}, smooth = Smooth.None));
   connect(pin_p, resistor.p) annotation(Line(points = {{-100, 0}, {-40, 0}}, color = {0, 0, 255}, smooth = Smooth.None));
   connect(resistor.n, capacitor.p) annotation(Line(points = {{-20, 0}, {20, 0}}, color = {0, 0, 255}, smooth = Smooth.None));
   annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}})),
