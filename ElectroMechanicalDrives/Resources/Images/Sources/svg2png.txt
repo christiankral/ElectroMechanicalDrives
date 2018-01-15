@@ -1,0 +1,2 @@
+SVG files are converted to PNG files in Inkscape using
+a screen resultion of 72dpi.

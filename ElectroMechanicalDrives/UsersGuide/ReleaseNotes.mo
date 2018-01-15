@@ -7,11 +7,22 @@ class ReleaseNotes "Release Notes"
 <ul>
 <li>Added parameters to icon representation, see
     <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/issues/10\">#10</a></li>
+<li>Removed inertia and parameter J from models
+    <ul>
+    <li><a href=\"modelica://ElectroMechanicalDrives.Components.Machines.AngularSpeedControlledMachine\">AngularSpeedControlledMachine</a></li>
+    <li><a href=\"modelica://ElectroMechanicalDrives.Components.Machines.AngularSpeedControlledMachine\">AngularTorqueControlledMachine</a></li>
+    </ul>
+    as they are a design flaw; see 
+    <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/issues/11\">#11</a>
+</li>
+<li>Changed gear machine icon to better distinguish from non-gear machine</li>
+    
 </ul>
 
 <h5>Version v1.4.0, 2017-11-20</h5>
 <ul>
-<li>Added Gear with constant efficiency</li>
+<li>Added <a href=\"modelica://ElectroMechanicalDrives.Components.Rotational.GearConstantEfficiency\">gear</a> 
+    with constant efficiency</li>
 <li>Added some more default component names</li>
 </ul>
 

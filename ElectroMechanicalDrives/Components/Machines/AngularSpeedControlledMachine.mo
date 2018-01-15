@@ -8,10 +8,8 @@ model AngularSpeedControlledMachine "Signal angular speed input machine"
   parameter Modelica.SIunits.Frequency f_crit = 50
     "if exact=false, critical frequency of filter to filter input signal"
     annotation(Dialog(enable = not exact));
-  parameter Modelica.SIunits.Inertia J = 0
-    "Total inertia of machine w.r.t machine speed" annotation(Evaluate = true);
 
-  Modelica.Blocks.Interfaces.RealInput w_ref(unit = "rad/s")
+  Modelica.Blocks.Interfaces.RealInput w_ref(unit = "rad/s",displayUnit = "rpm")
     "Reference angular speed as input signal"
     annotation(Placement(transformation(extent = {{-140, -20}, {-100, 20}}, rotation = 0)));
 
@@ -21,11 +19,6 @@ model AngularSpeedControlledMachine "Signal angular speed input machine"
   Modelica.SIunits.Torque tauMachine=torqueMachineSensor.tau "Torque of machine";
   Modelica.SIunits.Power powerMachine=powerMachineSensor.power "Power of machine";
 
-  Modelica.SIunits.Angle phiShaft = phiMachine "Absolute rotation angle";
-  Modelica.SIunits.AngularVelocity wShaft = wMachine "Angular velcocity";
-  Modelica.SIunits.AngularAcceleration aShaft = aMachine  "Absolute rotational acceleration";
-  Modelica.SIunits.Torque tauShaft=torqueShaftSensor.tau "Torque";
-  Modelica.SIunits.Power powerShaft=powerShaftSensor.power "Power";
 protected
   parameter Modelica.SIunits.AngularFrequency w_crit = 2 * Modelica.Constants.pi * f_crit
     "Critical frequency";
@@ -34,36 +27,24 @@ public
   Modelica.Mechanics.Rotational.Sensors.TorqueSensor torqueMachineSensor annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=0,
-        origin={-10,0})));
+        origin={10,0})));
   Modelica.Mechanics.Rotational.Sensors.PowerSensor powerMachineSensor annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=0,
-        origin={-40,0})));
+        origin={50,0})));
   Modelica.Mechanics.Rotational.Sensors.SpeedSensor speedMachineSensor annotation (Placement(transformation(
         extent={{-10,-10},{10,10}},
         rotation=90,
         origin={-60,30})));
-  Modelica.Mechanics.Rotational.Components.Inertia inertia(final J = J) annotation(Placement(transformation(extent={{10,-10},{30,10}})));
-  Modelica.Mechanics.Rotational.Sensors.TorqueSensor torqueShaftSensor annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 0, origin={50,0})));
-  Modelica.Mechanics.Rotational.Sensors.PowerSensor powerShaftSensor annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 0, origin={80,0})));
 equation
   der(phiMachine) = wMachine;
   der(wMachine) = aMachine;
 
-  connect(powerMachineSensor.flange_b, torqueMachineSensor.flange_a) annotation (Line(
-      points={{-30,0},{-20,0}},
-      color={0,0,0},
-      smooth=Smooth.None));
   connect(speed.w_ref, w_ref) annotation(Line(points={{-92,0},{-120,0}},      color = {0, 0, 127}, smooth = Smooth.None));
-  connect(speed.flange, powerMachineSensor.flange_a) annotation (Line(
-      points={{-70,4.44089e-16},{-70,0},{-50,0}},
-      color={0,0,0},
-      smooth=Smooth.None));
   connect(speedMachineSensor.flange, speed.flange) annotation (Line(points={{-60,20},{-60,0},{-70,0}}, color={0,0,0}));
-  connect(inertia.flange_b,torqueShaftSensor. flange_a) annotation(Line(points={{30,0},{40,0}},            color = {0, 0, 0}, smooth = Smooth.None));
-  connect(torqueShaftSensor.flange_b,powerShaftSensor. flange_a) annotation(Line(points={{60,0},{70,0}},                     color = {0, 0, 0}, smooth = Smooth.None));
-  connect(torqueMachineSensor.flange_b, inertia.flange_a) annotation (Line(points={{0,0},{6,0},{6,0},{10,0}}, color={0,0,0}));
-  connect(powerShaftSensor.flange_b, flange) annotation (Line(points={{90,0},{100,0},{100,0}}, color={0,0,0}));
+  connect(speed.flange, torqueMachineSensor.flange_a) annotation (Line(points={{-70,0},{0,0}}, color={0,0,0}));
+  connect(torqueMachineSensor.flange_b, powerMachineSensor.flange_a) annotation (Line(points={{20,0},{30,0},{30,0},{40,0}}, color={0,0,0}));
+  connect(powerMachineSensor.flange_b, flange) annotation (Line(points={{60,0},{80,0},{80,0},{100,0}}, color={0,0,0}));
   annotation(defaultComponentName = "machine", Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,-100},{100,100}})),                Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Rectangle(origin = {90, 0}, lineColor = {64, 64, 64}, fillColor = {191, 191, 191},
             fillPattern =                                                                                                   FillPattern.HorizontalCylinder, extent = {{-10, -10}, {10, 10}}), Text(extent = {{-140, 60}, {-100, 20}}, lineColor = {0, 0, 0},
             fillPattern =                                                                                                   FillPattern.HorizontalCylinder, fillColor = {175, 175, 175}, textString = "w"), Text(extent = {{-150, 120}, {150, 80}}, textString = "%name", lineColor = {0, 0, 255}), Line(points = {{-100, 0}, {-60, 0}}, color = {0, 0, 0}, smooth = Smooth.None)}),
@@ -88,19 +69,7 @@ Fig. 1: Principle of controlled machine model without gear
     <li><code>tauMachine</code> = (electrical) torque of machine</li>
     <li><code>powerMachine</code> = power of machine</li>
     </ul>
-<li>Shaft</li>
-    <ul>
-    <li><code>aShaft</code> = angular acceleration of shaft</li>
-    <li><code>phiShaft</code> = mechanical angle of shaft</li>
-    <li><code>wShaft</code> = angular velocity of shaft</li>
-    <li><code>tauShaft</code> = torque of shaft</li>
-    <li><code>powerShaft</code> = power of shaft</li>
-    </ul>
-</ul>
 
-<p>This machine model considers the following effect:</p>
-<ul>
-<li>Inertia with respect to electric machine side</li>
 </ul>
 
 <h5>Notes</h5>

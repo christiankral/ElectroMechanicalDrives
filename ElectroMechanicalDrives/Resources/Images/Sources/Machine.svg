@@ -39,13 +39,13 @@
      inkscape:window-height="984"
      id="namedview980"
      showgrid="false"
-     inkscape:zoom="1.2000167"
-     inkscape:cx="193.42441"
-     inkscape:cy="324.67611"
+     inkscape:zoom="0.84853995"
+     inkscape:cx="242.05484"
+     inkscape:cy="355.47161"
      inkscape:window-x="0"
      inkscape:window-y="33"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g486-6" />
+     inkscape:current-layer="svg2" />
   <title
      id="title4">OMEdit - OpenModelica Connection Editor</title>
   <desc
@@ -144,60 +144,6 @@
          stop-opacity="1"
          id="stop36" />
     </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#gradient1"
-       id="linearGradient5110"
-       gradientUnits="userSpaceOnUse"
-       x1="-75"
-       y1="-10"
-       x2="-75"
-       y2="10" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#gradient1"
-       id="linearGradient5112"
-       gradientUnits="userSpaceOnUse"
-       x1="-75"
-       y1="-10"
-       x2="-75"
-       y2="10" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#gradient2"
-       id="linearGradient5114"
-       gradientUnits="userSpaceOnUse"
-       x1="75"
-       y1="-10"
-       x2="75"
-       y2="10" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#gradient2"
-       id="linearGradient5116"
-       gradientUnits="userSpaceOnUse"
-       x1="75"
-       y1="-10"
-       x2="75"
-       y2="10" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#gradient3"
-       id="linearGradient5118"
-       gradientUnits="userSpaceOnUse"
-       x1="0"
-       y1="-50"
-       x2="0"
-       y2="50" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#gradient3"
-       id="linearGradient5120"
-       gradientUnits="userSpaceOnUse"
-       x1="0"
-       y1="-50"
-       x2="0"
-       y2="50" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#gradient4"
@@ -412,34 +358,6 @@
      transform="matrix(3.7,0,0,-3.7,391.415,241.415)" />
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.54054095;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-     id="g94"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(3.7,0,0,-3.7,391.415,241.415)">
-    <path
-       style="fill-rule:evenodd;stroke-width:0.54054095;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       inkscape:connector-curvature="0"
-       id="path96"
-       d="M 10,50 10,30"
-       vector-effect="non-scaling-stroke" />
-  </g>
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.54054095;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-     id="g98"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(3.7,0,0,-3.7,391.415,241.415)">
-    <path
-       style="fill-rule:evenodd;stroke-width:0.54054095;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       inkscape:connector-curvature="0"
-       id="path100"
-       d="m 10,30 1.5,2.5981 -3,0 L 10,30"
-       vector-effect="non-scaling-stroke" />
-  </g>
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.54054095;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g102"
      font-style="normal"
      font-weight="400"
@@ -549,25 +467,6 @@
      stroke-miterlimit="2" />
   <g
      style="font-style:normal;font-weight:400;font-size:5.07692003px;font-family:'DejaVu Sans Mono';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.54054095;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-opacity:1;stroke-dasharray:none"
-     id="g130"
-     font-style="normal"
-     font-weight="400"
-     font-size="5.07692"
-     transform="matrix(3.7,0,0,3.7,94,-181.8)"
-     stroke-miterlimit="2">
-    <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.86486864px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.54054093;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       id="text132"
-       font-style="normal"
-       font-weight="400"
-       font-size="5.07692"
-       y="59"
-       x="82.5"
-       xml:space="preserve"
-       sodipodi:linespacing="125%">...Shaft</text>
-  </g>
-  <g
-     style="font-style:normal;font-weight:400;font-size:5.07692003px;font-family:'DejaVu Sans Mono';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.54054095;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-opacity:1;stroke-dasharray:none"
      id="g134"
      font-style="normal"
      font-weight="400"
@@ -638,44 +537,6 @@
      stroke-miterlimit="2" />
   <g
      style="font-style:normal;font-weight:400;font-size:5.07692003px;font-family:'DejaVu Sans Mono';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.54054095;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-opacity:1;stroke-dasharray:none"
-     id="g154"
-     font-style="normal"
-     font-weight="400"
-     font-size="5.07692"
-     transform="matrix(3.7,0,0,3.7,390,92)"
-     stroke-miterlimit="2">
-    <text
-       style="font-style:normal;font-weight:normal;font-size:4.86486858px;font-family:'DejaVu Sans Mono';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.54054095;stroke-miterlimit:3.66391182;stroke-dasharray:none;-inkscape-font-specification:'DejaVu Sans Mono, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
-       id="text156"
-       font-style="normal"
-       font-weight="400"
-       font-size="5.07692"
-       y="17"
-       x="-20.5"
-       xml:space="preserve"
-       sodipodi:linespacing="125%">machine</text>
-  </g>
-  <g
-     style="font-style:normal;font-weight:400;font-size:5.07692003px;font-family:'DejaVu Sans Mono';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.54054095;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-opacity:1;stroke-dasharray:none"
-     id="g158"
-     font-style="normal"
-     font-weight="400"
-     font-size="5.07692"
-     transform="matrix(3.7,0,0,3.7,390,92)"
-     stroke-miterlimit="2">
-    <text
-       style="font-style:normal;font-weight:normal;font-size:4.86486858px;font-family:'DejaVu Sans Mono';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.54054095;stroke-miterlimit:3.66391182;stroke-dasharray:none;-inkscape-font-specification:'DejaVu Sans Mono, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
-       id="text160"
-       font-style="normal"
-       font-weight="400"
-       font-size="5.07692"
-       y="23"
-       x="-20.5"
-       xml:space="preserve"
-       sodipodi:linespacing="125%">inertia</text>
-  </g>
-  <g
-     style="font-style:normal;font-weight:400;font-size:5.07692003px;font-family:'DejaVu Sans Mono';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.54054095;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-opacity:1;stroke-dasharray:none"
      id="g162"
      font-style="normal"
      font-weight="400"
@@ -740,20 +601,6 @@
      transform="matrix(3.7,0,0,-3.7,94,240)" />
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.54054095;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-     id="g184"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(3.7,0,0,-3.7,94,240)">
-    <path
-       style="fill-rule:evenodd;stroke-width:0.54054095;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       inkscape:connector-curvature="0"
-       id="path186"
-       d="m 80,0 20,0"
-       vector-effect="non-scaling-stroke" />
-  </g>
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.54054095;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g188"
      font-style="normal"
      font-weight="400"
@@ -781,15 +628,15 @@
      font-size="11"
      transform="matrix(0.37,0,0,-0.37,464,240)" />
   <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-opacity:1;stroke-dasharray:none"
+     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540934;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-dasharray:none;stroke-opacity:1"
      id="g196"
      font-style="normal"
      font-weight="400"
      font-size="11"
-     transform="matrix(0.37,0,0,0.37,464,240)"
+     transform="matrix(0.37,0,0,0.37,329.6,240)"
      stroke-miterlimit="2">
     <path
-       style="fill-rule:evenodd;stroke-width:5.40540953;stroke-miterlimit:3.66391182;stroke-dasharray:none"
+       style="fill-rule:evenodd;stroke-width:5.40540934;stroke-miterlimit:3.66391182;stroke-dasharray:none"
        inkscape:connector-curvature="0"
        id="path198"
        d="M 40,0 C 40,22.0914 22.0914,40 0,40 -22.0914,40 -40,22.0914 -40,0 c 0,-22.0914 17.9086,-40 40,-40 22.0914,0 40,17.9086 40,40"
@@ -818,15 +665,15 @@
      transform="matrix(0.37,0,0,0.37,464,188.2)"
      stroke-miterlimit="2" />
   <g
-     style="font-style:normal;font-weight:400;font-size:33.84619904px;font-family:'DejaVu Sans Mono';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-opacity:1;stroke-dasharray:none"
+     style="font-style:normal;font-weight:400;font-size:33.84619904px;font-family:'DejaVu Sans Mono';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540934;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-dasharray:none;stroke-opacity:1"
      id="g206"
      font-style="normal"
      font-weight="400"
      font-size="33.8462"
-     transform="matrix(0.37,0,0,0.37,464,188.2)"
+     transform="matrix(0.37,0,0,0.37,329.6,188.2)"
      stroke-miterlimit="2">
     <text
-       style="font-style:normal;font-weight:normal;font-size:48.64868576px;font-family:'DejaVu Sans Mono';fill:#000000;fill-opacity:1;stroke:none;stroke-width:5.40540953;stroke-miterlimit:3.66391182;stroke-dasharray:none;-inkscape-font-specification:'DejaVu Sans Mono, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48.64868546px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:5.40540934;stroke-miterlimit:3.66391182;stroke-dasharray:none"
        id="text208"
        font-style="normal"
        font-weight="400"
@@ -917,19 +764,19 @@
      font-size="11"
      transform="translate(501,203)" />
   <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:#000000;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:2.00000153;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:0;stroke-miterlimit:3.66391182;stroke-dasharray:none"
+     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:#000000;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:2.00000143;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:3.66391182;stroke-dasharray:none;stroke-opacity:0"
      id="g232"
      font-style="normal"
      font-weight="400"
      font-size="11"
-     transform="translate(501,203)">
+     transform="translate(366.6,203)">
     <rect
        id="rect234"
        height="6"
        width="6"
        y="-3"
        x="-3"
-       style="stroke-width:2.00000153;stroke-miterlimit:3.66391182;stroke-dasharray:none" />
+       style="stroke-width:2.00000143;stroke-miterlimit:3.66391182;stroke-dasharray:none" />
   </g>
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.00000153;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
@@ -989,23 +836,6 @@
      font-size="11"
      transform="matrix(0.37,0,0,-0.37,353,240)" />
   <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:url(#linearGradient5112);fill-rule:evenodd;stroke:#404040;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-opacity:1;stroke-dasharray:none"
-     id="g252"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(0.37,0,0,-0.37,353,240)"
-     stroke-miterlimit="2">
-    <rect
-       style="fill:url(#linearGradient5110);stroke-width:5.40540953;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       id="rect254"
-       height="20"
-       width="50"
-       y="-10"
-       x="-100"
-       vector-effect="non-scaling-stroke" />
-  </g>
-  <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g256"
      font-style="normal"
@@ -1019,23 +849,6 @@
      font-weight="400"
      font-size="11"
      transform="matrix(0.37,0,0,-0.37,353,240)" />
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:url(#linearGradient5116);fill-rule:evenodd;stroke:#404040;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-opacity:1;stroke-dasharray:none"
-     id="g260"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(0.37,0,0,-0.37,353,240)"
-     stroke-miterlimit="2">
-    <rect
-       style="fill:url(#linearGradient5114);stroke-width:5.40540953;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       id="rect262"
-       height="20"
-       width="50"
-       y="-10"
-       x="50"
-       vector-effect="non-scaling-stroke" />
-  </g>
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g264"
@@ -1052,20 +865,6 @@
      transform="matrix(0.37,0,0,-0.37,353,240)" />
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-     id="g268"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(0.37,0,0,-0.37,353,240)">
-    <path
-       style="fill-rule:evenodd;stroke-width:5.40540953;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       inkscape:connector-curvature="0"
-       id="path270"
-       d="m -80,-25 20,0"
-       vector-effect="non-scaling-stroke" />
-  </g>
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g272"
      font-style="normal"
      font-weight="400"
@@ -1078,20 +877,6 @@
      font-weight="400"
      font-size="11"
      transform="matrix(0.37,0,0,-0.37,353,240)" />
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-     id="g276"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(0.37,0,0,-0.37,353,240)">
-    <path
-       style="fill-rule:evenodd;stroke-width:5.40540953;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       inkscape:connector-curvature="0"
-       id="path278"
-       d="m 60,-25 20,0"
-       vector-effect="non-scaling-stroke" />
-  </g>
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g280"
@@ -1108,20 +893,6 @@
      transform="matrix(0.37,0,0,-0.37,353,240)" />
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-     id="g284"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(0.37,0,0,-0.37,353,240)">
-    <path
-       style="fill-rule:evenodd;stroke-width:5.40540953;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       inkscape:connector-curvature="0"
-       id="path286"
-       d="m -70,-25 0,-45"
-       vector-effect="non-scaling-stroke" />
-  </g>
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g288"
      font-style="normal"
      font-weight="400"
@@ -1134,20 +905,6 @@
      font-weight="400"
      font-size="11"
      transform="matrix(0.37,0,0,-0.37,353,240)" />
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-     id="g292"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(0.37,0,0,-0.37,353,240)">
-    <path
-       style="fill-rule:evenodd;stroke-width:5.40540953;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       inkscape:connector-curvature="0"
-       id="path294"
-       d="m 70,-25 0,-45"
-       vector-effect="non-scaling-stroke" />
-  </g>
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g296"
@@ -1164,20 +921,6 @@
      transform="matrix(0.37,0,0,-0.37,353,240)" />
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-     id="g300"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(0.37,0,0,-0.37,353,240)">
-    <path
-       style="fill-rule:evenodd;stroke-width:5.40540953;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       inkscape:connector-curvature="0"
-       id="path302"
-       d="m -80,25 20,0"
-       vector-effect="non-scaling-stroke" />
-  </g>
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g304"
      font-style="normal"
      font-weight="400"
@@ -1190,20 +933,6 @@
      font-weight="400"
      font-size="11"
      transform="matrix(0.37,0,0,-0.37,353,240)" />
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-     id="g308"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(0.37,0,0,-0.37,353,240)">
-    <path
-       style="fill-rule:evenodd;stroke-width:5.40540953;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       inkscape:connector-curvature="0"
-       id="path310"
-       d="m 60,25 20,0"
-       vector-effect="non-scaling-stroke" />
-  </g>
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g312"
@@ -1220,20 +949,6 @@
      transform="matrix(0.37,0,0,-0.37,353,240)" />
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-     id="g316"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(0.37,0,0,-0.37,353,240)">
-    <path
-       style="fill-rule:evenodd;stroke-width:5.40540953;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       inkscape:connector-curvature="0"
-       id="path318"
-       d="m -70,45 0,-20"
-       vector-effect="non-scaling-stroke" />
-  </g>
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g320"
      font-style="normal"
      font-weight="400"
@@ -1246,20 +961,6 @@
      font-weight="400"
      font-size="11"
      transform="matrix(0.37,0,0,-0.37,353,240)" />
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-     id="g324"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(0.37,0,0,-0.37,353,240)">
-    <path
-       style="fill-rule:evenodd;stroke-width:5.40540953;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       inkscape:connector-curvature="0"
-       id="path326"
-       d="M 70,45 70,25"
-       vector-effect="non-scaling-stroke" />
-  </g>
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g328"
@@ -1276,20 +977,6 @@
      transform="matrix(0.37,0,0,-0.37,353,240)" />
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-     id="g332"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(0.37,0,0,-0.37,353,240)">
-    <path
-       style="fill-rule:evenodd;stroke-width:5.40540953;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       inkscape:connector-curvature="0"
-       id="path334"
-       d="m -70,-70 140,0"
-       vector-effect="non-scaling-stroke" />
-  </g>
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g336"
      font-style="normal"
      font-weight="400"
@@ -1302,21 +989,6 @@
      font-weight="400"
      font-size="11"
      transform="matrix(0.37,0,0,-0.37,353,240)" />
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:url(#linearGradient5120);fill-rule:evenodd;stroke:#404040;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-opacity:1;stroke-dasharray:none"
-     id="g340"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(0.37,0,0,-0.37,353,240)"
-     stroke-miterlimit="2">
-    <path
-       inkscape:connector-curvature="0"
-       style="fill:url(#linearGradient5118);fill-rule:evenodd;stroke-width:5.40540953;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       id="path342"
-       d="m -50,-40 c 0,-5.5228 4.4772,-10 10,-10 l 80,0 c 5.5228,0 10,4.4772 10,10 l 0,80 c 0,5.5228 -4.4772,10 -10,10 l -80,0 c -5.5228,0 -10,-4.4772 -10,-10 l 0,-80"
-       vector-effect="non-scaling-stroke" />
-  </g>
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g344"
@@ -1370,25 +1042,6 @@
      transform="matrix(0.37,0,0,0.37,353,314)"
      stroke-miterlimit="2" />
   <g
-     style="font-style:normal;font-weight:400;font-size:33.84619904px;font-family:'DejaVu Sans Mono';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540934;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-dasharray:none;stroke-opacity:1"
-     id="g362"
-     font-style="normal"
-     font-weight="400"
-     font-size="33.8462"
-     transform="matrix(0.37,0,0,0.37,348.2,315.6)"
-     stroke-miterlimit="2">
-    <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48.64868546px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:5.40540934;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       id="text364"
-       font-style="normal"
-       font-weight="400"
-       font-size="33.8462"
-       y="-88"
-       x="-30.7031"
-       xml:space="preserve"
-       sodipodi:linespacing="125%">J=J</text>
-  </g>
-  <g
      style="font-style:normal;font-weight:400;font-size:33.84619904px;font-family:'DejaVu Sans Mono';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-opacity:1;stroke-dasharray:none"
      id="g366"
      font-style="normal"
@@ -1410,21 +1063,6 @@
      font-weight="400"
      font-size="11"
      transform="matrix(0.37,0,0,-0.37,353,240)" />
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#404040;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-opacity:1;stroke-dasharray:none"
-     id="g372"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(0.37,0,0,-0.37,353,240)"
-     stroke-miterlimit="2">
-    <path
-       style="fill-rule:evenodd;stroke-width:5.40540953;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       inkscape:connector-curvature="0"
-       id="path374"
-       d="m -50,-40 c 0,-5.5228 4.4772,-10 10,-10 l 80,0 c 5.5228,0 10,4.4772 10,10 l 0,80 c 0,5.5228 -4.4772,10 -10,10 l -80,0 c -5.5228,0 -10,-4.4772 -10,-10 l 0,-80"
-       vector-effect="non-scaling-stroke" />
-  </g>
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.40540953;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g376"
@@ -1454,21 +1092,6 @@
      font-size="11"
      transform="matrix(0.037,0,0,-0.037,316,240)" />
   <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:#5f5f5f;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:54.05409529;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-opacity:1;stroke-dasharray:none"
-     id="g384"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(0.037,0,0,0.037,316,240)"
-     stroke-miterlimit="2">
-    <path
-       style="fill-rule:evenodd;stroke-width:54.05409529;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       inkscape:connector-curvature="0"
-       id="path386"
-       d="M 100,0 C 100,55.2285 55.2285,100 0,100 -55.2285,100 -100,55.2285 -100,0 c 0,-55.2285 44.7715,-100 100,-100 55.2285,0 100,44.7715 100,100"
-       vector-effect="non-scaling-stroke" />
-  </g>
-  <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:54.05409529;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g388"
      font-style="normal"
@@ -1496,21 +1119,6 @@
      font-weight="400"
      font-size="11"
      transform="matrix(0.037,0,0,-0.037,390,240)" />
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:54.05409529;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-opacity:1;stroke-dasharray:none"
-     id="g396"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="matrix(0.037,0,0,0.037,390,240)"
-     stroke-miterlimit="2">
-    <path
-       style="fill-rule:evenodd;stroke-width:54.05409529;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       inkscape:connector-curvature="0"
-       id="path398"
-       d="M 102,0 C 102,55.2285 57.2285,100 2,100 -53.2285,100 -98,55.2285 -98,0 c 0,-55.2285 44.7715,-100 100,-100 55.2285,0 100,44.7715 100,100"
-       vector-effect="non-scaling-stroke" />
-  </g>
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:54.05409529;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g400"
@@ -1584,21 +1192,6 @@
      font-size="11"
      transform="translate(390,203)" />
   <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:#000000;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:2.00000153;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:0;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-     id="g420"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="translate(390,203)">
-    <rect
-       id="rect422"
-       height="6"
-       width="6"
-       y="-3"
-       x="-3"
-       style="stroke-width:2.00000153;stroke-miterlimit:3.66391182;stroke-dasharray:none" />
-  </g>
-  <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.00000153;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g424"
      font-style="normal"
@@ -1612,21 +1205,6 @@
      font-weight="400"
      font-size="11"
      transform="translate(390,277)" />
-  <g
-     style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:#000000;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:2.00000153;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:0;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-     id="g428"
-     font-style="normal"
-     font-weight="400"
-     font-size="11"
-     transform="translate(390,277)">
-    <rect
-       id="rect430"
-       height="6"
-       width="6"
-       y="-3"
-       x="-3"
-       style="stroke-width:2.00000153;stroke-miterlimit:3.66391182;stroke-dasharray:none" />
-  </g>
   <g
      style="font-style:normal;font-weight:400;font-size:11px;font-family:'Noto Sans';fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.00000153;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;stroke-miterlimit:3.66391182;stroke-dasharray:none"
      id="g432"
@@ -3569,23 +3147,4 @@
      d="m 239.07954,240.0027 -29.83295,0.16666"
      id="path5596"
      inkscape:connector-curvature="0" />
-  <g
-     style="font-style:normal;font-weight:400;font-size:33.84619904px;font-family:'DejaVu Sans Mono';fill:none;fill-rule:evenodd;stroke:#0000ff;stroke-width:5.40540934;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:3.66391182;stroke-dasharray:none;stroke-opacity:1"
-     id="g486-6"
-     font-style="normal"
-     font-weight="400"
-     font-size="33.8462"
-     transform="matrix(0.37,0,0,0.37,340.18228,172.35951)"
-     stroke-miterlimit="2">
-    <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48.64868546px;line-height:125%;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:5.40540934;stroke-miterlimit:3.66391182;stroke-dasharray:none"
-       id="text488-3"
-       font-style="normal"
-       font-weight="400"
-       font-size="33.8462"
-       y="106.32433"
-       x="-70.054855"
-       xml:space="preserve"
-       sodipodi:linespacing="125%">inertia</text>
-  </g>
 </svg>

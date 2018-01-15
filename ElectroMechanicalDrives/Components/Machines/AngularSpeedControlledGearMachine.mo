@@ -12,7 +12,7 @@ model AngularSpeedControlledGearMachine "Signal angular speed input machine incl
   parameter Real efficiency = 1 "Efficiency of gear";
   parameter Modelica.SIunits.Inertia J = 0
     "Total inertia of machine w.r.t machine speed" annotation(Evaluate = true);
-  Modelica.Blocks.Interfaces.RealInput w_ref(unit = "rad/s")
+  Modelica.Blocks.Interfaces.RealInput w_ref(unit = "rad/s", displayUnit = "rpm")
     "Reference angular speed as input signal" annotation(Placement(transformation(extent = {{-140, -20}, {-100, 20}}, rotation = 0)));
 
   Modelica.SIunits.Angle phiMachine "Absolute rotation angle of machine";
@@ -64,10 +64,10 @@ equation
   connect(efficiencyGear.flange_b, powerLoadSensor.flange_a) annotation(Line(points={{80,-80},
           {90,-80},{90,-60}},                                                                                            color = {0, 0, 0}, smooth = Smooth.None));
   connect(speed.w_ref, w_ref) annotation(Line(points = {{-92, 0}, {-120, 0}}, color = {0, 0, 127}, smooth = Smooth.None));
-  connect(speed.flange, powerMachineSensor.flange_a) annotation(Line(points = {{-70, 4.44089e-16}, {-70, -20}}, color = {0, 0, 0}, smooth = Smooth.None));
+  connect(speed.flange, powerMachineSensor.flange_a) annotation(Line(points={{-70,0},{-70,-20}},                color = {0, 0, 0}, smooth = Smooth.None));
   connect(efficiencyGear.flange_a, idealGear.flange_b) annotation(Line(points={{60,-80},
           {50,-80}},                                                                                    color = {0, 0, 0}, smooth = Smooth.None));
-  connect(torqueShaftSensor.flange_b, powerShaftSensor.flange_a) annotation(Line(points = {{-10, -80}, {-4.44089e-16, -80}}, color = {0, 0, 0}, smooth = Smooth.None));
+  connect(torqueShaftSensor.flange_b, powerShaftSensor.flange_a) annotation(Line(points={{-10,-80},{0,-80}},                 color = {0, 0, 0}, smooth = Smooth.None));
   connect(powerShaftSensor.flange_b, idealGear.flange_a) annotation(Line(points = {{20, -80}, {30, -80}}, color = {0, 0, 0}, smooth = Smooth.None));
   connect(torqueLoadSensor.flange_b, flange) annotation (Line(points={{90,-10},{90,0},{100,0}}, color={0,0,0}));
   connect(torqueLoadSensor.flange_a, powerLoadSensor.flange_b) annotation (Line(points={{90,-30},{90,-35},{90,-40}}, color={0,0,0}));
