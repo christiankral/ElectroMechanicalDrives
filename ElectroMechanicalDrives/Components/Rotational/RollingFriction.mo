@@ -24,7 +24,11 @@ equation
           fillPattern =                                                                                                   FillPattern.Sphere, fillColor = {135, 135, 135}), Ellipse(extent = {{-44, -12}, {-24, -32}}, lineColor = {0, 0, 0},
             fillPattern =                                                                                                   FillPattern.Sphere, fillColor = {135, 135, 135}), Ellipse(extent = {{-30, 30}, {30, -30}}, lineColor = {0, 0, 0}, fillColor = {175, 175, 175},
             fillPattern =                                                                                                   FillPattern.Solid), Ellipse(extent = {{-20, 20}, {20, -20}}, lineColor = {0, 0, 0}, fillColor = {255, 255, 255},
-            fillPattern =                                                                                                   FillPattern.Solid)}), Documentation(info="<html>
+            fillPattern =                                                                                                   FillPattern.Solid),
+                                                                             Text(
+              extent={{-150,-120},{150,-170}},
+              lineColor={0,0,0},
+          textString="tau_constant=%tau_constant")}),                                                                                             Documentation(info="<html>
 <p>
 The friction model is implemented as a constant breaking torque similar to 
 <a href=\"modelica://ElectroMechanicalDrives.Components.Translational.RollingFriction\">Translational.RollingFriction</a>.

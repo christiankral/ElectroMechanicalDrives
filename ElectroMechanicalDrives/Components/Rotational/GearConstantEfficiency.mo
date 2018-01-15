@@ -43,7 +43,7 @@ connected to other elements in an appropriate way.
     coordinateSystem(preserveAspectRatio=true,
       extent={{-100,-100},{100,100}}),
     graphics={
-      Text(extent={{-153,145},{147,105}},
+      Text(extent={{-151,151},{149,111}},
         lineColor={0,0,255},
         textString="%name"),
       Text(extent={{-146,-49},{154,-79}},
@@ -51,5 +51,6 @@ connected to other elements in an appropriate way.
       textString="ratio=%ratio"),
       Text(extent={{60,100},{100,59}},
         lineColor={0,0,0},
-          textString="%%")}));
+          textString="%%"),                                                                                                                                                                                                        Text(extent={{-150,-120},{150,-150}},    lineColor={0,0,0},
+          textString="eff=%efficiency")}));
 end GearConstantEfficiency;

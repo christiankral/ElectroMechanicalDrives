@@ -1,7 +1,9 @@
 within ElectroMechanicalDrives.Icons;
 partial model GearMachine "Electric machine"
 
-  annotation(Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Rectangle(extent = {{-40, 60}, {80, -60}}, lineColor = {0, 0, 0},
+  annotation(Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Rectangle(extent={{22,60},{80,-60}},       lineColor={0,0,0},
+            fillPattern=FillPattern.HorizontalCylinder,
+          fillColor={255,255,255}),                                                                               Rectangle(extent={{-40,60},{22,-60}},      lineColor = {0, 0, 0},
             fillPattern =                                                                                                   FillPattern.HorizontalCylinder, fillColor = {255, 0, 0}), Rectangle(extent = {{-40, 60}, {-60, -60}}, lineColor = {0, 0, 0},
             fillPattern =                                                                                                   FillPattern.HorizontalCylinder, fillColor = {128, 128, 128}), Rectangle(extent = {{66, 10}, {100, -10}}, lineColor = {0, 0, 0},
             fillPattern =                                                                                                   FillPattern.HorizontalCylinder, fillColor = {95, 95, 95}), Rectangle(extent = {{-40, 70}, {40, 50}}, lineColor = {95, 95, 95}, fillColor = {95, 95, 95},

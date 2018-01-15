@@ -16,5 +16,7 @@ In this model considers the inertial mass <code>m</code> including the following
 athmospheric friction and optional electric drives.</p>
 <h5>Note</h5>
 <p>Do not change <code>v_linear</code> except this is required for numerical reasons</p>
-</html>"));
+</html>"),
+    Icon(graphics={                                                                                                                                                                                                        Text(extent={{-150,-110},{150,-140}},    lineColor={0,0,0},
+          textString="mu=%um")}));
 end MassFriction;

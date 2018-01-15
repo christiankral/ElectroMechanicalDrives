@@ -3,6 +3,12 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<h5>Version v1.5.0, 2018-01-15</h5>
+<ul>
+<li>Added parameters to icon representation, see
+    <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/issues/10\">#10</a></li>
+</ul>
+
 <h5>Version v1.4.0, 2017-11-20</h5>
 <ul>
 <li>Added Gear with constant efficiency</li>

@@ -77,7 +77,10 @@ equation
     annotation (Line(points={{80,0},{100,0}},        color={0,0,0}));
   annotation(defaultComponentName = "machine", Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,-100},{100,100}})),                Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Rectangle(origin = {90, 0}, lineColor = {64, 64, 64}, fillColor = {191, 191, 191},
             fillPattern =                                                                                                   FillPattern.HorizontalCylinder, extent = {{-10, -10}, {10, 10}}), Text(extent = {{-140, 60}, {-100, 20}}, lineColor = {0, 0, 0},
-            fillPattern =                                                                                                   FillPattern.HorizontalCylinder, fillColor = {175, 175, 175}, textString = "w"), Text(extent = {{-150, 120}, {150, 80}}, textString = "%name", lineColor = {0, 0, 255}), Line(points = {{-100, 0}, {-60, 0}}, color = {0, 0, 0}, smooth = Smooth.None)}),
+            fillPattern =                                                                                                   FillPattern.HorizontalCylinder, fillColor = {175, 175, 175}, textString = "w"), Text(extent = {{-150, 120}, {150, 80}}, textString = "%name", lineColor = {0, 0, 255}), Line(points = {{-100, 0}, {-60, 0}}, color = {0, 0, 0}, smooth = Smooth.None),
+                                                                                                                                                                                                        Text(extent={{-150,-110},{150,-150}},                         lineColor={0,0,0},
+          textString="ratio=%ratio"),                                                                                                                                                                       Text(extent={{-150,-150},{150,-190}},                         lineColor={0,0,0},
+          textString="eff=%efficiency")}),
     Documentation(info="<html>
 <p>This is an idealized angular speed controlled electric machine model with integrated gear considering constant gear efficiency. 
 The actual angular speed of the <em>electric machine</em> can be adjusted by means of the signal input. 

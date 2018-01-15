@@ -21,7 +21,10 @@ model Battery "Re-chargeable battery with internal resistor"
           extent={{60,12},{70,-12}},
           lineColor={0,0,255},
           fillColor={0,0,255},
-          fillPattern=FillPattern.Solid)}),
+          fillPattern=FillPattern.Solid),
+        Text(extent={{-150,-40},{150,-80}},
+        lineColor={0,0,0},
+          textString="Ecell=%Ecell")}),
     Documentation(info="<html>
 <p>This linear battery model is based on a linear capacitor which can be charged and discharged. 
 The battery cell is parameterized by the upper and lower operationg voltage limit and the total

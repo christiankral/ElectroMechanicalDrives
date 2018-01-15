@@ -12,7 +12,11 @@ equation
   v = der(s);
   f = smooth(1, if v > v_linear then f_constant else if v < (-v_linear) then -f_constant else f_constant * v / v_linear);
   lossPower = f * v;
-  annotation(defaultComponentName = "friction", Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Line(points = {{-80, -40}, {-20, -40}, {20, 40}, {80, 40}}, color = {0, 0, 255}, smooth = Smooth.None)}),
+  annotation(defaultComponentName = "friction", Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Line(points = {{-80, -40}, {-20, -40}, {20, 40}, {80, 40}}, color = {0, 0, 255}, smooth = Smooth.None),
+                                                                             Text(
+              extent={{-150,-120},{150,-170}},
+              lineColor={0,0,0},
+          textString="f_constant=%f_constant")}),
     Documentation(info="<html>
 <p>
 <img src=\"modelica://ElectroMechanicalDrives/Resources/Images/friction.png\">
