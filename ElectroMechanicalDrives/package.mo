@@ -3,7 +3,7 @@ package ElectroMechanicalDrives "Library for the simulation of electro mechanica
   extends Modelica.Icons.Package;
   import Modelica.Constants.pi;
 
-  annotation(version = "1.5.0", versionBuild = 2, versionDate = "2018-01-15", uses(Modelica(version = "3.2.2")),
+  annotation(version = "1.5.1", versionBuild = 1, versionDate = "2018-01-15", uses(Modelica(version = "3.2.2")),
   Documentation(info="<html>
 <p>The ElectroMechanicalDrives library is an educational library to investigate simple industrial drives and electric vehicles</p>
 </html>"));
