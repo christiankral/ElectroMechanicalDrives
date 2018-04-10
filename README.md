@@ -1,10 +1,15 @@
 # ElectroMechanicalDrives
 
-Modelica library for the simulation of electromechanical drives such as
+Modelica library for the simulation of electromechanical drives such as:
+
 - Electric vehicles
-- Electric trains
+- Electric railway vehicles
+- Industrial drives
 - Machine tools
-in order to investigate the stastionary and transient behaviour and to dimension electric drive components. 
+
+![ElectroMechanicalDrives library](https://github.com/christiankral/ElectroMechanicalDrives/blob/master/ElectroMechanicalDrives/Resources/Images/VehicleDriveCyle.png?raw=true)
+
+This library enables the investigation of the operational behaviour of electric drives and the dimensioning electric drive components. 
 
 The library provides: 
 - Vehicle with
