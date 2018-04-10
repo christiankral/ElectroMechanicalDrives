@@ -28,7 +28,7 @@ The library provides:
 
 This library is published under the [BSD-3-Clause](https://opensource.org/licenses/BSD-3-Clause) 
 
-Copyright 2015-2017 Christian Kral 
+Copyright 2015-2018 Christian Kral 
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
