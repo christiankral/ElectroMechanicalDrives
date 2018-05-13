@@ -3,6 +3,13 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<h5>Version v1.6.0, 2018-05-13</h5>
+<ul>
+<li>Moved parameter <code>v_linear</code> to tab Tuning, see 
+    <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/issues/13\">#13</a></li>
+</ul>
+
+
 <h5>Version v1.5.1, 2018-01-15</h5>
 <ul>
 <li>Added <code>partial</code> to all partial <a href=\"modelica://ElectroMechanicalDrives.Interfaces\">Interfaces</a> models</li>

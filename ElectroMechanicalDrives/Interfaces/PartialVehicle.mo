@@ -9,7 +9,7 @@ partial model PartialVehicle "Partial vehicle with friction"
   parameter Modelica.SIunits.Mass m = 1000 "Total mass of vehicle" annotation(Dialog(group = "Vehicle"));
   parameter Modelica.SIunits.Length r = 0.35 "Wheel radius" annotation(Dialog(group = "Vehicle"));
   parameter Real j = 0 "Relative mass increase due to rotating inertias" annotation(Dialog(group = "Vehicle"));
-  parameter Modelica.SIunits.Velocity v_linear = 0.01 "Speed limit of constant rolling friction (do not change unless required)" annotation(Dialog(group = "Vehicle"));
+  parameter Modelica.SIunits.Velocity v_linear = 0.01 "Speed limit of constant rolling friction (do not change unless required)" annotation(Dialog(tab = "Tuning",groupImage="modelica://ElectroMechanicalDrives/Resources/Images/v_linear.png"));
   final parameter Modelica.SIunits.Inertia J = j * m * r ^ 2 "Total inertia with respect to wheel" annotation(Evaluate = true);
   Modelica.SIunits.Acceleration a "Vehicle acceleration";
   Modelica.SIunits.Velocity v "Vehicle velovity";

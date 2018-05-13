@@ -1,6 +1,5 @@
 within ElectroMechanicalDrives.Components.Vehicles;
 model VehicleWithDrive "Vehicle with friction"
-  extends ElectroMechanicalDrives.Components.Vehicles.Vehicle;
   parameter Real i = 1 "Transmission speed ratio machine/wheel" annotation(Dialog(group = "Power train", tab = "ElectroMechanical"));
   parameter Modelica.SIunits.ElectricalTorqueConstant kBase = 1
     "Transformation coefficient of base velocity range" annotation(Dialog(group = "Electric machine", tab = "ElectroMechanical"));
@@ -17,6 +16,7 @@ model VehicleWithDrive "Vehicle with friction"
   parameter Modelica.SIunits.Energy ECell
     "Total cell energy between V0 and V1" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
   parameter Modelica.SIunits.Voltage ViniCell = V1Cell "Initial cell voltage" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
+  extends ElectroMechanicalDrives.Components.Vehicles.Vehicle;
   Modelica.Mechanics.Rotational.Components.IdealGear idealGear(ratio = i) annotation(Placement(transformation(extent={{-40,70},
             {-60,90}})));
   Machines.IdealCurrentFedMachine machine(final kBase = kBase, final wBase = wBase) annotation(Placement(transformation(extent={{-10,70},
