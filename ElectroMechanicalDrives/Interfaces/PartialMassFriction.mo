@@ -6,8 +6,7 @@ partial model PartialMassFriction
   parameter Modelica.SIunits.Mass m(min = 0, start = 1)
     "Mass of the sliding mass";
   parameter Real mu = 0.02 "Friction coefficient";
-  parameter Modelica.SIunits.Velocity v_linear = 1E-5
-    "Speed limit of constant friction (do not change unless required)";
+  parameter Modelica.SIunits.Velocity v_linear = 0.01 "Speed limit of constant rolling friction (do not change unless required)" annotation(Dialog(tab = "Tuning",groupImage="modelica://ElectroMechanicalDrives/Resources/Images/v_linearBase.png"));
   Modelica.SIunits.Force f_frictionSliding "Nominal sliding friction force";
   Modelica.SIunits.Position s "Position of flange_a";
   Modelica.SIunits.Velocity v "Absolute velocity of flange_a and flange_b";
