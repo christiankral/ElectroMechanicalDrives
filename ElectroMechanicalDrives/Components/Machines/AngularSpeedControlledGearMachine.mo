@@ -9,7 +9,8 @@ model AngularSpeedControlledGearMachine "Signal angular speed input machine incl
     "if exact=false, critical frequency of filter to filter input signal"                               annotation(Dialog(enable = not exact));
   parameter Real ratio = 1
     "Transmission ratio of gear (wMachine/wLoad)";
-  parameter Real efficiency = 1 "Efficiency of gear";
+  parameter Real efficiency(final min=Modelica.Constants.small,
+    final max=1) = 1 "Efficiency of gear";
   parameter Modelica.SIunits.Inertia J = 0
     "Total inertia of machine w.r.t machine speed" annotation(Evaluate = true);
   Modelica.Blocks.Interfaces.RealInput w_ref(unit = "rad/s", displayUnit = "rpm")

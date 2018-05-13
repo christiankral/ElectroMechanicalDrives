@@ -5,7 +5,8 @@ model TorqueControlledGearMachine "Signal torque input machine including loss, i
                                                            annotation(Placement(transformation(extent = {{90, -10}, {110, 10}})));
   parameter Real ratio = 1
     "Transmission ratio of gear (wMachine/wLoad)";
-  parameter Real efficiency = 1 "Efficiency of gear";
+  parameter Real efficiency(final min=Modelica.Constants.small,
+    final max=1) = 1 "Efficiency of gear";
   parameter Modelica.SIunits.Inertia J = 0 "Total inertia of machine w.r.t machine speed" annotation(Evaluate = true);
 
   parameter Boolean useFieldWeakening = false

@@ -7,6 +7,8 @@ class ReleaseNotes "Release Notes"
 <ul>
 <li>Moved parameter <code>v_linear</code> to tab Tuning, see 
     <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/issues/13\">#13</a></li>
+<li>Limited parameter <code>efficiency</code> to <code>0 &lt; efficiency &le; 1</code>, see
+    <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/issues/14\">#14</a></li></li>
 </ul>
 
 

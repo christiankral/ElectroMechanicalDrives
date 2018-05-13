@@ -2,7 +2,8 @@ within ElectroMechanicalDrives.Components.Rotational;
 model ConstantEfficiency
   "Efficiency model considering constant efficiency"
   extends Modelica.Mechanics.Rotational.Interfaces.PartialElementaryTwoFlangesAndSupport2;
-  parameter Real efficiency = 0.9 "Efficiency coefficient";
+  parameter Real efficiency(final min=Modelica.Constants.small,
+    final max=1) = 1 "Efficiency coefficient";
   Modelica.SIunits.Angle phi "Angle of flange_a";
   Modelica.SIunits.AngularVelocity w
     "Absolute angular velocity of flange_a and flange_b";

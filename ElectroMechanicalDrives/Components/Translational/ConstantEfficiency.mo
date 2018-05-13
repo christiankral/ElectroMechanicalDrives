@@ -2,7 +2,8 @@ within ElectroMechanicalDrives.Components.Translational;
 model ConstantEfficiency
   "Efficiency model considering constant efficiency"
   extends Modelica.Mechanics.Translational.Interfaces.PartialElementaryTwoFlangesAndSupport2;
-  parameter Real efficiency = 0.9 "Efficiency coefficient";
+  parameter Real efficiency(final min=Modelica.Constants.small,
+    final max=1) = 1 "Efficiency coefficient";
   Modelica.SIunits.Position s "Position of flange_a";
   Modelica.SIunits.Velocity v
     "Absolute velocity of flange_a and flange_b";
