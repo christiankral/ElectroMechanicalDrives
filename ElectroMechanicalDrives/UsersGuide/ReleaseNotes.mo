@@ -3,6 +3,12 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<h5>Version v1.7.0, 2018-08-06</h5>
+<ul>
+<li>Removed ElectroMechanicalDrives.Components.Machines.AngularSpeedControlledGearMachine.mo</li>
+<li>Removed ElectroMechanicalDrives.Components.Machines.TorqueControlledGearMachine.mo</li>
+</ul>
+
 <h5>Version v1.6.0, 2018-05-13</h5>
 <ul>
 <li>Moved parameter <code>v_linear</code> to tab Tuning, see 
