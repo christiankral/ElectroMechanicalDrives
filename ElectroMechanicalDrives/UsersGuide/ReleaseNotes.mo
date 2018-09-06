@@ -3,7 +3,7 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
-<h5>Version v1.7.0, 2018-08-06</h5>
+<h5>Version v2.0.0, 2018-08-06</h5>
 <ul>
 <li>Removed ElectroMechanicalDrives.Components.Machines.AngularSpeedControlledGearMachine.mo</li>
 <li>Removed ElectroMechanicalDrives.Components.Machines.TorqueControlledGearMachine.mo</li>
@@ -11,7 +11,7 @@ class ReleaseNotes "Release Notes"
 
 <h5>Version v1.6.0, 2018-05-13</h5>
 <ul>
-<li>Moved parameter <code>v_linear</code> to tab Tuning, see 
+<li>Moved parameter <code>v_linear</code> to tab Tuning, see
     <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/issues/13\">#13</a></li>
 <li>Limited parameter <code>efficiency</code> to <code>0 &lt; efficiency &le; 1</code>, see
     <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/issues/14\">#14</a></li></li>
@@ -32,16 +32,16 @@ class ReleaseNotes "Release Notes"
     <li><a href=\"modelica://ElectroMechanicalDrives.Components.Machines.AngularSpeedControlledMachine\">AngularSpeedControlledMachine</a></li>
     <li><a href=\"modelica://ElectroMechanicalDrives.Components.Machines.AngularSpeedControlledMachine\">AngularTorqueControlledMachine</a></li>
     </ul>
-    as they are a design flaw; see 
+    as they are a design flaw; see
     <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/issues/11\">#11</a>
 </li>
 <li>Changed gear machine icon to better distinguish from non-gear machine</li>
-    
+
 </ul>
 
 <h5>Version v1.4.0, 2017-11-20</h5>
 <ul>
-<li>Added <a href=\"modelica://ElectroMechanicalDrives.Components.Rotational.GearConstantEfficiency\">gear</a> 
+<li>Added <a href=\"modelica://ElectroMechanicalDrives.Components.Rotational.GearConstantEfficiency\">gear</a>
     with constant efficiency</li>
 <li>Added some more default component names</li>
 </ul>
