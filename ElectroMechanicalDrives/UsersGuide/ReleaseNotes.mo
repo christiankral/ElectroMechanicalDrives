@@ -3,6 +3,12 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<h5>Version v2.0.1, 2018-09-29</h5>
+<ul>
+<li>Change color of translational component to green to match MSL 3.2.3 color guidelines, see 
+    <a href=\"https://github.com/modelica/ModelicaStandardLibrary/issues/2486\">MSL #2486</a></li>
+</ul>
+
 <h5>Version v2.0.0, 2018-08-06</h5>
 <ul>
 <li>Removed ElectroMechanicalDrives.Components.Machines.AngularSpeedControlledGearMachine.mo</li>

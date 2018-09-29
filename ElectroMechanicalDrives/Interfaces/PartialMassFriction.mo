@@ -32,10 +32,13 @@ equation
   // Force balance
   flange_a.f + flange_b.f - f_friction = m * a + m * Modelica.Constants.g_n * sin(angle);
   lossPower = f_friction * v;
-  annotation(defaultComponentName = "massFriction", Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Polygon(points={{
-              -60,-40},{60,-40},{60,40},{-60,40},{-60,-40}},                                                                                                                                                                        lineColor = {0, 0, 0},
-            fillPattern =                                                                                                   FillPattern.Sphere, smooth = Smooth.None, fillColor = {196, 196, 196}), Line(points={{
+  annotation(defaultComponentName = "massFriction", Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={                                             Line(points={{
               -100,-60},{100,-60}},                                                                                                                                                                                                        color = {0, 0, 0}, smooth = Smooth.None), Text(extent = {{-150, 100}, {150, 60}}, textString = "%name", lineColor = {0, 0, 255}), Text(extent={{-150,-60},{150,-90}},      lineColor = {0, 0, 0}, textString = "m=%m"), Line(points={{
               -100,0},{-60,0}},                                                                                                                                                                                                        color = {0, 127, 0}), Line(points={{
-              60,0},{100,0}},                                                                                                                                                                                                        color = {0, 127, 0})}));
+              60,0},{100,0}},                                                                                                                                                                                                        color = {0, 127, 0}),
+        Rectangle(
+          extent={{-60,-40},{60,40}},
+          lineColor={0,127,0},
+          fillPattern=FillPattern.Sphere,
+          fillColor={160,215,160})}));
 end PartialMassFriction;

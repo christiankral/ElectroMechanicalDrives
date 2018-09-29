@@ -90,14 +90,14 @@ equation
         Ellipse(extent={{-120,-120},{-80,-80}}, lineColor={0,0,0},
           fillColor={255,255,255},
           fillPattern=FillPattern.Solid),
-        Polygon(
-          points={{-100,-80},{-100,-40},{100,-40},{100,-80},{-100,-80}},
-          lineColor={0,0,0},
-          fillColor={128,128,128},
-          fillPattern=FillPattern.Solid),
         Ellipse(extent={{80,-120},{120,-80}},   lineColor={0,0,0},
           fillColor={255,255,255},
-          fillPattern=FillPattern.Solid)}),
+          fillPattern=FillPattern.Solid),
+        Rectangle(
+          extent={{-100,-80},{102,-40}},
+          lineColor={0,128,0},
+          fillPattern=FillPattern.Sphere,
+          fillColor={160,215,160})}),
     Documentation(info="<html>
 </html>"));
 end PartialVehicle;

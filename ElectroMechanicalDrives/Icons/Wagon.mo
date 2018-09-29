@@ -1,9 +1,10 @@
 within ElectroMechanicalDrives.Icons;
 model Wagon "Rail wagon icon"
 
-  annotation(Icon(graphics={  Polygon(points={{-100,-40},{-100,10},{-100,60},{-40,60},{40,60},{100,60},{100,10},{100,-40},{-100,-40}},                  lineColor = {0, 0, 0},
-            fillPattern =                                                                                                   FillPattern.Sphere, smooth = Smooth.None, fillColor = {128, 128, 128}),
-                                                                                                                                                                              Polygon(points={{-84,10},{-84,48},{-58,48},{-58,10},{-84,10}},            lineColor = {0, 0, 0},
+  annotation(Icon(graphics={  Polygon(points={{-100,-40},{-100,10},{-100,60},{-40,60},{40,60},{100,60},{100,10},{100,-40},{-100,-40}},                  lineColor=
+              {0,0,0},
+            fillPattern=FillPattern.Sphere,                                                                                                                           fillColor=
+              {160,215,160}),                                                                                                                                                 Polygon(points={{-84,10},{-84,48},{-58,48},{-58,10},{-84,10}},            lineColor = {0, 0, 0},
             fillPattern =                                                                                                   FillPattern.Sphere, smooth = Smooth.None, fillColor = {255, 255, 255}),
                                                                                                                                                                               Polygon(points={{-48,10},{-48,48},{-22,48},{-22,10},{-48,10}},            lineColor = {0, 0, 0},
             fillPattern =                                                                                                   FillPattern.Sphere, smooth = Smooth.None, fillColor = {255, 255, 255}),
