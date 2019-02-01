@@ -9,7 +9,7 @@ class License "BSD-3-Clause"
 </p>
 
 <p>
-Copyright 2015-2018, Christian Kral
+Copyright 2015-2019, Christian Kral
 </p>
 
 <p>
