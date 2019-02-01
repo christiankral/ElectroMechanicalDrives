@@ -3,7 +3,7 @@ model RollingFriction
   "Constant rolling force with linear range around zero speed"
   extends Modelica.Mechanics.Translational.Interfaces.PartialForce;
   parameter Modelica.SIunits.Force f_constant(final min = 0)
-    "Constant friction force";
+    "Constant friction force (if negative, force is acting as load)";
   parameter Modelica.SIunits.Velocity v_linear = 0.01 "Speed limit of constant rolling friction (do not change unless required)" annotation(Dialog(tab = "Tuning",groupImage="modelica://ElectroMechanicalDrives/Resources/Images/v_linearBase.png"));
   Modelica.SIunits.Velocity v "Speed";
   extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;

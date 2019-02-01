@@ -3,7 +3,7 @@ model RollingFriction
   "Constant friction torque with linear range around zero"
   extends Modelica.Mechanics.Rotational.Interfaces.PartialTorque;
   parameter Modelica.SIunits.Torque tau_constant(final min = 0)
-    "Constant friction torque";
+    "Constant friction torque (if negative, force is acting as load)";
   parameter Modelica.SIunits.AngularVelocity w_linear(final min = 0) = 0.1
     "Region of linear torque vs angular speed";
   Modelica.SIunits.Torque tau "Friction torque";
