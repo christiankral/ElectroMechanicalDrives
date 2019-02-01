@@ -1,7 +1,8 @@
 within ElectroMechanicalDrives.Components.Translational;
 model ConstantEfficiency
   "Efficiency model considering constant efficiency"
-  extends Modelica.Mechanics.Translational.Interfaces.PartialElementaryTwoFlangesAndSupport2;
+  extends
+    Modelica.Mechanics.Translational.Interfaces.PartialElementaryTwoFlangesAndSupport2;
   parameter Real efficiency(final min=Modelica.Constants.small,
     final max=1) = 1 "Efficiency coefficient";
   Modelica.SIunits.Position s "Position of flange_a";
@@ -14,7 +15,8 @@ model ConstantEfficiency
   Modelica.SIunits.Power power_b = flange_b.f * v
     "Power input of flange_b";
   Modelica.SIunits.Force f_loss(final start = 0) "Friction force";
-  extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
+  extends
+    Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
 equation
   s = flange_a.s - s_support;
   flange_a.s = flange_b.s;

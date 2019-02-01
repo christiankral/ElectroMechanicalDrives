@@ -8,7 +8,8 @@ model RollingFriction
     "Region of linear torque vs angular speed";
   Modelica.SIunits.Torque tau "Friction torque";
   Modelica.SIunits.AngularVelocity w "Angular velocity";
-  extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
+  extends
+    Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
 equation
   w = der(phi);
   tau = smooth(1, if w > w_linear then tau_constant else if w < (-w_linear) then -tau_constant else tau_constant * w / w_linear);

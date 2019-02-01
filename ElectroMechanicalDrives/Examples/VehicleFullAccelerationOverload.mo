@@ -26,7 +26,7 @@ equation
     experiment(
       StopTime=200,
       Interval=0.1,
-      Tolerance=1e-06),
+      Tolerance=1e-07),
     Documentation(info="<html>
 <p>Acceleration test with 140% of nominal current. The electric machine is different from
 <a href=\"modelica://ElectroMechanicalDrives.Examples.VehicleFullAcceleration\">VehicleFullAcceleration</a>: </p>

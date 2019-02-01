@@ -1,8 +1,10 @@
 within ElectroMechanicalDrives.Components.Rotational;
 model VariableDamper "Linear 1D rotational damper"
-  extends Modelica.Mechanics.Rotational.Interfaces.PartialCompliantWithRelativeStates;
+  extends
+    Modelica.Mechanics.Rotational.Interfaces.PartialCompliantWithRelativeStates;
   Modelica.Blocks.Interfaces.RealInput d "Damping coefficient" annotation(Placement(transformation(extent = {{-140, -80}, {-100, -40}}), iconTransformation(extent = {{-20, -20}, {20, 20}}, rotation = 90, origin = {0, -120})));
-  extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
+  extends
+    Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
 equation
   tau = d * w_rel;
   lossPower = tau * w_rel;

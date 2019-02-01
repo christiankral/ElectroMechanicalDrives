@@ -36,7 +36,7 @@ equation
   annotation(Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,-100},{100,100}})),                Icon(graphics), experiment(
       StopTime=1200,
       Interval=0.1,
-      Tolerance=1e-06),
+      Tolerance=1e-07),
     Documentation(info="<html>
 <p>This examples demonstrate a locomotive plus several wagons performing a drive cycle, powered by the external <code>speed</code> source.
 

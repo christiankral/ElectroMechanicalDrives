@@ -1,7 +1,8 @@
 within ElectroMechanicalDrives.Components.Rotational;
 model GearConstantEfficiency "Gear with constant efficiency"
   extends Modelica.Mechanics.Rotational.Icons.Gear;
-  extends Modelica.Mechanics.Rotational.Interfaces.PartialElementaryTwoFlangesAndSupport2;
+  extends
+    Modelica.Mechanics.Rotational.Interfaces.PartialElementaryTwoFlangesAndSupport2;
   parameter Real ratio(start=1)
     "Transmission ratio (flange_a.phi/flange_b.phi)";
   parameter Real efficiency = 1 "Constant efficiency coefficient";
@@ -15,7 +16,8 @@ model GearConstantEfficiency "Gear with constant efficiency"
     final efficiency=efficiency,
     final useHeatPort=useHeatPort) annotation (Placement(transformation(extent={{20,-10},{40,10}})));
   Modelica.Mechanics.Rotational.Components.IdealGear idealGear(final useSupport=useSupport, final ratio=ratio) annotation (Placement(transformation(extent={{-40,-10},{-20,10}})));
-  extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT(useHeatPort=false);
+  extends
+    Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT(      useHeatPort=false);
 equation
   phi_a = flange_a.phi - phi_support;
   phi_b = flange_b.phi - phi_support;

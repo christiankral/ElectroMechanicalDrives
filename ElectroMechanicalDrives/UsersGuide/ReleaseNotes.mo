@@ -3,6 +3,14 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<h5>Version v2.0.2, 2019-02-01</h5>
+<ul>
+<li>Fix doc strings of friction models, see 
+    <a href=\"https://https://github.com/christiankral/ElectroMechanicalDrives/issues/19\">#19</a></li>
+<li>Improve simulation accuracy, see 
+    <a href=\"https://https://github.com/christiankral/ElectroMechanicalDrives/issues/20\">#20</a></li>
+</ul>
+
 <h5>Version v2.0.1, 2018-09-29</h5>
 <ul>
 <li>Change color of translational component to green to match MSL 3.2.3 color guidelines, see 

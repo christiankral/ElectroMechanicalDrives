@@ -41,7 +41,7 @@ equation
     experiment(
       StopTime=13200,
       Interval=1,
-      Tolerance=1e-06,
+      Tolerance=1e-07,
       __Dymola_Algorithm="Radau"),
     Documentation(info="<html>
 <p>This example shows a self-powered electric vehicle which performs eleven NEDC drive cycles. 
