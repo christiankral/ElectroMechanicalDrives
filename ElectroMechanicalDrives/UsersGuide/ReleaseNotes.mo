@@ -3,6 +3,12 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<h5>Version v2.0.3, 2019-02-13</h5>
+<ul>
+<li>Fix wording of doc strings of friction models, see 
+    <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/commit/38f55ca7e0aa02e3010ab711fa7888953ea49b94#r32219349\">comment on #19</a></li>
+</ul>
+
 <h5>Version v2.0.2, 2019-02-01</h5>
 <ul>
 <li>Fix doc strings of friction models, see 
