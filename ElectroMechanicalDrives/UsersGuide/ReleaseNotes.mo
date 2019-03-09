@@ -3,6 +3,12 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<h5>Version v2.1.0, 2019-03-09</h5>
+<ul>
+<li>Switch to Modelcia Standard Library 3.2.3, see 
+    <a href=\"https://github.com/christiankral/WindPowerPlants/issues/24\">#24</a></li>
+</ul>
+
 <h5>Version v2.0.1, 2018-09-29</h5>
 <ul>
 <li>Change color of translational component to green to match MSL 3.2.3 color guidelines, see 
