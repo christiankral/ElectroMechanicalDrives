@@ -30,7 +30,7 @@ equation
   annotation(Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,-100},{100,100}}),      graphics), Icon(graphics), experiment(
       StopTime=1200,
       Interval=0.1,
-      Tolerance=1e-06),
+      Tolerance=1e-07),
     Documentation(info="<html>
 <p>This example extends 
 <a href=\"modelica://ElectroMechanicalDrives.Examples.VehicleDriveCycle\">VehicleDriveCycle</a>

@@ -8,7 +8,7 @@ equation
   annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}})),           Icon(graphics), experiment(
       StopTime=60,
       __Dymola_NumberOfIntervals=6000,
-      Tolerance=1e-06),
+      Tolerance=1e-07),
     Documentation(info="<html>
 <p>This example demonstrates the coast to standstill of a vehicle due to rolling friction and atmospheric friction<p>
 

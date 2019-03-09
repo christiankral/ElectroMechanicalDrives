@@ -40,7 +40,7 @@ connect(combiTable1Ds.y[1], vehicle.variableAngle) annotation (Line(points=
           -100},{100,100}})),                                                                       Icon(graphics), experiment(
       StopTime=6000,
       Interval=0.1,
-      Tolerance=1e-06),
+      Tolerance=1e-07),
     Documentation(info="<html>
 <p>This example extends 
 <a href=\"modelica://ElectroMechanicalDrives.Examples.VehicleDriveCycleWithDrive\">VehicleDriveCycleWithDrive</a>
