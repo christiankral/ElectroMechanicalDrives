@@ -6,8 +6,7 @@ model RollingFriction
     "Constant friction force (if negative, force is acting as load)";
   parameter Modelica.SIunits.Velocity v_linear = 0.01 "Speed limit of constant rolling friction (do not change unless required)" annotation(Dialog(tab = "Tuning",groupImage="modelica://ElectroMechanicalDrives/Resources/Images/v_linearBase.png"));
   Modelica.SIunits.Velocity v "Speed";
-  extends
-    Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
+  extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
 equation
   v = der(s);
   f = smooth(1, if v > v_linear then f_constant else if v < (-v_linear) then -f_constant else f_constant * v / v_linear);

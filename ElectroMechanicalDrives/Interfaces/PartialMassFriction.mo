@@ -1,8 +1,7 @@
 within ElectroMechanicalDrives.Interfaces;
 partial model PartialMassFriction
   "Partial model with mass, inclination and friction"
-  extends
-    Modelica.Mechanics.Translational.Interfaces.PartialElementaryTwoFlangesAndSupport2;
+  extends Modelica.Mechanics.Translational.Interfaces.PartialElementaryTwoFlangesAndSupport2;
   extends ElectroMechanicalDrives.Interfaces.ConditionalAngle;
   parameter Modelica.SIunits.Mass m(min = 0, start = 1)
     "Mass of the sliding mass";
@@ -17,8 +16,7 @@ partial model PartialMassFriction
   Modelica.SIunits.Force f_gradient "Force caused by gradient";
   Modelica.SIunits.Power power_gradient = f_gradient*v "Power caused by gradient";
   Modelica.SIunits.Force f "Total force";
-  extends
-    Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
+  extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
 equation
   s = flange_a.s - s_support;
   flange_a.s = flange_b.s;

@@ -1,8 +1,7 @@
 within ElectroMechanicalDrives.Components.Translational;
 model Clutch "Clutch based on Coulomb friction"
   // extends Modelica.Mechanics.Rotational.Icons.Clutch;
-  extends
-    Modelica.Mechanics.Translational.Interfaces.PartialCompliantWithRelativeStates;
+  extends Modelica.Mechanics.Translational.Interfaces.PartialCompliantWithRelativeStates;
   parameter Real mue_pos[:, 2] = [0, 0.5]
     "[v,mue] positive sliding friction coefficient (v_rel>=0)";
   parameter Real peak(final min = 1) = 1
@@ -12,8 +11,7 @@ model Clutch "Clutch based on Coulomb friction"
   parameter Modelica.SIunits.Force fn_max(final min = 0, start = 1)
     "Maximum normal force";
   extends Modelica.Mechanics.Translational.Interfaces.PartialFriction;
-  extends
-    Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
+  extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
   Real mue0 "Friction coefficient for v=0 and forward sliding";
   Modelica.SIunits.Force fn "Normal force (fn=fn_max*f_normalized)";
   Modelica.SIunits.Acceleration a_rel(start = 0)
