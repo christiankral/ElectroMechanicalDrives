@@ -3,10 +3,16 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<h5>Version v2.1.1, 2019-05-15</h5>
+<ul>
+<li>Fix icon text of mass friction models, see
+    <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/issues/21\">#21</a></li>
+<li>Fix links of release notes</li>
+</ul>
+
 <h5>Version v2.1.0, 2019-03-09</h5>
 <ul>
-<li>Switch to Modelcia Standard Library 3.2.3, see
-    <a href=\"https://github.com/christiankral/WindPowerPlants/issues/24\">#24</a></li>
+<li>Switch to Modelcia Standard Library 3.2.3</li>
 </ul>
 
 <h5>Version v2.0.3, 2019-02-13</h5>

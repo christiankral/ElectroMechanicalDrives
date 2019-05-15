@@ -18,5 +18,5 @@ athmospheric friction and optional electric drives.</p>
 <p>Do not change <code>v_linear</code> except this is required for numerical reasons</p>
 </html>"),
     Icon(graphics={                                                                                                                                                                                                        Text(extent={{-150,-110},{150,-140}},    lineColor={0,0,0},
-          textString="mu=%um")}));
+          textString="mu=%mu")}));
 end MassFriction;
