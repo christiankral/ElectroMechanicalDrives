@@ -3,6 +3,13 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<h5>Version v2.2.0, 2019-07-03</h5>
+<ul>
+<li>Change default value of <code>mu</code> in 
+    <a href=\"modelica://ElectroMechanicalDrives.Interfaces.PartialMassFriction\">PartialMassFriction</a> (non-backwards compatible change), see
+    <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/issues/22\">#22</a></li>
+</ul>
+
 <h5>Version v2.1.1, 2019-05-15</h5>
 <ul>
 <li>Fix icon text of mass friction models, see
