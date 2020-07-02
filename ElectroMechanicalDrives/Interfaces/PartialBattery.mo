@@ -2,8 +2,8 @@ within ElectroMechanicalDrives.Interfaces;
 partial model PartialBattery "Partial re-chargeable battery with internal resistor"
   parameter Integer ns(min = 1) = 1 "Number of series cells";
   parameter Integer np(min = 1) = 1 "Number of parallel cells";
-  parameter Modelica.SIunits.Voltage V1Cell "Maximum cell voltage > V0Cell";
-  parameter Modelica.SIunits.Voltage V0Cell "Minimum cell voltage < V1Cell";
+  parameter Modelica.SIunits.Voltage V1Cell = 4.2 "Maximum cell voltage > V0Cell";
+  parameter Modelica.SIunits.Voltage V0Cell = 2.5 "Minimum cell voltage < V1Cell";
   final parameter Modelica.SIunits.Voltage V1 = V1Cell*ns "Maximum battery voltage > V0";
   final parameter Modelica.SIunits.Voltage V0 = V0Cell*ns "Maximum battery voltage < V1";
   parameter Boolean allowOvercharge = false

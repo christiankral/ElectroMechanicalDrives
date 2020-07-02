@@ -7,8 +7,8 @@ model VehicleWithDrive "Vehicle with friction"
     "Maximum base angular velocity" annotation(Dialog(group = "Electric machine", tab = "ElectroMechanical"));
   parameter Integer ns(min = 1) = 1 "Number of series cells" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
   parameter Integer np(min = 1) = 1 "Number of parallel cells" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
-  parameter Modelica.SIunits.Voltage V1Cell "Maximum cell voltage > V0Cell" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
-  parameter Modelica.SIunits.Voltage V0Cell "Minimum cell voltage < V1Cell" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
+  parameter Modelica.SIunits.Voltage V1Cell = 4.2 "Maximum cell voltage > V0Cell" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
+  parameter Modelica.SIunits.Voltage V0Cell = 2.5 "Minimum cell voltage < V1Cell" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
   parameter Boolean allowOvercharge = false
     "Allows overcharging without error" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
   parameter Boolean allowUndercharge = false

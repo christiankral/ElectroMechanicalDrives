@@ -4,8 +4,8 @@ model VehicleFullAcceleration "Full acceleration of vehicle"
   ElectroMechanicalDrives.Components.Vehicles.VehicleWithDrive vehicle(
     ns=42,
     np=1,
-    V1Cell=4,
-    V0Cell=3,
+    V1Cell=4.2,
+    V0Cell=2.5,
     ViniCell=4,
     ECell=1188E3,
     r=0.35,
