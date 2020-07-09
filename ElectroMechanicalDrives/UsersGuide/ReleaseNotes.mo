@@ -5,7 +5,7 @@ class ReleaseNotes "Release Notes"
 
 <h5>Version v2.4.0, 2020-07-09</h5>
 <ul>
-<li>Change drive cycle <code>suv2.txt</code> to limit accleration, see
+<li>Change drive cycle <code>suv2.txt</code> to limit acceleration, see
     <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/issues/25\">#25</a></li>
 </ul>
 
