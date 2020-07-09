@@ -3,6 +3,12 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<h5>Version v2.4.0, 2020-07-09</h5>
+<ul>
+<li>Change drive cycle <code>suv2.txt</code> to limit accleration, see
+    <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/issues/25\">#25</a></li>
+</ul>
+
 <h5>Version v2.3.0, 2020-07-02</h5>
 <ul>
 <li>Change default value of <code>V0cell</code> and <code>V1cell</code> in battery models, see
