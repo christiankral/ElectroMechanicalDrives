@@ -34,13 +34,13 @@ equation
           lineColor={28,108,200},
           fillPattern=FillPattern.Solid,
           fillColor={255,255,255}),
-        Line(points={{-60,-60},{60,-60}}, color={28,108,200}),
+        Line(points={{-60,-60},{60,-60}}, color={0,0,0}),
         Line(points={{-60,40},{0,40},{10,24},{20,10},{30,0},{40,-8},{50,-16},{60,
-              -20}}, color={28,108,200}),
+              -20}}, color={0,0,0}),
         Line(points={{-60,-60},{-60,60},{-54,60},{-60,80},{-66,60},{-60,60}},
-            color={28,108,200}),
-        Line(points={{60,-60},{60,-54},{80,-60},{60,-66},{60,-60}}, color={28,108,
-              200})}),
+            color={0,0,0}),
+        Line(points={{60,-60},{60,-54},{80,-60},{60,-66},{60,-60}}, color={0,0,
+              0})}),
     Documentation(info="<html>
 <p>
 This block enables a simplified approach of torque deduction due by field weakening.
