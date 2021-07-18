@@ -1,6 +1,6 @@
 within ElectroMechanicalDrives.Components.Electrical;
 model IdealBattery "Re-chargeable ideal battery without loss"
-  extends ElectroMechanicalDrives.Interfaces.PartialBattery(final RCell=0);
+  extends ElectroMechanicalDrives.BaseClasses.Battery(      final RCell=0);
   annotation(defaultComponentName="battery",Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}})),           Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={
         Line(points={{-90,30},{-70,30}}, color={28,108,200}),
         Line(points={{-80,20},{-80,40}}, color={28,108,200}),

@@ -1,5 +1,5 @@
-within ElectroMechanicalDrives.Interfaces;
-partial model PartialBattery "Partial re-chargeable battery with internal resistor"
+within ElectroMechanicalDrives.BaseClasses;
+partial model Battery "Partial re-chargeable battery with internal resistor"
   parameter Integer ns(min = 1) = 1 "Number of series cells";
   parameter Integer np(min = 1) = 1 "Number of parallel cells";
   parameter Modelica.SIunits.Voltage V1Cell = 4.2 "Maximum cell voltage > V0Cell";
@@ -51,4 +51,4 @@ equation
     Documentation(info="<html>
 <p>Partial re-chargeable battery model with internal resistor</p>
 </html>"));
-end PartialBattery;
+end Battery;

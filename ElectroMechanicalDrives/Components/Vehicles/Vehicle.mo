@@ -1,6 +1,6 @@
 within ElectroMechanicalDrives.Components.Vehicles;
 model Vehicle "Vehicle with friction"
-  extends ElectroMechanicalDrives.Interfaces.PartialVehicle;
+  extends ElectroMechanicalDrives.BaseClasses.Vehicle;
   annotation (defaultComponentName="vehicle", Documentation(info="<html>
 <p>This vehicle model considers<p>
 <ul>

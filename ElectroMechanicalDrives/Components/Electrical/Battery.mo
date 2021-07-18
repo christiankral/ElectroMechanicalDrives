@@ -1,6 +1,6 @@
 within ElectroMechanicalDrives.Components.Electrical;
 model Battery "Re-chargeable battery with internal resistor"
-  extends ElectroMechanicalDrives.Interfaces.PartialBattery;
+  extends ElectroMechanicalDrives.BaseClasses.Battery;
   annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}})),
     Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={
         Line(points={{-20,0},{0,0}},       color = {0, 0, 255}),

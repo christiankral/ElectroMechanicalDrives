@@ -1,6 +1,6 @@
 within ElectroMechanicalDrives.Components.Translational;
 model MassFriction "Constant force with linear range around zero speed"
-  extends ElectroMechanicalDrives.Interfaces.PartialMassFriction;
+  extends ElectroMechanicalDrives.BaseClasses.MassFriction;
 equation
   f_friction = smooth(1, if v > v_linear then f_frictionSliding else if v < (-v_linear) then -f_frictionSliding else f_frictionSliding * v / v_linear);
   annotation (defaultComponentName="mass",Documentation(info="<html>

@@ -1,6 +1,6 @@
 within ElectroMechanicalDrives.Components.Translational;
 model MassStickingFriction
-  extends Interfaces.PartialMassFriction;
+  extends BaseClasses.MassFriction;
   parameter Real peak = 1
     "Peak sticking friction w.r.t. sliding friction";
 equation

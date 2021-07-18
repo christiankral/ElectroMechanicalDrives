@@ -1,5 +1,5 @@
-within ElectroMechanicalDrives.Interfaces;
-partial model PartialVehicle "Partial vehicle with friction"
+within ElectroMechanicalDrives.BaseClasses;
+partial model Vehicle "Partial vehicle with friction"
 
   extends ElectroMechanicalDrives.Interfaces.ConditionalAngle;
   parameter Modelica.SIunits.Density rho = 1.2 "Mass density of air" annotation(Dialog(group = "Ambient"));
@@ -100,4 +100,4 @@ equation
           fillColor={160,215,160})}),
     Documentation(info="<html>
 </html>"));
-end PartialVehicle;
+end Vehicle;
