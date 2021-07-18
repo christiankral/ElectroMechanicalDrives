@@ -58,10 +58,12 @@ equation
                                                                                                                 color={0,0,0}));
   connect(torqueMachineSensor.flange_b, powerMachineSensor.flange_a) annotation (Line(points={{20,0},{40,0}},                                         color={0,0,0}));
   connect(powerMachineSensor.flange_b, flange) annotation (Line(points={{60,0},{100,0}}, color={0,0,0}));
-  annotation(defaultComponentName = "machine", Diagram(coordinateSystem(preserveAspectRatio=false,   extent={{-100,
-            -100},{100,100}})),                                                                                                    Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Rectangle(origin = {90, 0}, lineColor = {64, 64, 64}, fillColor = {191, 191, 191},
-            fillPattern =                                                                                                   FillPattern.HorizontalCylinder, extent = {{-10, -10}, {10, 10}}), Text(extent={{
-              -140,60},{-60,20}},                                                                                                                                                                                                     lineColor = {0, 0, 0},
+  annotation(defaultComponentName = "machine", 
+      Diagram(coordinateSystem(preserveAspectRatio=false,   
+			extent={{-100,-100},{100,100}})),                                                                                                    Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Rectangle(origin = {90, 0}, lineColor = {64, 64, 64}, fillColor = {191, 191, 191},
+            fillPattern = FillPattern.HorizontalCylinder, 
+            extent = {{-10, -10}, {10, 10}}), 
+			Text(extent={{-140,60},{-60,20}},                                                                                                                                                                                                     lineColor = {0, 0, 0},
             fillPattern =                                                                                                   FillPattern.HorizontalCylinder, fillColor = {175, 175, 175}, textString = "tau"), Text(extent = {{-150, 120}, {150, 80}}, textString = "%name", lineColor = {0, 0, 255}), Line(points = {{-100, 0}, {-60, 0}}, color = {0, 0, 0}, smooth = Smooth.None)}),
     Documentation(info="<html>
 <p>This is an idealized torque controlled electric machine model. 
