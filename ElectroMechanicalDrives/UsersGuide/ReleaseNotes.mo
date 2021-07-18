@@ -3,6 +3,13 @@ class ReleaseNotes "Release Notes"
   extends Modelica.Icons.ReleaseNotes;
   annotation (preferredView="info",Documentation(info="<html>
 
+<h5>Version v3.0.0, 2021-07-18</h5>
+<ul>
+<li>Switch to Modelica Standard Library 4.0.0</li>
+<li>Move and rename partial models, see
+    <a href=\"https://github.com/christiankral/ElectroMechanicalDrives/issues/23\">#23</a></li>
+</ul>
+
 <h5>Version v2.4.0, 2020-07-09</h5>
 <ul>
 <li>Change drive cycle <code>suv2.txt</code> to limit acceleration, see
