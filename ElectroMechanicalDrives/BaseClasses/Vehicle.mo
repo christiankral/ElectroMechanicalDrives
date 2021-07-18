@@ -2,33 +2,49 @@ within ElectroMechanicalDrives.BaseClasses;
 partial model Vehicle "Partial vehicle with friction"
 
   extends ElectroMechanicalDrives.Interfaces.ConditionalAngle;
-  parameter Modelica.SIunits.Density rho = 1.2 "Mass density of air" annotation(Dialog(group = "Ambient"));
+  parameter Modelica.Units.SI.Density rho=1.2 "Mass density of air"
+    annotation (Dialog(group="Ambient"));
   parameter Real mu = 0.02 "Rolling friction coefficient" annotation(Dialog(group = "Ambient"));
-  parameter Modelica.SIunits.Area A = 3 "Area of cross section of vehicle" annotation(Dialog(group = "Vehicle"));
+  parameter Modelica.Units.SI.Area A=3 "Area of cross section of vehicle"
+    annotation (Dialog(group="Vehicle"));
   parameter Real cx = 0.3 "Drag coefficient (cw in German)" annotation(Dialog(group = "Vehicle"));
-  parameter Modelica.SIunits.Mass m = 1000 "Total mass of vehicle" annotation(Dialog(group = "Vehicle"));
-  parameter Modelica.SIunits.Length r = 0.35 "Wheel radius" annotation(Dialog(group = "Vehicle"));
+  parameter Modelica.Units.SI.Mass m=1000 "Total mass of vehicle"
+    annotation (Dialog(group="Vehicle"));
+  parameter Modelica.Units.SI.Length r=0.35 "Wheel radius"
+    annotation (Dialog(group="Vehicle"));
   parameter Real j = 0 "Relative mass increase due to rotating inertias" annotation(Dialog(group = "Vehicle"));
-  parameter Modelica.SIunits.Velocity v_linear = 0.01 "Speed limit of constant rolling friction (do not change unless required)" annotation(Dialog(tab = "Tuning",groupImage="modelica://ElectroMechanicalDrives/Resources/Images/v_linear.png"));
-  final parameter Modelica.SIunits.Inertia J = j * m * r ^ 2 "Total inertia with respect to wheel" annotation(Evaluate = true);
-  Modelica.SIunits.Acceleration a "Vehicle acceleration";
-  Modelica.SIunits.Velocity v "Vehicle velovity";
-  Modelica.SIunits.Length s "Distance";
-  Modelica.SIunits.AngularAcceleration alpha "Angular acceleration of wheel(s)";
-  Modelica.SIunits.AngularVelocity w "Angular velocity of wheel(s)";
-  Modelica.SIunits.Angle phi "Angul of wheel(s)";
-  Modelica.SIunits.Force f_a = flangeT_a.f "Force of flangeT a";
-  Modelica.SIunits.Force f_b = flangeT_b.f "Force of flangeT b";
-  Modelica.SIunits.Force fRollingFriction = rollingFriction.f_friction "Rolling friction force";
-  Modelica.SIunits.Force fAtmosphericFriction = atmosphericFriction.f "Atmospheric friction force";
-  Modelica.SIunits.Force fTotalFriction = fRollingFriction + fAtmosphericFriction "Total rolling plus atmospeheric friction";
-  Modelica.SIunits.Force fGradient = rollingFriction.f_gradient "Force cause by gradient";
-  Modelica.SIunits.Power powerRollingFriction = fRollingFriction*v "Rolling friction power";
-  Modelica.SIunits.Power powerAtmosphericFriction = fAtmosphericFriction*v "Atmospheric friction power";
-  Modelica.SIunits.Power powerTotalFriction = fTotalFriction*v "Total friction power";
-  Modelica.SIunits.Power powerGradient = fGradient*v "Power caused by gradient";
-  Modelica.SIunits.Torque tau_a = flangeR_a.tau "Torque of flangeR_a";
-  Modelica.SIunits.Torque tau_b = flangeR_b.tau "Torque of flangeR_b";
+  parameter Modelica.Units.SI.Velocity v_linear=0.01
+    "Speed limit of constant rolling friction (do not change unless required)"
+    annotation (Dialog(tab="Tuning", groupImage=
+          "modelica://ElectroMechanicalDrives/Resources/Images/v_linear.png"));
+  final parameter Modelica.Units.SI.Inertia J=j*m*r^2
+    "Total inertia with respect to wheel" annotation (Evaluate=true);
+  Modelica.Units.SI.Acceleration a "Vehicle acceleration";
+  Modelica.Units.SI.Velocity v "Vehicle velovity";
+  Modelica.Units.SI.Length s "Distance";
+  Modelica.Units.SI.AngularAcceleration alpha
+    "Angular acceleration of wheel(s)";
+  Modelica.Units.SI.AngularVelocity w "Angular velocity of wheel(s)";
+  Modelica.Units.SI.Angle phi "Angul of wheel(s)";
+  Modelica.Units.SI.Force f_a=flangeT_a.f "Force of flangeT a";
+  Modelica.Units.SI.Force f_b=flangeT_b.f "Force of flangeT b";
+  Modelica.Units.SI.Force fRollingFriction=rollingFriction.f_friction
+    "Rolling friction force";
+  Modelica.Units.SI.Force fAtmosphericFriction=atmosphericFriction.f
+    "Atmospheric friction force";
+  Modelica.Units.SI.Force fTotalFriction=fRollingFriction +
+      fAtmosphericFriction "Total rolling plus atmospeheric friction";
+  Modelica.Units.SI.Force fGradient=rollingFriction.f_gradient
+    "Force cause by gradient";
+  Modelica.Units.SI.Power powerRollingFriction=fRollingFriction*v
+    "Rolling friction power";
+  Modelica.Units.SI.Power powerAtmosphericFriction=fAtmosphericFriction*v
+    "Atmospheric friction power";
+  Modelica.Units.SI.Power powerTotalFriction=fTotalFriction*v
+    "Total friction power";
+  Modelica.Units.SI.Power powerGradient=fGradient*v "Power caused by gradient";
+  Modelica.Units.SI.Torque tau_a=flangeR_a.tau "Torque of flangeR_a";
+  Modelica.Units.SI.Torque tau_b=flangeR_b.tau "Torque of flangeR_b";
 
   Modelica.Mechanics.Translational.Interfaces.Flange_a flangeT_a "Left translational flange of vehicle" annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_b flangeT_b "Right translational flange of vehicle" annotation (Placement(transformation(extent={{90,-10},{110,10}})));

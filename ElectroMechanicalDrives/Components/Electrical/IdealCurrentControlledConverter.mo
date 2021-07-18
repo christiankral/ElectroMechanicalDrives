@@ -1,23 +1,26 @@
 within ElectroMechanicalDrives.Components.Electrical;
 model IdealCurrentControlledConverter
   "Ideal current controlled DC/DC converter"
-  parameter Modelica.SIunits.Time T = 1E-6
-    "Internal integtration time constant";
-  Modelica.SIunits.Voltage v1 = dc_p1.v - dc_n1.v "Voltage of pins 1";
-  Modelica.SIunits.Voltage v2 = dc_p2.v - dc_n2.v "Voltage of pins 2";
-  Modelica.SIunits.Current i1 = dc_p1.i "Current pins 1";
-  Modelica.SIunits.Power p1 = v1 * i1 "Power of pins 1";
-  Modelica.SIunits.Power p2 = v2 * i2 "Power of pins 2";
+  parameter Modelica.Units.SI.Time T=1E-6 "Internal integtration time constant";
+  Modelica.Units.SI.Voltage v1=dc_p1.v - dc_n1.v "Voltage of pins 1";
+  Modelica.Units.SI.Voltage v2=dc_p2.v - dc_n2.v "Voltage of pins 2";
+  Modelica.Units.SI.Current i1=dc_p1.i "Current pins 1";
+  Modelica.Units.SI.Power p1=v1*i1 "Power of pins 1";
+  Modelica.Units.SI.Power p2=v2*i2 "Power of pins 2";
   Modelica.Electrical.Analog.Interfaces.PositivePin dc_p1
-    "Positive DC input"                                                       annotation(Placement(transformation(extent = {{-110, 50}, {-90, 70}})));
+    "Positive DC input"
+    annotation(Placement(transformation(extent = {{-110, 50}, {-90, 70}})));
   Modelica.Electrical.Analog.Interfaces.NegativePin dc_n1
-    "Negative DC input"                                                       annotation(Placement(transformation(extent = {{-110, -70}, {-90, -50}})));
+    "Negative DC input"
+    annotation(Placement(transformation(extent = {{-110, -70}, {-90, -50}})));
   Modelica.Electrical.Analog.Interfaces.PositivePin dc_p2
-    "Positive DC output"                                                       annotation(Placement(transformation(extent = {{90, 50}, {110, 70}})));
+    "Positive DC output"
+    annotation(Placement(transformation(extent = {{90, 50}, {110, 70}})));
   Modelica.Electrical.Analog.Interfaces.NegativePin dc_n2
-    "Negative DC output"                                                       annotation(Placement(transformation(extent = {{90, -70}, {110, -50}})));
+    "Negative DC output"
+    annotation(Placement(transformation(extent = {{90, -70}, {110, -50}})));
   Modelica.Blocks.Interfaces.RealInput i2 "Current input i2"
-                                                          annotation(Placement(transformation(extent = {{-20, -20}, {20, 20}}, rotation = 90, origin = {0, -120}), iconTransformation(extent = {{-20, -20}, {20, 20}}, rotation = 90, origin = {0, -120})));
+    annotation(Placement(transformation(extent = {{-20, -20}, {20, 20}}, rotation = 90, origin = {0, -120}), iconTransformation(extent = {{-20, -20}, {20, 20}}, rotation = 90, origin = {0, -120})));
   Modelica.Electrical.Analog.Sources.SignalCurrent signalVoltage annotation(Placement(transformation(extent = {{-10, 10}, {10, -10}}, rotation = 270, origin = {100, 0})));
   Modelica.Electrical.Analog.Sensors.VoltageSensor voltageSensor annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 270, origin = {80, 20})));
   Modelica.Blocks.Math.Product product annotation(Placement(transformation(extent = {{40, 0}, {20, 20}})));
@@ -33,13 +36,13 @@ equation
   connect(powerSensor.nv, dc_n1) annotation(Line(points = {{-70, 40}, {-100, 40}, {-100, -60}}, color = {0, 0, 255}, smooth = Smooth.None));
   connect(product.y, feedback.u1) annotation(Line(points = {{19, 10}, {8, 10}}, color = {0, 0, 127}, smooth = Smooth.None));
   connect(feedback.y, integrator.u) annotation(Line(points = {{-9, 10}, {-18, 10}}, color = {0, 0, 127}, smooth = Smooth.None));
-  connect(powerSensor.power, inverse.u) annotation(Line(points = {{-71, 48}, {-80, 48}, {-80, 80}, {0, 80}, {0, 62}}, color = {0, 0, 127}, smooth = Smooth.None));
+  connect(powerSensor.power, inverse.u) annotation(Line(points={{-71,50},{-80, 50},{-80,80},{0,80},{0,62}},                                                                                color = {0, 0, 127}, smooth = Smooth.None));
   connect(inverse.y, feedback.u2) annotation(Line(points = {{0, 39}, {0, 18}}, color = {0, 0, 127}, smooth = Smooth.None));
-  connect(i2, signalVoltage.i) annotation(Line(points = {{0, -120}, {0, -80}, {60, -80}, {60, 0}, {76, 0}, {76, 8.88178e-16}, {93, 8.88178e-16}}, color = {0, 0, 127}, smooth = Smooth.None));
+  connect(i2, signalVoltage.i) annotation(Line(points={{0,-120},{0,-80},{60,-80},{60,0},{76,0},{76,0},{88,0}},                                                                                       color = {0, 0, 127}, smooth = Smooth.None));
   connect(voltageSensor.p, dc_p2) annotation(Line(points = {{80, 30}, {80, 60}, {100, 60}}, color = {0, 0, 255}, smooth = Smooth.None));
   connect(voltageSensor.n, dc_n2) annotation(Line(points = {{80, 10}, {80, -60}, {100, -60}}, color = {0, 0, 255}, smooth = Smooth.None));
-  connect(voltageSensor.v, product.u1) annotation(Line(points = {{70, 20}, {60, 20}, {60, 16}, {42, 16}}, color = {0, 0, 127}, smooth = Smooth.None));
-  connect(integrator.y, signalCurrent.i) annotation(Line(points = {{-41, 10}, {-53, 10}}, color = {0, 0, 127}, smooth = Smooth.None));
+  connect(voltageSensor.v, product.u1) annotation(Line(points={{69,20},{60,20},{60,16},{42,16}}, color = {0, 0, 127}, smooth = Smooth.None));
+  connect(integrator.y, signalCurrent.i) annotation(Line(points={{-41,10},{-48,10}}, color = {0, 0, 127}, smooth = Smooth.None));
   connect(powerSensor.nc, signalCurrent.p) annotation(Line(points = {{-60, 30}, {-60, 20}}, color = {0, 0, 255}, smooth = Smooth.None));
   connect(signalCurrent.n, dc_n1) annotation(Line(points = {{-60, 0}, {-60, -60}, {-100, -60}}, color = {0, 0, 255}, smooth = Smooth.None));
   connect(dc_p2, signalVoltage.p) annotation(Line(points = {{100, 60}, {100, 10}}, color = {0, 0, 255}, smooth = Smooth.None));

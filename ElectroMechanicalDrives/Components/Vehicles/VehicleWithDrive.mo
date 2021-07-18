@@ -1,21 +1,29 @@
 within ElectroMechanicalDrives.Components.Vehicles;
 model VehicleWithDrive "Vehicle with friction"
   parameter Real i = 1 "Transmission speed ratio machine/wheel" annotation(Dialog(group = "Power train", tab = "ElectroMechanical"));
-  parameter Modelica.SIunits.ElectricalTorqueConstant kBase = 1
-    "Transformation coefficient of base velocity range" annotation(Dialog(group = "Electric machine", tab = "ElectroMechanical"));
-  parameter Modelica.SIunits.AngularVelocity wBase
-    "Maximum base angular velocity" annotation(Dialog(group = "Electric machine", tab = "ElectroMechanical"));
+  parameter Modelica.Units.SI.ElectricalTorqueConstant kBase=1
+    "Transformation coefficient of base velocity range"
+    annotation (Dialog(group="Electric machine", tab="ElectroMechanical"));
+  parameter Modelica.Units.SI.AngularVelocity wBase
+    "Maximum base angular velocity"
+    annotation (Dialog(group="Electric machine", tab="ElectroMechanical"));
   parameter Integer ns(min = 1) = 1 "Number of series cells" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
   parameter Integer np(min = 1) = 1 "Number of parallel cells" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
-  parameter Modelica.SIunits.Voltage V1Cell = 4.2 "Maximum cell voltage > V0Cell" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
-  parameter Modelica.SIunits.Voltage V0Cell = 2.5 "Minimum cell voltage < V1Cell" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
+  parameter Modelica.Units.SI.Voltage V1Cell=4.2
+    "Maximum cell voltage > V0Cell"
+    annotation (Dialog(group="Battery", tab="ElectroMechanical"));
+  parameter Modelica.Units.SI.Voltage V0Cell=2.5
+    "Minimum cell voltage < V1Cell"
+    annotation (Dialog(group="Battery", tab="ElectroMechanical"));
   parameter Boolean allowOvercharge = false
     "Allows overcharging without error" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
   parameter Boolean allowUndercharge = false
     "Allows undercharging without error" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
-  parameter Modelica.SIunits.Energy ECell
-    "Total cell energy between V0 and V1" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
-  parameter Modelica.SIunits.Voltage ViniCell = V1Cell "Initial cell voltage" annotation(Dialog(group = "Battery", tab = "ElectroMechanical"));
+  parameter Modelica.Units.SI.Energy ECell
+    "Total cell energy between V0 and V1"
+    annotation (Dialog(group="Battery", tab="ElectroMechanical"));
+  parameter Modelica.Units.SI.Voltage ViniCell=V1Cell "Initial cell voltage"
+    annotation (Dialog(group="Battery", tab="ElectroMechanical"));
   extends ElectroMechanicalDrives.Components.Vehicles.Vehicle;
   Modelica.Mechanics.Rotational.Components.IdealGear idealGear(ratio = i) annotation(Placement(transformation(extent={{-40,70},
             {-60,90}})));

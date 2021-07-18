@@ -1,6 +1,6 @@
 within ElectroMechanicalDrives.Components.Rotational;
 model InitialVelocity "Initial angularvelocity of flange"
-  parameter Modelica.SIunits.AngularVelocity w0 "Initial angular velocity";
+  parameter Modelica.Units.SI.AngularVelocity w0 "Initial angular velocity";
   Modelica.Mechanics.Rotational.Interfaces.Flange_a flange_a annotation(Placement(transformation(extent = {{90, -10}, {110, 10}}), iconTransformation(extent = {{90, -10}, {110, 10}})));
 initial equation
   der(flange_a.phi) = w0;

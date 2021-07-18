@@ -14,13 +14,13 @@ block TorqueLimiter "Torque limiter including field weakening"
   Modelica.Blocks.Interfaces.RealOutput tauLimited "Limited torque" annotation (
      Placement(transformation(extent={{100,-10},{120,10}}), iconTransformation(
           extent={{100,-10},{120,10}})));
-  Modelica.SIunits.Torque tauLimitPos "Torque, limited by tauLimit";
+  Modelica.Units.SI.Torque tauLimitPos "Torque, limited by tauLimit";
   parameter Boolean useFieldWeakening = true
     "True, if field weakening is considered";
-  parameter Modelica.SIunits.Torque tauLimit = Modelica.Constants.inf
+  parameter Modelica.Units.SI.Torque tauLimit=Modelica.Constants.inf
     "Torque limit (nominal torque)";
-  parameter Modelica.SIunits.AngularVelocity wBase = Modelica.Constants.inf
-    "Base angular frequency"  annotation(Dialog(enable=useFieldWeakening));
+  parameter Modelica.Units.SI.AngularVelocity wBase=Modelica.Constants.inf
+    "Base angular frequency" annotation (Dialog(enable=useFieldWeakening));
 equation
   tauLimitPos = if useFieldWeakening then smooth(1, if w > wBase then tauLimit * wBase / w else if w < (-wBase) then -tauLimit * wBase / w else tauLimit) else tauLimit;
   tauLimited = max(min(tau,tauLimitPos),-tauLimitPos);

@@ -2,13 +2,14 @@ within ElectroMechanicalDrives.Components.Rotational;
 model RollingFriction
   "Constant friction torque with linear range around zero"
   extends Modelica.Mechanics.Rotational.Interfaces.PartialTorque;
-  parameter Modelica.SIunits.Torque tau_constant(final min = 0)
+  parameter Modelica.Units.SI.Torque tau_constant(final min=0)
     "Constant friction torque (if negative, torque is acting as load)";
-  parameter Modelica.SIunits.AngularVelocity w_linear(final min = 0) = 0.1
+  parameter Modelica.Units.SI.AngularVelocity w_linear(final min=0) = 0.1
     "Region of linear torque vs angular speed";
-  Modelica.SIunits.Torque tau "Friction torque";
-  Modelica.SIunits.AngularVelocity w "Angular velocity";
-  extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
+  Modelica.Units.SI.Torque tau "Friction torque";
+  Modelica.Units.SI.AngularVelocity w "Angular velocity";
+  extends
+    Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
 equation
   w = der(phi);
   tau = smooth(1, if w > w_linear then tau_constant else if w < (-w_linear) then -tau_constant else tau_constant * w / w_linear);

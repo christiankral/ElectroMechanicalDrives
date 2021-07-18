@@ -2,10 +2,10 @@ within ElectroMechanicalDrives.Components.Blocks.Sources;
 block MultipleRamps "Generate multiple ramp signals"
   parameter Integer n = 1 "Number of ramps";
   parameter Real height[n] = ones(n) "Height of ramps";
-  parameter Modelica.SIunits.Time duration[n](each min = 0.0, each start = 2)
+  parameter Modelica.Units.SI.Time duration[n](each min=0.0, each start=2)
     "Duration of ramp (= 0.0 gives a Step)";
   parameter Real offset = 0 "Offset of output signal";
-  parameter Modelica.SIunits.Time startTime[n] = zeros(n)
+  parameter Modelica.Units.SI.Time startTime[n]=zeros(n)
     "Output = offset for time < startTime";
   extends Modelica.Blocks.Interfaces.SO;
   Modelica.Blocks.Sources.Ramp ramp[n](final startTime = startTime, final height = height, final duration = duration, offset = fill(offset, n)) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}})));

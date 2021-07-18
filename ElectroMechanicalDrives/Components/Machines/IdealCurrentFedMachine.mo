@@ -3,22 +3,21 @@ model IdealCurrentFedMachine
   "Ideal electric machine to be supplied with current"
   parameter Boolean useSupport = false
     "= true, if support flange enabled, otherwise implicitly grounded"                                    annotation(Evaluate = true, HideResult = true, choices(checkBox = true));
-  parameter Modelica.SIunits.ElectricalTorqueConstant kBase = 1
+  parameter Modelica.Units.SI.ElectricalTorqueConstant kBase=1
     "Transformation coefficient of base velocity range";
-  parameter Modelica.SIunits.AngularVelocity wBase
+  parameter Modelica.Units.SI.AngularVelocity wBase
     "Maximum base angular velocity";
-  Modelica.SIunits.Voltage v "Voltage drop between the two pins";
-  Modelica.SIunits.Current i
-    "Current flowing from positive to negative pin";
-  Modelica.SIunits.Power power "Power";
-  Modelica.SIunits.Angle phi
+  Modelica.Units.SI.Voltage v "Voltage drop between the two pins";
+  Modelica.Units.SI.Current i "Current flowing from positive to negative pin";
+  Modelica.Units.SI.Power power "Power";
+  Modelica.Units.SI.Angle phi
     "Angle of shaft flange with respect to support (= flange.phi - support.phi)";
-  Modelica.SIunits.AngularVelocity w
+  Modelica.Units.SI.AngularVelocity w
     "Angular velocity of flange relative to support";
-  Modelica.SIunits.ElectricalTorqueConstant k
+  Modelica.Units.SI.ElectricalTorqueConstant k
     "Transformation coefficient of base speed range";
-  Modelica.SIunits.Torque tau = flange.tau "Torque acting at flange";
-  Modelica.SIunits.Torque tauElectrical = -tau "Electrical torque";
+  Modelica.Units.SI.Torque tau=flange.tau "Torque acting at flange";
+  Modelica.Units.SI.Torque tauElectrical=-tau "Electrical torque";
   Modelica.Electrical.Analog.Interfaces.PositivePin p annotation(Placement(transformation(origin = {0, 100}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
   Modelica.Electrical.Analog.Interfaces.NegativePin n annotation(Placement(transformation(origin = {0, -100}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
   Modelica.Mechanics.Rotational.Interfaces.Flange_b flange annotation(Placement(transformation(extent = {{90, -10}, {110, 10}}, rotation = 0)));

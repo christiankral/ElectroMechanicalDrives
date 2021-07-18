@@ -1,20 +1,21 @@
 within ElectroMechanicalDrives.Components.Rotational;
 model ConstantEfficiency
   "Efficiency model considering constant efficiency"
-  extends Modelica.Mechanics.Rotational.Interfaces.PartialElementaryTwoFlangesAndSupport2;
+  extends
+    Modelica.Mechanics.Rotational.Interfaces.PartialElementaryTwoFlangesAndSupport2;
   parameter Real efficiency(final min=Modelica.Constants.small,
     final max=1) = 1 "Efficiency coefficient";
-  Modelica.SIunits.Angle phi "Angle of flange_a";
-  Modelica.SIunits.AngularVelocity w
+  Modelica.Units.SI.Angle phi "Angle of flange_a";
+  Modelica.Units.SI.AngularVelocity w
     "Absolute angular velocity of flange_a and flange_b";
-  Modelica.SIunits.AngularAcceleration a
+  Modelica.Units.SI.AngularAcceleration a
     "Absolute acceleration of flange_a and flange_b";
-  Modelica.SIunits.Power power_a(start=0) = flange_a.tau * w
+  Modelica.Units.SI.Power power_a(start=0) = flange_a.tau*w
     "Power input of flange_a";
-  Modelica.SIunits.Power power_b = flange_b.tau * w
-    "Power input of flange_b";
-  Modelica.SIunits.Torque tau_loss(final start = 0) "Friction torque";
-  extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
+  Modelica.Units.SI.Power power_b=flange_b.tau*w "Power input of flange_b";
+  Modelica.Units.SI.Torque tau_loss(final start=0) "Friction torque";
+  extends
+    Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
 equation
   phi = flange_a.phi - phi_support;
   flange_a.phi = flange_b.phi;

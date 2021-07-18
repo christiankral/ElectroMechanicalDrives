@@ -1,6 +1,6 @@
 within ElectroMechanicalDrives.Components.Translational;
 model InitialVelocity "Initial velocity of flange"
-  parameter Modelica.SIunits.Velocity v0 "Initial velocity";
+  parameter Modelica.Units.SI.Velocity v0 "Initial velocity";
   Modelica.Mechanics.Translational.Interfaces.Flange_a flange_a annotation(Placement(transformation(extent = {{90, -10}, {110, 10}}), iconTransformation(extent = {{90, -10}, {110, 10}})));
 initial equation
   der(flange_a.s) = v0;

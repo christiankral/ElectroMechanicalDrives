@@ -1,10 +1,10 @@
 within ElectroMechanicalDrives.Components.Translational;
 model AthmosphericFriction "Athomspheric friction"
   extends Modelica.Mechanics.Translational.Interfaces.PartialForce;
-  parameter Modelica.SIunits.Density rho = 1.2 "Mass density of air";
-  parameter Modelica.SIunits.Area A = 3 "Area of cross section";
+  parameter Modelica.Units.SI.Density rho=1.2 "Mass density of air";
+  parameter Modelica.Units.SI.Area A=3 "Area of cross section";
   parameter Real cx = 0.3 "Drag coefficient (cw in German)";
-  Modelica.SIunits.Velocity v "Velocity of flange";
+  Modelica.Units.SI.Velocity v "Velocity of flange";
   Modelica.Mechanics.Translational.Sources.QuadraticSpeedDependentForce quadraticSpeedDependentForce(final useSupport = useSupport, final f_nominal = -cx * rho * 1 ^ 2 * A / 2, final ForceDirection = false, final v_nominal = 1) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}})));
 equation
   v = der(s);

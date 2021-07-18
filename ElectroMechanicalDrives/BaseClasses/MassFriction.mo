@@ -3,19 +3,22 @@ partial model MassFriction "Partial model with mass, inclination and friction"
   extends
     Modelica.Mechanics.Translational.Interfaces.PartialElementaryTwoFlangesAndSupport2;
   extends ElectroMechanicalDrives.Interfaces.ConditionalAngle;
-  parameter Modelica.SIunits.Mass m(min = 0, start = 1)
-    "Mass of the sliding mass";
+  parameter Modelica.Units.SI.Mass m(min=0, start=1) "Mass of the sliding mass";
   parameter Real mu = 0 "Friction coefficient";
-  parameter Modelica.SIunits.Velocity v_linear = 0.01 "Speed limit of constant rolling friction (do not change unless required)" annotation(Dialog(tab = "Tuning",groupImage="modelica://ElectroMechanicalDrives/Resources/Images/v_linearBase.png"));
-  Modelica.SIunits.Force f_frictionSliding "Nominal sliding friction force";
-  Modelica.SIunits.Position s "Position of flange_a";
-  Modelica.SIunits.Velocity v "Absolute velocity of flange_a and flange_b";
-  Modelica.SIunits.Acceleration a
+  parameter Modelica.Units.SI.Velocity v_linear=0.01
+    "Speed limit of constant rolling friction (do not change unless required)"
+    annotation (Dialog(tab="Tuning", groupImage=
+          "modelica://ElectroMechanicalDrives/Resources/Images/v_linearBase.png"));
+  Modelica.Units.SI.Force f_frictionSliding "Nominal sliding friction force";
+  Modelica.Units.SI.Position s "Position of flange_a";
+  Modelica.Units.SI.Velocity v "Absolute velocity of flange_a and flange_b";
+  Modelica.Units.SI.Acceleration a
     "Absolute acceleration of flange_a and flange_b";
-  Modelica.SIunits.Force f_friction "Friction force";
-  Modelica.SIunits.Force f_gradient "Force caused by gradient";
-  Modelica.SIunits.Power power_gradient = f_gradient*v "Power caused by gradient";
-  Modelica.SIunits.Force f "Total force";
+  Modelica.Units.SI.Force f_friction "Friction force";
+  Modelica.Units.SI.Force f_gradient "Force caused by gradient";
+  Modelica.Units.SI.Power power_gradient=f_gradient*v
+    "Power caused by gradient";
+  Modelica.Units.SI.Force f "Total force";
   extends
     Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
 equation

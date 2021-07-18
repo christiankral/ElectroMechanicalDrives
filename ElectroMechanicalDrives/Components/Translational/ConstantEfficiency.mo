@@ -1,20 +1,19 @@
 within ElectroMechanicalDrives.Components.Translational;
 model ConstantEfficiency
   "Efficiency model considering constant efficiency"
-  extends Modelica.Mechanics.Translational.Interfaces.PartialElementaryTwoFlangesAndSupport2;
+  extends
+    Modelica.Mechanics.Translational.Interfaces.PartialElementaryTwoFlangesAndSupport2;
   parameter Real efficiency(final min=Modelica.Constants.small,
     final max=1) = 1 "Efficiency coefficient";
-  Modelica.SIunits.Position s "Position of flange_a";
-  Modelica.SIunits.Velocity v
-    "Absolute velocity of flange_a and flange_b";
-  Modelica.SIunits.Acceleration a
+  Modelica.Units.SI.Position s "Position of flange_a";
+  Modelica.Units.SI.Velocity v "Absolute velocity of flange_a and flange_b";
+  Modelica.Units.SI.Acceleration a
     "Absolute acceleration of flange_a and flange_b";
-  Modelica.SIunits.Power power_a = flange_a.f * v
-    "Power input of flange_a";
-  Modelica.SIunits.Power power_b = flange_b.f * v
-    "Power input of flange_b";
-  Modelica.SIunits.Force f_loss(final start = 0) "Friction force";
-  extends Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
+  Modelica.Units.SI.Power power_a=flange_a.f*v "Power input of flange_a";
+  Modelica.Units.SI.Power power_b=flange_b.f*v "Power input of flange_b";
+  Modelica.Units.SI.Force f_loss(final start=0) "Friction force";
+  extends
+    Modelica.Thermal.HeatTransfer.Interfaces.PartialElementaryConditionalHeatPortWithoutT;
 equation
   s = flange_a.s - s_support;
   flange_a.s = flange_b.s;

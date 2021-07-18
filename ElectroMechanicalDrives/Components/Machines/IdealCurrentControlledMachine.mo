@@ -3,19 +3,22 @@ model IdealCurrentControlledMachine
   "Ideal electric machine with current control input"
   parameter Boolean useSupport = false
     "= true, if support flange enabled, otherwise implicitly grounded" annotation(Evaluate = true, HideResult = true, choices(checkBox = true));
-  parameter Modelica.SIunits.ElectricalTorqueConstant kBase = 1
+  parameter Modelica.Units.SI.ElectricalTorqueConstant kBase=1
     "Transformation coefficient of base velocity range";
-  parameter Modelica.SIunits.AngularVelocity wBase
+  parameter Modelica.Units.SI.AngularVelocity wBase
     "Maximum base angular velocity";
-  Modelica.SIunits.Voltage v "Voltage drop between the two pins";
+  Modelica.Units.SI.Voltage v "Voltage drop between the two pins";
   Modelica.Blocks.Interfaces.RealInput i(unit = "A")
     "Controlled current input" annotation(Placement(transformation(extent = {{-20, -20}, {20, 20}}, rotation = 270, origin = {0, 120}), iconTransformation(extent = {{-20, -20}, {20, 20}}, rotation = 270, origin = {0, 120})));
-  Modelica.SIunits.Power power "Power";
-  Modelica.SIunits.Angle phi "Angle of shaft flange with respect to support (= flange.phi - support.phi)";
-  Modelica.SIunits.AngularVelocity w "Angular velocity of flange relative to support";
-  Modelica.SIunits.ElectricalTorqueConstant k "Transformation coefficient of base speed range";
-  Modelica.SIunits.Torque tau = flange.tau "Torque acting at flange";
-  Modelica.SIunits.Torque tauElectrical = -tau "Electrical torque";
+  Modelica.Units.SI.Power power "Power";
+  Modelica.Units.SI.Angle phi
+    "Angle of shaft flange with respect to support (= flange.phi - support.phi)";
+  Modelica.Units.SI.AngularVelocity w
+    "Angular velocity of flange relative to support";
+  Modelica.Units.SI.ElectricalTorqueConstant k
+    "Transformation coefficient of base speed range";
+  Modelica.Units.SI.Torque tau=flange.tau "Torque acting at flange";
+  Modelica.Units.SI.Torque tauElectrical=-tau "Electrical torque";
   Modelica.Mechanics.Rotational.Interfaces.Flange_b flange annotation(Placement(transformation(extent = {{90, -10}, {110, 10}}, rotation = 0)));
   Modelica.Mechanics.Rotational.Interfaces.Support support if useSupport
     "Support/housing of emf shaft"                                                                      annotation(Placement(transformation(extent = {{-110, -10}, {-90, 10}})));

@@ -3,7 +3,7 @@ model VehicleDriveCycleElevation "Test of NEDC drive cycle of car including elev
   extends Modelica.Icons.Example;
   parameter String fileName = Modelica.Utilities.Files.loadResource("modelica://ElectroMechanicalDrives/Resources/DriveCycles/nedc.txt")
     "File on which data is present" annotation(Dialog(loadSelector(filter = "Text files (*.txt)", caption = "Open text file to read parameters of the form \"name = value\"")));
-  parameter Modelica.SIunits.Distance sNEDC = 10713.5
+  parameter Modelica.Units.SI.Distance sNEDC=10713.5
     "Distance of one drive cycle";
   Modelica.Blocks.Sources.CombiTimeTable combiTimeTable(tableOnFile = true, tableName = "velocity", extrapolation = Modelica.Blocks.Types.Extrapolation.Periodic, fileName = fileName) annotation(Placement(transformation(extent = {{-100, -10}, {-80, 10}})));
   Modelica.Mechanics.Translational.Sources.Speed speed(exact = false) annotation(Placement(transformation(extent = {{-60, -10}, {-40, 10}})));

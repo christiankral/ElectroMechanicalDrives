@@ -4,8 +4,8 @@ model ConditionalAngle "Conditional input with internal input connector"
   parameter Boolean useConstantAngle = true
     "If false, signal input is used"
     annotation(Evaluate = true, HideResult = true, choices(checkBox = true));
-  parameter Modelica.SIunits.Angle constantAngle = 0
-    "Constant angle of gradient" annotation(Dialog(enable = useConstantAngle));
+  parameter Modelica.Units.SI.Angle constantAngle=0
+    "Constant angle of gradient" annotation (Dialog(enable=useConstantAngle));
 
   Modelica.Blocks.Interfaces.RealInput variableAngle(unit = "rad") if not useConstantAngle
     "Angle of inclination of ramp" annotation(Placement(transformation(extent={{-140,
